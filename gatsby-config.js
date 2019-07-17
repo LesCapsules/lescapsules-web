@@ -10,10 +10,17 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: `gatsby-source-sanity`,
       options: {
         projectId: process.env.SANITY_PROJECT_ID,
         dataset: process.env.SANITY_DATASET,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
     {
@@ -25,8 +32,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Les Capsules`,
-        short_name: `Les Capsules`,
+        name: `les capsules`,
+        // short_name: `les capsules`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#0024D9`,
@@ -37,6 +44,8 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-typography`,
