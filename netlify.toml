@@ -1,5 +1,0 @@
-[build]
-  base    = ""
-  publish = "public"
-  command = "gatsby build"
-  environment = { GATSBY_CPU_COUNT = "1" }
