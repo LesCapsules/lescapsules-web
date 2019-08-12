@@ -10,7 +10,7 @@ const GalleryPage = ({ data, pageContext }) => {
   const thumbs = images.map(imageNode => imageNode.asset.thumb)
   return (
     <Layout location={pageContext.location}>
-      <div className="my-4">
+      <div className="container my-4">
         <h1>{page.title}</h1>
         <Gallery images={fullSize} thumbs={thumbs} colClass="col-4 col-md-3" />
       </div>

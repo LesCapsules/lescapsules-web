@@ -40,6 +40,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         // in page queries as GraphQL variables.
         id: node.id,
         location: `/photos/${node.slug.current}/`,
+        title: node.title,
+        isGallery: true,
       },
     })
   })
