@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import LogoCapsules from '../images/icons/logo-capsules.svg'
+import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import { Link } from 'gatsby'
 
 const NavBav = ({ children }) => (

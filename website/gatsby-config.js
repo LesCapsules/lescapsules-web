@@ -34,7 +34,18 @@ module.exports = {
         dataset: `production`,
       },
     },
-    `gatsby-plugin-manifest`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: title,
+        short_name: title,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#0054c7`,
+        display: `standalone`,
+        icon: `src/images/lescapsules-favicon.png`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
