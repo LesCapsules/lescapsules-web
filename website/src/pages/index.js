@@ -8,7 +8,7 @@ const IndexPage = ({ location, data }) => {
   return (
     <Layout location={location}>
       <div>
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <Img fluid={data.photo.image.asset.full} />
       </div>
       <div className="container">
         <h1>Les Capsules</h1>
@@ -21,11 +21,15 @@ const IndexPage = ({ location, data }) => {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query HomeImage {
-    file(relativePath: { eq: "images/comite-grand.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1200, maxHeight: 800) {
-          ...GatsbyImageSharpFluid
+  query HomePage {
+    photo: sanityPhoto(name: { eq: "all-staff-big" }) {
+      name
+      title
+      image {
+        asset {
+          full: fluid(maxWidth: 1024) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
     }
