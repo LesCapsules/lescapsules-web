@@ -8,19 +8,24 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Title',
-      type: 'string'
+      title: 'Titre',
+      type: 'string',
+    },
+    {
+      name: 'name',
+      title: 'Nom',
+      type: 'string',
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
       options: {
-        hotspot: true
-      }
-    }
+        hotspot: true,
+      },
+    },
   ],
   preview: {
-    select: {title: 'title', media: 'image'}
-  }
+    select: { title: 'title', media: 'image' },
+  },
 }
