@@ -1218,6 +1218,11 @@
     in-publish "^2.0.0"
     promise-props-recursive "^1.0.0"
 
+"@sanity/cli@0.142.2":
+  version "0.142.2"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.142.2.tgz#186c592b7906cb1e6064ebe94d5dd3521e2a7ffa"
+  integrity sha512-kHxYtdySeUeV2Ag9KfDr3esbcJsFuC3c5T3mK2udeAE2BHnu4v9h7Iqi30X2eOHUSrnycDGrevaoT3lUWQscvw==
+
 "@sanity/client@0.141.6":
   version "0.141.6"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-0.141.6.tgz#06241b521b839214fb7b8ece30ddc645c7e29b58"
