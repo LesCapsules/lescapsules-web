@@ -9,7 +9,7 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'slug',
@@ -17,27 +17,28 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 100
-      }
+        maxLength: 100,
+      },
     },
     {
       name: 'overview',
       title: 'Overview',
-      type: 'blockContent'
+      type: 'blockContent',
     },
     {
       name: 'date',
       title: 'Date',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
       name: 'photos',
       title: 'Photos',
       type: 'array',
-      of: [{
-        type: 'image',
-      }]
-    }
-  ]
+      of: [
+        {
+          type: 'image',
+        },
+      ],
+    },
+  ],
 }
-
