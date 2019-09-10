@@ -27,7 +27,7 @@ export const pageQuery = graphql`
       title
       image {
         asset {
-          full: fluid(maxWidth: 1024) {
+          full: fluid(maxWidth: 1024, maxHeight: 600) {
             ...GatsbySanityImageFluid
           }
         }
