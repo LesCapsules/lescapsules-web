@@ -1,5 +1,5 @@
 [build]
-  base    = ""
-  publish = "website/public"
-  command = "yarn workspace website build"
+  base    = "website"
+  publish = "public"
+  command = "yarn build"
   environment = { GATSBY_CPU_COUNT = "1" }
