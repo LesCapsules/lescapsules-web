@@ -1,0 +1,32 @@
+{
+  "name": "lescapsules",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Bruno Alla <alla.brunoo@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "deploy": "sanity deploy",
+    "graphql": "sanity graphql deploy",
+    "start": "sanity start",
+    "test": "sanity check"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^0.141.6",
+    "@sanity/components": "^0.141.6",
+    "@sanity/core": "^0.141.6",
+    "@sanity/default-layout": "^0.141.6",
+    "@sanity/default-login": "^0.141.5",
+    "@sanity/desk-tool": "^0.141.6",
+    "@sanity/google-maps-input": "^0.141.6",
+    "prop-types": "^15.6",
+    "react": "^16.2",
+    "react-dom": "^16.2",
+    "react-icons": "^2.2.5"
+  },
+  "devDependencies": {}
+}
