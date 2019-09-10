@@ -7,8 +7,9 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "deploy": "sanity deploy",
-    "graphql": "sanity graphql deploy",
+    "deploy": "yarn run deploy:studio && yarn run deploy:graphql",
+    "deploy:studio": "sanity deploy",
+    "deploy:graphql": "sanity graphql deploy --no-playground",
     "start": "sanity start",
     "test": "sanity check"
   },
