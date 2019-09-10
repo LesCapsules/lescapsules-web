@@ -5,6 +5,9 @@ export default {
   title: 'Photo',
   type: 'document',
   icon: photoIcon,
+  options: {
+    hotspot: true,
+  },
   fields: [
     {
       name: 'title',
