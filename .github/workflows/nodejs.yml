@@ -18,3 +18,5 @@ jobs:
       run: yarn
     - name: Deploy
       run: yarn workspace deploy
+      env:
+        SANITY_AUTH_TOKEN=${{ secrets.SANITY_AUTH_TOKEN }}
