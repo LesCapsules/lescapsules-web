@@ -31,6 +31,11 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'mainPhoto',
+      title: 'Photo principale',
+      type: 'image',
+    },
+    {
       name: 'photos',
       title: 'Photos',
       type: 'array',
