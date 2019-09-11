@@ -2,20 +2,39 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 const IndexPage = ({ location, data }) => {
-  const pagesArray = data.allSitePage.edges
+  const pagesArray = data.allSanityGallery.edges
   return (
     <Layout location={location}>
       <div className="container">
         <h1>Galleries de photos:</h1>
-        <ul>
-          {pagesArray.map(({ node }) => (
-            <li key={node.context.id}>
-              <Link to={node.path}>{node.context.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <div className="row">
+          {pagesArray.map(({ node }) => {
+            const pageUrl = `/photos/${node.year}/${node.slug.current}`
+            return (
+              <div
+                className="card col-6 col-md-4 col-lg-3 p-3"
+                key={node.id}
+                style={{ borderWidth: '0' }}
+              >
+                <Link to={pageUrl}>
+                  <div>
+                    <Img
+                      fluid={node.mainPhoto.asset.thumb}
+                      className="card-img-top"
+                    />
+                    <div className="card-text">
+                      <h4>{node.title}</h4>
+                      <p className="h6">{node.year}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )
@@ -25,14 +44,21 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query GalleryPagesList {
-    allSitePage(filter: { context: { isGallery: { eq: true } } }) {
+    allSanityGallery(sort: { fields: date, order: DESC }) {
       edges {
         node {
-          path
-          context {
-            location
-            title
-            id
+          id
+          title
+          slug {
+            current
+          }
+          year: date(formatString: "YYYY")
+          mainPhoto {
+            asset {
+              thumb: fluid(maxWidth: 300, maxHeight: 200) {
+                ...GatsbySanityImageFluid
+              }
+            }
           }
         }
       }
