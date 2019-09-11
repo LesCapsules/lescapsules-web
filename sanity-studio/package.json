@@ -11,7 +11,7 @@
     "deploy:studio": "sanity deploy",
     "deploy:graphql": "sanity graphql deploy --no-playground",
     "start": "sanity start",
-    "test": "sanity check"
+    "test": "sanity build && sanity check"
   },
   "keywords": [
     "sanity"
