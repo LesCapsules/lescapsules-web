@@ -12,6 +12,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'date',
+      title: 'Date',
+      type: 'date',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -24,11 +29,6 @@ export default {
       name: 'overview',
       title: 'Overview',
       type: 'blockContent',
-    },
-    {
-      name: 'date',
-      title: 'Date',
-      type: 'datetime',
     },
     {
       name: 'mainPhoto',
