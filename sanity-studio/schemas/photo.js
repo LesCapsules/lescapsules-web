@@ -1,10 +1,10 @@
-import photoIcon from 'react-icons/lib/md/photo'
+import { MdPhoto } from 'react-icons/md'
 
 export default {
   name: 'photo',
   title: 'Photo',
   type: 'document',
-  icon: photoIcon,
+  icon: MdPhoto,
   options: {
     hotspot: true,
   },
