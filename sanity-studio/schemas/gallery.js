@@ -1,10 +1,10 @@
-import albumIcon from 'react-icons/lib/md/photo-album'
+import { MdPhotoLibrary } from 'react-icons/md'
 
 export default {
   name: 'gallery',
-  title: 'Gallery',
+  title: 'Album',
   type: 'document',
-  icon: albumIcon,
+  icon: MdPhotoLibrary,
   fields: [
     {
       name: 'title',
