@@ -17,7 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug {
               current
             }
-            date(formatString: "DD MMMM YYYY", locale: "fr-FR")
+            year: date(formatString: "YYYY")
           }
         }
       }
@@ -32,14 +32,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Process result & create pages
   result.data.allSanityGallery.edges.forEach(({ node }) => {
+    const urlPath = `/photos/${node.year}/${node.slug.current}/`
     actions.createPage({
-      path: `/photos/${node.slug.current}/`,
+      path: urlPath,
       component: path.resolve(`./src/templates/gallery-page.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         id: node.id,
-        location: `/photos/${node.slug.current}/`,
+        location: urlPath,
         title: node.title,
         isGallery: true,
       },
