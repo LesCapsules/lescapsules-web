@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import GridCard from '../components/card-grid'
+import Row from '../components/row'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -10,31 +12,22 @@ const IndexPage = ({ location, data }) => {
     <Layout location={location}>
       <div className="container">
         <h1>Galleries de photos:</h1>
-        <div className="row">
+        <Row>
           {pagesArray.map(({ node }) => {
             const pageUrl = `/photos/${node.year}/${node.slug.current}`
             return (
-              <div
-                className="card col-6 col-md-4 col-lg-3 p-3"
-                key={node.id}
-                style={{ borderWidth: '0' }}
-              >
+              <GridCard key={node.id}>
                 <Link to={pageUrl}>
-                  <div>
-                    <Img
-                      fluid={node.mainPhoto.asset.thumb}
-                      className="card-img-top"
-                    />
-                    <div className="card-text">
-                      <h4>{node.title}</h4>
-                      <p className="h6">{node.year}</p>
-                    </div>
+                  <Img fluid={node.mainPhoto.asset.thumb} />
+                  <div className="m-2">
+                    <h4>{node.title}</h4>
+                    <p className="h6">{node.year}</p>
                   </div>
                 </Link>
-              </div>
+              </GridCard>
             )
           })}
-        </div>
+        </Row>
       </div>
     </Layout>
   )
