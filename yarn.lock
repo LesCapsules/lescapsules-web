@@ -1738,10 +1738,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-0.142.0.tgz#ea8777b72bc9db531e25c0066407d504df91f22d"
   integrity sha512-dHNGG1J8QvJh/Itce0lBDmGEdbzpVHOnZz5QDO/K6uWMCCFsj3/ePseidOJpgKSf4Xg2qfgAVGQEad3o0B6dhQ==
 
-"@sanity/google-maps-input@0.142.4":
-  version "0.142.4"
-  resolved "https://registry.yarnpkg.com/@sanity/google-maps-input/-/google-maps-input-0.142.4.tgz#c00861a20e6fb8347acd252ad209d8cd821e9b27"
-  integrity sha512-YSbQIRotnUDlzSe0NfHLDGiWLov8Kmv2NkQhz34tqt4CjCFp8Z9n2LWCNtHWwb9fgnTKwNlG9oWSZIhAlUfS7w==
+"@sanity/google-maps-input@0.142.5":
+  version "0.142.5"
+  resolved "https://registry.yarnpkg.com/@sanity/google-maps-input/-/google-maps-input-0.142.5.tgz#f8e573eecdc934b2b2b9e85999dd6ad486121883"
+  integrity sha512-CYaVgOIKvnQ0m3edelLcMnx0wx1AhHUEo+1HNo5LAyxzKa0RUyRjUY/ANbwPhwMTZY6QgZernmhhcCAXDaNuHw==
   dependencies:
     in-publish "^2.0.0"
 
