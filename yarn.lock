@@ -1495,10 +1495,10 @@
     in-publish "^2.0.0"
     promise-props-recursive "^1.0.0"
 
-"@sanity/cli@0.142.2":
-  version "0.142.2"
-  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.142.2.tgz#186c592b7906cb1e6064ebe94d5dd3521e2a7ffa"
-  integrity sha512-kHxYtdySeUeV2Ag9KfDr3esbcJsFuC3c5T3mK2udeAE2BHnu4v9h7Iqi30X2eOHUSrnycDGrevaoT3lUWQscvw==
+"@sanity/cli@0.142.6":
+  version "0.142.6"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.142.6.tgz#6129ffa285a2686f1f003a0f0d57d83cff1d3169"
+  integrity sha512-jWALEF8KTFY6LGSa+N6jysfQCu6466QjdO54Yq0Ny2PD+J4iXP3Daq0Qq60pWjHswKrkF6hfNU7aZfN7EVVccg==
 
 "@sanity/client@0.142.6":
   version "0.142.6"
