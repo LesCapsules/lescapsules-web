@@ -1538,10 +1538,10 @@
     react-tippy "^1.2.3"
     rxjs "^6.5.2"
 
-"@sanity/default-login@0.142.3":
-  version "0.142.3"
-  resolved "https://registry.yarnpkg.com/@sanity/default-login/-/default-login-0.142.3.tgz#e2d70fc0a0fab89b5344eb25e2c5e68ec44519ae"
-  integrity sha512-6aOLZQs8hXG1htteeQPxVG2MJsj12wtz60UeyNto5a27wxS1j+VQSj+zCOvfwk9DQdyfxtz9hlaqD1kPb8Ef3Q==
+"@sanity/default-login@0.142.6":
+  version "0.142.6"
+  resolved "https://registry.yarnpkg.com/@sanity/default-login/-/default-login-0.142.6.tgz#c63453fc3e618d00199a4ac21190390c51efdfb9"
+  integrity sha512-z2Kt+jYCt8pSDPywL2rv+3Sn9+Fvc0JLDaC321VlTvs5+gK8m2I2i7mu8E/lfVzAxJkCfMO6Vb9NdfqgbondpQ==
   dependencies:
     "@sanity/generate-help-url" "0.142.0"
     in-publish "^2.0.0"
@@ -1714,15 +1714,6 @@
     tempy "^0.3.0"
     whatwg-url "^7.0.0"
 
-"@sanity/mutator@0.142.0":
-  version "0.142.0"
-  resolved "https://registry.yarnpkg.com/@sanity/mutator/-/mutator-0.142.0.tgz#b193e36504990abae36c691d3bb6c3f53a485148"
-  integrity sha512-BhnbD4l9Um0JKad+et8LXgJi8n/Loq/G07TOLygsvrmNcxBYF7U2EY76J2A9wcjBvZprOciwzO/Vm3XhTlItIg==
-  dependencies:
-    debug "^3.1.0"
-    diff-match-patch "^1.0.0"
-    lodash "^4.17.4"
-
 "@sanity/mutator@0.142.6":
   version "0.142.6"
   resolved "https://registry.yarnpkg.com/@sanity/mutator/-/mutator-0.142.6.tgz#8228893a167ade6e11be241b7318b97d21f9b411"
@@ -1803,19 +1794,6 @@
     moment-timezone "^0.5.11"
     prop-types "^15.6.0"
     react-datepicker "^1.8.0"
-
-"@sanity/schema@0.142.0":
-  version "0.142.0"
-  resolved "https://registry.yarnpkg.com/@sanity/schema/-/schema-0.142.0.tgz#685e0d8479c7e6060efeadedb6ffe7da1a804d67"
-  integrity sha512-j0+LPv4+9sQBM1rZ02E5ze5Tw+BOUpcaCbXfsxaSk+rFsNsHYFiVyaTzpMxLeP8NPc11smu67fN3Q9IAJHjjDg==
-  dependencies:
-    "@sanity/generate-help-url" "0.142.0"
-    arrify "^1.0.1"
-    humanize-list "^1.0.1"
-    json-reduce "^1.0.0"
-    leven "^2.1.0"
-    lodash "^4.17.4"
-    object-inspect "^1.3.0"
 
 "@sanity/schema@0.142.6":
   version "0.142.6"
@@ -1898,15 +1876,6 @@
     "@types/lodash" "^4.14.116"
     "@types/node" "^8.0.0"
     lodash "^4.17.4"
-
-"@sanity/util@0.142.0":
-  version "0.142.0"
-  resolved "https://registry.yarnpkg.com/@sanity/util/-/util-0.142.0.tgz#27ca7b31e32a05d881737a05fc365245bd02c97a"
-  integrity sha512-f2beG+Bla858ocxqzCMLqxSel7pDiHlXBMd1kpaqnhR6kAj0dnML8/Yv5tvB2Ex3Lp2xFCRndW4EKAcpfN7Dxw==
-  dependencies:
-    fs-extra "^6.0.1"
-    lodash "^4.17.4"
-    resolve-from "^4.0.0"
 
 "@sanity/util@0.142.6":
   version "0.142.6"
@@ -11298,7 +11267,7 @@ object-hash@^1.1.4:
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.3.1.tgz#fde452098a951cb145f039bb7d455449ddc126df"
   integrity sha512-OSuu/pU4ENM9kmREg0BdNrUDIl1heYa4mBZacJc+vVWz4GtAwu7jO8s4AIt2aGRUTqxykpWzI3Oqnsm13tTMDA==
 
-object-inspect@^1.3.0, object-inspect@^1.6.0:
+object-inspect@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.6.0.tgz#c70b6cbf72f274aab4c34c0c82f5167bf82cf15b"
   integrity sha512-GJzfBZ6DgDAmnuaM3104jR4s1Myxr3Y3zfIyN4z3UdqN69oSRacNK8UhnobDdC+7J2AHCjGwxQubNJfE70SXXQ==
