@@ -1337,12 +1337,12 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@browniebroke/gatsby-image-gallery@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-2.0.0.tgz#44a20e6a7bdd37f6b7dd3c766fceae8caf5e960e"
-  integrity sha512-6sr8LP26S3yMTeTw38B0zzIcCK53CNKJUqs4Og4t0AaVJWw5Vx2SJ2nshFUdYlWg3u5FScr+TBwKVtJLPsveJQ==
+"@browniebroke/gatsby-image-gallery@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-2.0.1.tgz#b1d1c6bfcc90b1c7d08916e11c2acaa788db48ec"
+  integrity sha512-UHFx0wudOSOxkCvL7bNFz1rO20U/Uh3oDYA2uPjchrr5A3wpY8yl1hTbOOWIGe0/mJpvbYxDTZkjM+9zC0gbfg==
   dependencies:
-    react-image-lightbox "5.1.0"
+    react-image-lightbox "5.1.1"
     styled-components "^4.4.0"
 
 "@emotion/is-prop-valid@^0.8.1":
@@ -13907,13 +13907,13 @@ react-icons@^2.2.7:
   dependencies:
     react-icon-base "2.1.0"
 
-react-image-lightbox@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.0.tgz#b47b904b027c918acdd9efa94dc0a0ddd8125c86"
-  integrity sha512-R46QvffoDBscLQgTl4s3kFxVbnP7a+nIh7AXJNS0EXVeDaa6zKDKtIT+jFeEvs+F9oUHtZfenG1NHhTkO4hEOA==
+react-image-lightbox@5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.1.tgz#872d1a4336b5a6410ea7909b767cf59014081004"
+  integrity sha512-GprldD8AqpRb2hsOdns3sI7Xeo9hJlcybDxuli4RB+ml1J/GaFaUuRkT/7IrTLv2+4vkR74ahz2LD0HOUHI7wA==
   dependencies:
     prop-types "^15.6.2"
-    react-modal "^3.6.1"
+    react-modal "^3.8.1"
 
 react-immutable-proptypes@^2.1.0:
   version "2.1.0"
@@ -13967,10 +13967,10 @@ react-measure@^2.3.0:
     prop-types "^15.6.2"
     resize-observer-polyfill "^1.5.0"
 
-react-modal@^3.6.1:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.9.1.tgz#82ce53d110eea0d8f028f3315ef336d0baffa9b9"
-  integrity sha512-k+TUkhGWpIVHLsEyjNmlyOYL0Uz03fNZvlkhCImd1h+6fhNgTi6H6jexVXPVhD2LMMDzJyfugxMN+APN/em+eQ==
+react-modal@^3.8.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.11.1.tgz#2a0d6877c9e98f123939ea92d2bb4ad7fa5a17f9"
+  integrity sha512-8uN744Yq0X2lbfSLxsEEc2UV3RjSRb4yDVxRQ1aGzPo86QjNOwhQSukDb8U8kR+636TRTvfMren10fgOjAy9eA==
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
