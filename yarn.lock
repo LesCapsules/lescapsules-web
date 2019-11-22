@@ -2108,12 +2108,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-0.145.0.tgz#24ae61fa6263851510c774c24cf27cebc436cf35"
   integrity sha512-3FLzq3fdcmETKzVVHr4q1ZtMNqSlOCzohFoIL+ssipmFkhnyUB6L51g98t+1Frpd/BPiA/ItBV+ZUZ2BhWK5yA==
 
-"@sanity/google-maps-input@0.144.2":
-  version "0.144.2"
-  resolved "https://registry.yarnpkg.com/@sanity/google-maps-input/-/google-maps-input-0.144.2.tgz#0096d93ab4c4267db4e795976e4b692c5262a391"
-  integrity sha512-rttTHUZqEkGhs6KP6rWRl5WH26Ff8Zxhbv0fckgwmpfEALqv96MSsH9H5g9YKvqD/P3028LmU03P1Fxen8LGqA==
-  dependencies:
-    in-publish "^2.0.0"
+"@sanity/google-maps-input@0.145.1":
+  version "0.145.1"
+  resolved "https://registry.yarnpkg.com/@sanity/google-maps-input/-/google-maps-input-0.145.1.tgz#be3749ae170225b4b53b9d5804abedaf7a6a780e"
+  integrity sha512-7Arifl/zHJOtKLm7peltgqssN0Nd7KRZ/iJcib1awg0VX2mlQga+o7MxQ3dG59v28PrrJDDV6Pzbk6Fpkh9yYw==
 
 "@sanity/image-url@0.140.15", "@sanity/image-url@^0.140.15":
   version "0.140.15"
