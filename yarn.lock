@@ -1815,10 +1815,10 @@
     in-publish "^2.0.0"
     promise-props-recursive "^1.0.0"
 
-"@sanity/cli@0.144.0":
-  version "0.144.0"
-  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.144.0.tgz#66271545ee7b204ef4d9f9adb51d256ea17d1eaf"
-  integrity sha512-EwkA8IAaFG8HaS5n8tG3q2r1CyjKJZBaBB0ATSxD3aAzjOFhXSjiG6/idjlko7HCxyVkWAb/jeu+re3935+ESA==
+"@sanity/cli@0.145.0":
+  version "0.145.0"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.145.0.tgz#8c7e274a05822fdef24d1e30a91fa96de0bf6d06"
+  integrity sha512-C2KgGyraUAwXkMeL9MS2od4SPj18xfnERWRlbzVCTU88qlPpOpUmQMFV2PB0zGwPfZKMfSl/f4xLETY9VTiPQg==
 
 "@sanity/client@0.145.0":
   version "0.145.0"
