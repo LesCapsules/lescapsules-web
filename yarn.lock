@@ -1814,10 +1814,10 @@
     fs-extra "^6.0.1"
     promise-props-recursive "^1.0.0"
 
-"@sanity/cli@0.145.0":
-  version "0.145.0"
-  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.145.0.tgz#8c7e274a05822fdef24d1e30a91fa96de0bf6d06"
-  integrity sha512-C2KgGyraUAwXkMeL9MS2od4SPj18xfnERWRlbzVCTU88qlPpOpUmQMFV2PB0zGwPfZKMfSl/f4xLETY9VTiPQg==
+"@sanity/cli@0.146.0":
+  version "0.146.0"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.146.0.tgz#4d1f586ee91ce95ce5dab510c829309b85ede955"
+  integrity sha512-wEDfmAcMV0cvMh9+GRYfPEq5j7AAd3U5vvnkwPWQQNSytGkS5J1KZccLcT5ZHWEMTG364yuqdavvkBuCaQxKAw==
 
 "@sanity/client@0.146.0":
   version "0.146.0"
