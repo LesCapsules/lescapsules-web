@@ -12,6 +12,9 @@ const Header = ({ location, data }) => (
       <NavItem location={location} to="/photos/">
         Photos
       </NavItem>
+      <NavItem location={location} to="/drink-team/">
+        Drink Team
+      </NavItem>
     </NavBav>
   </header>
 )
