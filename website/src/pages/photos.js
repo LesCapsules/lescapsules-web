@@ -8,7 +8,7 @@ import Img from 'gatsby-image'
 
 import Container from '../components/container'
 
-const IndexPage = ({ location, data }) => {
+const PhotoIndexPage = ({ location, data }) => {
   const pagesArray = data.allSanityGallery.edges
   return (
     <Layout location={location}>
@@ -35,7 +35,7 @@ const IndexPage = ({ location, data }) => {
   )
 }
 
-export default IndexPage
+export default PhotoIndexPage
 
 export const pageQuery = graphql`
   query GalleryPagesList {
