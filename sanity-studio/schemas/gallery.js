@@ -46,4 +46,22 @@ export default {
       ],
     },
   ],
+  initialValue: () => ({
+    date: new Date().toISOString(),
+  }),
+  preview: {
+    select: {
+      title: 'title',
+      datetime: 'date',
+    },
+    prepare(selection) {
+      const { title, datetime } = selection
+      const date = datetime.split('T')[0]
+      const year = date.split('-')[0]
+      return {
+        title: `${title} (${year})`,
+        subtitle: date,
+      }
+    },
+  },
 }
