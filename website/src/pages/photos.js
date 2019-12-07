@@ -6,11 +6,13 @@ import Row from '../components/row'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
+import Container from '../components/container'
+
 const IndexPage = ({ location, data }) => {
   const pagesArray = data.allSanityGallery.edges
   return (
     <Layout location={location}>
-      <div className="container">
+      <Container>
         <h1>Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
@@ -28,7 +30,7 @@ const IndexPage = ({ location, data }) => {
             )
           })}
         </Row>
-      </div>
+      </Container>
     </Layout>
   )
 }
