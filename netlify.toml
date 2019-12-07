@@ -3,3 +3,6 @@
   publish = "website/public"
   command = "yarn workspace website build"
   environment = { GATSBY_CPU_COUNT = "1" }
+
+[context.production]
+  environment = { GA_TRACKING_ID = "UA-134920468-1" }
