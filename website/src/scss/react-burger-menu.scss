@@ -1,0 +1,75 @@
+$rbm-button-size: 36px;
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  width: $rbm-button-size;
+  height: $rbm-button-size;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $secondary;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: darken($secondary, 10%);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  position: absolute;
+  height: $rbm-button-size !important;
+  width: $rbm-button-size !important;
+  & > span {
+    // Reset inline styling with !important
+    position: initial !important;
+    top: initial !important;
+    right: initial !important;
+  }
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: $primary;
+  // Doesn't seem to respect values without !important
+  width: 7px !important;
+  height: 36px !important;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $secondary;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: $primary;
+  padding: 0.8em;
+  list-style: none;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.3s ease 0s;
+  left: 0;
+  top: 0;
+}

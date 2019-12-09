@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { slide as Menu } from 'react-burger-menu'
 
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import Container from './container'
@@ -11,7 +12,7 @@ const NavBav = ({ children }) => (
       <Link to="/" className="navbar-brand d-flex align-items-center">
         <LogoCapsules />
       </Link>
-      <ul className="navbar-nav ml-auto">{children}</ul>
+      <Menu right>{children}</Menu>
     </Container>
   </nav>
 )
