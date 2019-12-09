@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { gutterWidth } from './constants'
 
 const Row = styled.div`
@@ -6,6 +6,11 @@ const Row = styled.div`
   flex-wrap: wrap;
   margin-right: -${gutterWidth};
   margin-left: -${gutterWidth};
+  ${props =>
+    props.alignItems &&
+    css`
+      align-items: ${props.alignItems};
+    `}
 `
 
 export default Row
