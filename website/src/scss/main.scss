@@ -2,9 +2,11 @@
 
 @import 'variables';
 @import 'custom-bootstrap';
+@import 'react-burger-menu';
 
 .brand-logo {
   height: 40px;
+  color: $secondary;
   path {
     fill: currentColor;
   }

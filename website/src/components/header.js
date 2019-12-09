@@ -1,19 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { IoMdImages, IoMdHome, IoMdPeople } from 'react-icons/io'
 import NavBav from './nav-bar'
 import NavItem from './nav-item'
-import PropTypes from 'prop-types'
 
 const Header = ({ location, data }) => (
   <header>
     <NavBav>
       <NavItem location={location} to="/">
-        Acceuil
+        <IoMdHome /> Acceuil
       </NavItem>
       <NavItem location={location} to="/photos/">
-        Photos
+        <IoMdImages /> Photos
       </NavItem>
       <NavItem location={location} to="/drink-team/">
-        Drink Team
+        <IoMdPeople /> Drink Team
       </NavItem>
     </NavBav>
   </header>
