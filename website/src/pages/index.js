@@ -10,10 +10,6 @@ const IndexPage = ({ location, data }) => {
       <div>
         <Img fluid={data.photo.image.asset.full} />
       </div>
-      <div className="container">
-        <h1>Les Capsules</h1>
-        <p>Bienvenue sur notre Site</p>
-      </div>
     </Layout>
   )
 }
