@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const NavItem = ({ location, children, to }) => (
-  <li className="nav-item active px-3">
+  <li className="nav-item">
     <Link to={to} className="nav-link">
       {children}
     </Link>
