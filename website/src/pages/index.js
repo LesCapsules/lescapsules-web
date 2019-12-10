@@ -1,8 +1,10 @@
 import React from 'react'
 
-import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import Container from '../components/container'
+import Layout from '../components/layout'
+import Row from '../components/row'
 
 const IndexPage = ({ location, data }) => {
   return (
@@ -10,6 +12,17 @@ const IndexPage = ({ location, data }) => {
       <div>
         <Img fluid={data.photo.image.asset.full} />
       </div>
+      <Container>
+        <Row>
+          <div className="col">
+            <div className="p-5">
+              <h2 className="text-center text-primary">
+                Bienvenue sur le site de la Bandade!
+              </h2>
+            </div>
+          </div>
+        </Row>
+      </Container>
     </Layout>
   )
 }
