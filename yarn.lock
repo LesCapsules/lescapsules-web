@@ -1999,10 +1999,10 @@
     fs-extra "^6.0.1"
     promise-props-recursive "^1.0.0"
 
-"@sanity/cli@0.146.0":
-  version "0.146.0"
-  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.146.0.tgz#4d1f586ee91ce95ce5dab510c829309b85ede955"
-  integrity sha512-wEDfmAcMV0cvMh9+GRYfPEq5j7AAd3U5vvnkwPWQQNSytGkS5J1KZccLcT5ZHWEMTG364yuqdavvkBuCaQxKAw==
+"@sanity/cli@0.147.3":
+  version "0.147.3"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-0.147.3.tgz#e94dd12e6c4a9cc66b8fd390683d40593a6048cd"
+  integrity sha512-bjmSWF+mSH2zVZX4beQLF5RqE5ODhCjoXyxtLQfqN/y6I2QjGlvUB73ZJ491eU7HPxJqKUspwNphu9VJyKR+OA==
 
 "@sanity/client@0.147.3":
   version "0.147.3"
