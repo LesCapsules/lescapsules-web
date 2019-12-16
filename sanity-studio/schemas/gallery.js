@@ -27,7 +27,7 @@ export default {
     },
     {
       name: 'overview',
-      title: 'Overview',
+      title: 'Description',
       type: 'blockContent',
     },
     {
@@ -64,4 +64,16 @@ export default {
       }
     },
   },
+  orderings: [
+    {
+      title: 'Date',
+      name: 'dateateDesc',
+      by: [{ field: 'date', direction: 'desc' }],
+    },
+    {
+      title: 'Ancienneté',
+      name: 'dateateAsc',
+      by: [{ field: 'date', direction: 'asc' }],
+    },
+  ],
 }
