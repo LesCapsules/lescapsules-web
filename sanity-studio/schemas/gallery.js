@@ -29,6 +29,7 @@ export default {
       name: 'overview',
       title: 'Description',
       type: 'blockContent',
+      hidden: true,
     },
     {
       name: 'mainPhoto',
