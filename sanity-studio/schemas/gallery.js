@@ -54,14 +54,16 @@ export default {
     select: {
       title: 'title',
       datetime: 'date',
+      photo: 'mainPhoto',
     },
     prepare(selection) {
-      const { title, datetime } = selection
+      const { title, datetime, photo } = selection
       const date = datetime.split('T')[0]
       const year = date.split('-')[0]
       return {
         title: `${title} (${year})`,
         subtitle: date,
+        media: photo,
       }
     },
   },
