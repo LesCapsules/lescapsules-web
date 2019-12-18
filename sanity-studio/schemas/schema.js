@@ -21,10 +21,10 @@ export default createSchema({
     // in the studio.
     gallery,
     member,
+    photo,
     video,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
-    photo,
     blockContent,
   ]),
 })
