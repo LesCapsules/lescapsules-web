@@ -8,12 +8,11 @@ const customStyles = {
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
   },
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    width: 'auto',
+    position: 'relative',
+    maxWidth: '1024px',
+    marginRight: 'auto',
+    marginLeft: 'auto',
   },
 }
 
@@ -65,15 +64,15 @@ const LiteYouTubeEmbed = ({ id, title }) => {
           onRequestClose={() => setModalIsOpen(false)}
           contentLabel={title}
         >
-          <iframe
-            title={title}
-            width="1120"
-            height="630"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            src={iframeSrc}
-          />
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe
+              title={title}
+              className="embed-responsive-item"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              src={iframeSrc}
+            />
+          </div>
         </Modal>
       </div>
     </Fragment>
