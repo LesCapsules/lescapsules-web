@@ -5,6 +5,7 @@ $rbm-button-size: 36px;
   position: relative;
   width: $rbm-button-size;
   height: $rbm-button-size;
+  z-index: initial !important;
 }
 
 /* Color/shape of burger icon bars */
