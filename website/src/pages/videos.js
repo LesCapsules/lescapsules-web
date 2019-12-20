@@ -18,7 +18,7 @@ const VideosIndexPage = ({ location, data }) => {
             {videosArray.map(({ node }) => {
               const { id, title, youtubeId } = node
               return (
-                <GridCard key={id}>
+                <GridCard key={id} width={100} widthSm={100}>
                   <LiteYouTubeEmbed id={youtubeId} title={title} />
                   <div className="m-2">
                     <h4>{title}</h4>
