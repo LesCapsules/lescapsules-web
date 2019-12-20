@@ -13,23 +13,25 @@ const PhotoIndexPage = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Container>
-        <h1>Galleries de photos:</h1>
-        <Row>
-          {pagesArray.map(({ node }) => {
-            const pageUrl = `/photos/${node.year}/${node.slug.current}`
-            return (
-              <GridCard key={node.id}>
-                <Link to={pageUrl}>
-                  <Img fluid={node.mainPhoto.asset.thumb} />
-                  <div className="m-2">
-                    <h4>{node.title}</h4>
-                    <p className="h6">{node.year}</p>
-                  </div>
-                </Link>
-              </GridCard>
-            )
-          })}
-        </Row>
+        <div className="py-5">
+          <h1>Galleries de photos:</h1>
+          <Row>
+            {pagesArray.map(({ node }) => {
+              const pageUrl = `/photos/${node.year}/${node.slug.current}`
+              return (
+                <GridCard key={node.id}>
+                  <Link to={pageUrl}>
+                    <Img fluid={node.mainPhoto.asset.thumb} />
+                    <div className="m-2">
+                      <h4>{node.title}</h4>
+                      <p className="h6">{node.year}</p>
+                    </div>
+                  </Link>
+                </GridCard>
+              )
+            })}
+          </Row>
+        </div>
       </Container>
     </Layout>
   )
