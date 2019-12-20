@@ -22,7 +22,7 @@
     "gatsby-plugin-sharp": "2.3.7",
     "gatsby-plugin-sitemap": "2.2.24",
     "gatsby-source-filesystem": "2.1.42",
-    "gatsby-source-sanity": "5.0.4",
+    "gatsby-source-sanity": "5.0.5",
     "gatsby-transformer-remark": "2.6.42",
     "gatsby-transformer-sharp": "2.3.9",
     "node-sass": "4.13.0",
