@@ -11,23 +11,21 @@ const VideosIndexPage = ({ location, data }) => {
   const videosArray = data.allSanityVideo.edges
   return (
     <Layout location={location}>
-      <Container>
-        <div className="py-5">
-          <h1>Vidéos</h1>
-          <Row>
-            {videosArray.map(({ node }) => {
-              const { id, title, youtubeId } = node
-              return (
-                <GridCard key={id} width={100} widthSm={100}>
-                  <LiteYouTubeEmbed id={youtubeId} title={title} />
-                  <div className="m-2">
-                    <h4>{title}</h4>
-                  </div>
-                </GridCard>
-              )
-            })}
-          </Row>
-        </div>
+      <Container yPadding={true}>
+        <h1>Vidéos</h1>
+        <Row>
+          {videosArray.map(({ node }) => {
+            const { id, title, youtubeId } = node
+            return (
+              <GridCard key={id} width={100} widthSm={100}>
+                <LiteYouTubeEmbed id={youtubeId} title={title} />
+                <div className="m-2">
+                  <h4>{title}</h4>
+                </div>
+              </GridCard>
+            )
+          })}
+        </Row>
       </Container>
     </Layout>
   )
