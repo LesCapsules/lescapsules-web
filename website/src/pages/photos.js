@@ -12,7 +12,7 @@ const PhotoIndexPage = ({ location, data }) => {
   const pagesArray = data.allSanityGallery.edges
   return (
     <Layout location={location}>
-      <Container>
+      <Container yPadding={true}>
         <h1>Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {

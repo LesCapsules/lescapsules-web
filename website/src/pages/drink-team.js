@@ -12,7 +12,7 @@ const DrinkTeamPage = ({ location, data }) => {
   const membersArray = data.allSanityMember.edges
   return (
     <Layout location={location}>
-      <Container>
+      <Container yPadding={true}>
         <h1>Drink team:</h1>
         <Row>
           {membersArray.map(({ node }) => {

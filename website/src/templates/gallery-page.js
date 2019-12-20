@@ -1,8 +1,10 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Layout from '../components/layout'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
+
+import Layout from '../components/layout'
+import Container from '../components/container'
 
 const GalleryPage = ({ data, pageContext }) => {
   const page = data.sanityGallery
@@ -11,10 +13,10 @@ const GalleryPage = ({ data, pageContext }) => {
   const thumbs = images.map(imageNode => imageNode.asset.thumb)
   return (
     <Layout location={pageContext.location}>
-      <div className="container my-4">
+      <Container yPadding={true}>
         <h1>{page.title}</h1>
         <Gallery images={fullSize} thumbs={thumbs} />
-      </div>
+      </Container>
     </Layout>
   )
 }
