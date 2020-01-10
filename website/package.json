@@ -40,7 +40,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.17.0",
     "prettier": "1.19.1",
-    "textlint": "11.5.0"
+    "textlint": "11.6.1"
   },
   "license": "MIT",
   "scripts": {
