@@ -37,7 +37,7 @@ export default DrinkTeamPage
 
 export const pageQuery = graphql`
   query DrinkTeamQuery {
-    allSanityMember {
+    allSanityMember(sort: { fields: name }) {
       edges {
         node {
           id
