@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import GridCard from '../components/card-grid'
-import Row from '../components/row'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
+import GridCard from '../components/card-grid'
 import Container from '../components/container'
+import Layout from '../components/layout'
+import Profile from '../components/profile'
+import Row from '../components/row'
 
 const DrinkTeamPage = ({ location, data }) => {
   const membersArray = data.allSanityMember.edges
@@ -18,12 +18,12 @@ const DrinkTeamPage = ({ location, data }) => {
           {membersArray.map(({ node }) => {
             return (
               <GridCard key={node.id}>
-                <Img fluid={node.photo.asset.thumb} />
-                <div className="m-2">
-                  <h4>{node.name}</h4>
-                  <p>Lieu de bandade favori: {node.favouritePlace}</p>
-                  <p>Hobbies: {node.hobbies}</p>
-                </div>
+                <Profile
+                  name={node.name}
+                  fluidImg={node.photo.asset.thumb}
+                  favouritePlace={node.favouritePlace}
+                  hobbies={node.hobbies}
+                />
               </GridCard>
             )
           })}
