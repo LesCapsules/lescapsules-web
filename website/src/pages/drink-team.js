@@ -20,7 +20,7 @@ const DrinkTeamPage = ({ location, data }) => {
               <GridCard key={node.id}>
                 <Profile
                   name={node.name}
-                  fluidImg={node.photo.asset.thumb}
+                  imgSrc={node.photo.asset.fixed.src}
                   favouritePlace={node.favouritePlace}
                   hobbies={node.hobbies}
                 />
@@ -46,8 +46,8 @@ export const pageQuery = graphql`
           favouritePlace
           photo {
             asset {
-              thumb: fluid(maxWidth: 300, maxHeight: 300) {
-                ...GatsbySanityImageFluid
+              fixed(height: 300, width: 300) {
+                ...GatsbySanityImageFixed
               }
             }
           }

@@ -1,10 +1,9 @@
 import React from 'react'
-import Img from 'gatsby-image'
 
-const Profile = ({ name, fluidImg, favouritePlace, hobbies }) => {
+const Profile = ({ name, imgSrc, favouritePlace, hobbies }) => {
   return (
     <>
-      <Img fluid={fluidImg} />
+      <img src={imgSrc} alt={name} className="img-fluid" />
       <div className="m-2">
         <h4>{name}</h4>
         <p>Lieu de bandade favori: {favouritePlace}</p>
