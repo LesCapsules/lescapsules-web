@@ -15,10 +15,18 @@ const IndexPage = ({ location, data }) => {
       <Container>
         <Row>
           <div className="col">
-            <div className="p-5">
+            <div className="p-5 pb-0">
               <h2 className="text-center text-primary">
                 Bienvenue sur le site de la Bandade!
               </h2>
+              <p className="lead mt-5">
+                Ce site a pour vocation de réunir une bande de collègues autour
+                d'un centre d'intérêt : l'art de la fête !!! Cette passion les
+                rassemble au sein du comité des fêtes de Sauclières, où les
+                Capsules peuvent donner libre cours à leur imagination pour
+                faire bouger ce petit village du sud Aveyron. Vous trouverez ici
+                des photos de leurs plus célèbres exploits !!
+              </p>
             </div>
           </div>
         </Row>
