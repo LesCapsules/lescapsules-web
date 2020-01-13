@@ -11,21 +11,23 @@ const DrinkTeamPage = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Container yPadding={true}>
-        <h1>Drink team:</h1>
-        {membersArray.map(({ node }) => {
-          return (
-            <div className="row justify-content-center mb-3" key={node.id}>
-              <div className="col-11 col-md-10 col-lg-8">
-                <Profile
-                  name={node.name}
-                  imgSrc={node.photo.asset.fixed.src}
-                  favouritePlace={node.favouritePlace}
-                  hobbies={node.hobbies}
-                />
-              </div>
-            </div>
-          )
-        })}
+        <div className="row justify-content-center">
+          <div className="col-10 col-md-8">
+            <h1>Drink team:</h1>
+            {membersArray.map(({ node }) => {
+              return (
+                <div className="mb-3" key={node.id}>
+                  <Profile
+                    name={node.name}
+                    imgSrc={node.photo.asset.fixed.src}
+                    favouritePlace={node.favouritePlace}
+                    hobbies={node.hobbies}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </Container>
     </Layout>
   )
