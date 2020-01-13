@@ -2,11 +2,9 @@ import React from 'react'
 
 import { graphql } from 'gatsby'
 
-import GridCard from '../components/card-grid'
 import Container from '../components/container'
 import Layout from '../components/layout'
 import Profile from '../components/profile'
-import Row from '../components/row'
 
 const DrinkTeamPage = ({ location, data }) => {
   const membersArray = data.allSanityMember.edges
@@ -14,20 +12,20 @@ const DrinkTeamPage = ({ location, data }) => {
     <Layout location={location}>
       <Container yPadding={true}>
         <h1>Drink team:</h1>
-        <Row>
-          {membersArray.map(({ node }) => {
-            return (
-              <GridCard key={node.id}>
+        {membersArray.map(({ node }) => {
+          return (
+            <div className="row justify-content-center mb-3" key={node.id}>
+              <div className="col-11 col-md-10 col-lg-8">
                 <Profile
                   name={node.name}
                   imgSrc={node.photo.asset.fixed.src}
                   favouritePlace={node.favouritePlace}
                   hobbies={node.hobbies}
                 />
-              </GridCard>
-            )
-          })}
-        </Row>
+              </div>
+            </div>
+          )
+        })}
       </Container>
     </Layout>
   )
