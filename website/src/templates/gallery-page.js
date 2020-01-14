@@ -25,9 +25,6 @@ export const pageQuery = graphql`
   query GalleryData($id: String!) {
     sanityGallery(id: { eq: $id }) {
       title
-      slug {
-        current
-      }
       photos {
         asset {
           thumb: fluid(maxWidth: 270, maxHeight: 270) {

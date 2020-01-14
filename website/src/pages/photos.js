@@ -1,4 +1,5 @@
 import React from 'react'
+import slugify from 'slugify'
 
 import Layout from '../components/layout'
 import GridCard from '../components/card-grid'
@@ -16,7 +17,7 @@ const PhotoIndexPage = ({ location, data }) => {
         <h1>Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
-            const pageUrl = `/photos/${node.year}/${node.slug.current}`
+            const pageUrl = `/photos/${node.year}/${slugify(node.title)}/`
             return (
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
@@ -44,9 +45,6 @@ export const pageQuery = graphql`
         node {
           id
           title
-          slug {
-            current
-          }
           year: date(formatString: "YYYY")
           mainPhoto {
             asset {

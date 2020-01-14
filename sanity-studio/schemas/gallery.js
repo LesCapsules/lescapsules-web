@@ -17,15 +17,6 @@ export default {
       type: 'date',
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 100,
-      },
-    },
-    {
       name: 'overview',
       title: 'Description',
       type: 'blockContent',

@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`)
+const slugify = require(`slugify`)
 
 // Create a page for each markdown file for photos
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -32,7 +33,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Process result & create pages
   result.data.allSanityGallery.edges.forEach(({ node }) => {
-    const urlPath = `/photos/${node.year}/${node.slug.current}/`
+    const urlPath = `/photos/${node.year}/${slugify(node.title)}/`
     actions.createPage({
       path: urlPath,
       component: path.resolve(`./src/templates/gallery-page.js`),
