@@ -15,9 +15,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             id
             title
-            slug {
-              current
-            }
             year: date(formatString: "YYYY")
           }
         }
