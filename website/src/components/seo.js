@@ -24,7 +24,7 @@ function SEO({ title, description, image, lang, meta }) {
         defaultImage: sanityPhoto(name: { eq: "all-staff-big" }) {
           image {
             asset {
-              fluid(maxWidth: 1024) {
+              fixed(width: 1024, height: 800) {
                 src
               }
             }
@@ -37,7 +37,7 @@ function SEO({ title, description, image, lang, meta }) {
   const metaDescription = description || site.siteMetadata.description
   const imageUrl =
     image === ''
-      ? defaultImage.image.asset.fluid.src
+      ? defaultImage.image.asset.fixed.src
       : image.includes('https://')
       ? image
       : `${site.siteMetadata.siteUrl}${image}`
@@ -49,6 +49,18 @@ function SEO({ title, description, image, lang, meta }) {
     {
       property: `og:image`,
       content: imageUrl,
+    },
+    {
+      property: `og:image:url`,
+      content: imageUrl,
+    },
+    {
+      property: `og:image:width`,
+      content: 1024,
+    },
+    {
+      property: `og:image:height`,
+      content: 800,
     },
   ]
 
@@ -63,6 +75,10 @@ function SEO({ title, description, image, lang, meta }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `og:locale`,
+          content: lang,
         },
         {
           property: `og:title`,

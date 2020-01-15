@@ -41,7 +41,7 @@ export const pageQuery = graphql`
       }
       mainPhoto {
         asset {
-          full: fluid(maxWidth: 1024) {
+          full: fixed(width: 1024, height: 800) {
             src
           }
         }

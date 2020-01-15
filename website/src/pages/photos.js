@@ -56,7 +56,7 @@ export const pageQuery = graphql`
               thumb: fluid(maxWidth: 300, maxHeight: 200) {
                 ...GatsbySanityImageFluid
               }
-              full: fluid(maxWidth: 1024) {
+              full: fixed(width: 1024, height: 800) {
                 src
               }
             }
