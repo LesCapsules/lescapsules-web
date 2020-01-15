@@ -6,12 +6,12 @@ import '@browniebroke/gatsby-image-gallery/dist/style.css'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const GalleryPage = ({ data, path }) => {
+const GalleryPage = ({ data, path, uri }) => {
   const page = data.sanityGallery
   const images = page.photos
   const fullSize = images.map(imageNode => imageNode.asset.full.src)
   const thumbs = images.map(imageNode => imageNode.asset.thumb)
-  console.log(path)
+  console.log(uri)
   return (
     <Layout
       title={page.title}
