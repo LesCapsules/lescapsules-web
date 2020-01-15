@@ -20,7 +20,7 @@ const PhotoIndexPage = ({ data }) => {
       path="/photos/"
     >
       <Container yPadding={true}>
-        <h1>Galleries de photos:</h1>
+        <h1 className="mb-5">Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
             const pageUrl = makeAlbumPagePath(node.title, node.year)

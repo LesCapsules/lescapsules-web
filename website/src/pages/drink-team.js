@@ -17,7 +17,7 @@ const DrinkTeamPage = ({ data }) => {
       <Container yPadding={true}>
         <div className="row justify-content-center">
           <div className="col-10 col-md-8">
-            <h1>Drink team:</h1>
+            <h1 className="mb-5">La Drink Team</h1>
             {membersArray.map(({ node }) => {
               return (
                 <div className="mb-3" key={node.id}>

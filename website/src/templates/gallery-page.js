@@ -14,12 +14,15 @@ const GalleryPage = ({ data, pageContext }) => {
   return (
     <Layout
       title={page.title}
-      description={`Album photo: ${page.title}`}
+      description={`Album photo: ${page.title} (${page.year})`}
       image={page.mainPhoto.asset.full.src}
       path={pageContext.urlPath}
     >
       <Container yPadding={true}>
-        <h1>{page.title}</h1>
+        <h1 className="mb-5">
+          {page.title} <br />
+          <small>{page.year}</small>
+        </h1>
         <Gallery images={fullSize} thumbs={thumbs} />
       </Container>
     </Layout>
@@ -30,6 +33,7 @@ export const pageQuery = graphql`
   query GalleryData($id: String!) {
     sanityGallery(id: { eq: $id }) {
       title
+      year: date(formatString: "YYYY")
       photos {
         asset {
           thumb: fluid(maxWidth: 270, maxHeight: 270) {

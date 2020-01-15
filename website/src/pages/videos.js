@@ -16,7 +16,7 @@ const VideosIndexPage = ({ data }) => {
       path="/videos/"
     >
       <Container yPadding={true}>
-        <h1>Vidéos</h1>
+        <h1 className="mb-5">Vidéos</h1>
         <Row>
           {videosArray.map(({ node }) => {
             const { id, title, youtubeId } = node
