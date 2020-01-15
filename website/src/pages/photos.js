@@ -1,13 +1,12 @@
 import React from 'react'
-import slugify from 'slugify'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import GridCard from '../components/card-grid'
 import Row from '../components/row'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-
 import Container from '../components/container'
+import { makeAlbumPagePath } from '../utils'
 
 const PhotoIndexPage = ({ data }) => {
   const pagesArray = data.allSanityGallery.edges
@@ -23,7 +22,7 @@ const PhotoIndexPage = ({ data }) => {
         <h1>Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
-            const pageUrl = `/photos/${node.year}/${slugify(node.title)}/`
+            const pageUrl = makeAlbumPagePath(node.title, node.year)
             return (
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
