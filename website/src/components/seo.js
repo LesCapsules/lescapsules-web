@@ -24,7 +24,7 @@ function SEO({ title, description, image, lang, meta }) {
         defaultImage: sanityPhoto(name: { eq: "all-staff-big" }) {
           image {
             asset {
-              fixed(width: 1024, height: 600) {
+              fluid(maxWidth: 1024) {
                 src
               }
             }
@@ -37,7 +37,7 @@ function SEO({ title, description, image, lang, meta }) {
   const metaDescription = description || site.siteMetadata.description
   const imageUrl =
     image === ''
-      ? defaultImage.image.asset.src
+      ? defaultImage.image.asset.fluid.src
       : image.includes('https://')
       ? image
       : `${site.siteMetadata.siteUrl}${image}`
