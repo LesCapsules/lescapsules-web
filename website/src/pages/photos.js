@@ -8,7 +8,7 @@ import Row from '../components/row'
 import Container from '../components/container'
 import { makeAlbumPagePath } from '../utils'
 
-const PhotoIndexPage = ({ data }) => {
+const PhotoIndexPage = ({ data, path }) => {
   const pagesArray = data.allSanityGallery.edges
   const mostRecentGallery = data.allSanityGallery.edges[0]
   const seoImage = mostRecentGallery.node.mainPhoto.asset.full.src
@@ -17,6 +17,7 @@ const PhotoIndexPage = ({ data }) => {
       title="Photos"
       description="Galleries de photos sur les évènements marquants. "
       image={seoImage}
+      path={path}
     >
       <Container yPadding={true}>
         <h1>Galleries de photos:</h1>

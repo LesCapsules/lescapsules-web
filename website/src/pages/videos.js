@@ -7,12 +7,13 @@ import Row from '../components/row'
 import Container from '../components/container'
 import LiteYouTubeEmbed from '../components/youtube'
 
-const VideosIndexPage = ({ data }) => {
+const VideosIndexPage = ({ data, path }) => {
   const videosArray = data.allSanityVideo.edges
   return (
     <Layout
       title="Vidéos"
       description="Quelques vidéos retraçant des bons moments."
+      path={path}
     >
       <Container yPadding={true}>
         <h1>Vidéos</h1>
