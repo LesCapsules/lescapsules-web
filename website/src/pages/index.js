@@ -6,9 +6,12 @@ import Container from '../components/container'
 import Layout from '../components/layout'
 import Row from '../components/row'
 
-const IndexPage = ({ location, data }) => {
+const IndexPage = ({ data }) => {
   return (
-    <Layout location={location}>
+    <Layout
+      title="Acceuil"
+      description="Bienvenue sur le site des Capsules, le comité des fêtes de Sauclières"
+    >
       <div>
         <Img fluid={data.photo.image.asset.full} />
       </div>

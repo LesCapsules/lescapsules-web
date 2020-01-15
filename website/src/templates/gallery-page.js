@@ -6,13 +6,17 @@ import '@browniebroke/gatsby-image-gallery/dist/style.css'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const GalleryPage = ({ data, pageContext }) => {
+const GalleryPage = ({ data }) => {
   const page = data.sanityGallery
   const images = page.photos
   const fullSize = images.map(imageNode => imageNode.asset.full.src)
   const thumbs = images.map(imageNode => imageNode.asset.thumb)
   return (
-    <Layout location={pageContext.location}>
+    <Layout
+      title={page.title}
+      description={`${page.title}`}
+      image={page.mainPhoto.asset.full.src}
+    >
       <Container yPadding={true}>
         <h1>{page.title}</h1>
         <Gallery images={fullSize} thumbs={thumbs} />
@@ -32,6 +36,13 @@ export const pageQuery = graphql`
           }
           full: fluid(maxWidth: 1024) {
             ...GatsbySanityImageFluid
+          }
+        }
+      }
+      mainPhoto {
+        asset {
+          full: fluid(maxWidth: 1024) {
+            src
           }
         }
       }

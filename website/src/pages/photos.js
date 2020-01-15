@@ -9,10 +9,16 @@ import Img from 'gatsby-image'
 
 import Container from '../components/container'
 
-const PhotoIndexPage = ({ location, data }) => {
+const PhotoIndexPage = ({ data }) => {
   const pagesArray = data.allSanityGallery.edges
+  const mostRecentGallery = data.allSanityGallery.edges[0]
+  const seoImage = mostRecentGallery.node.mainPhoto.asset.full.src
   return (
-    <Layout location={location}>
+    <Layout
+      title="Photos"
+      description="Galleries de photos sur les évènements marquants. "
+      image={seoImage}
+    >
       <Container yPadding={true}>
         <h1>Galleries de photos:</h1>
         <Row>
@@ -50,6 +56,9 @@ export const pageQuery = graphql`
             asset {
               thumb: fluid(maxWidth: 300, maxHeight: 200) {
                 ...GatsbySanityImageFluid
+              }
+              full: fluid(maxWidth: 1024) {
+                src
               }
             }
           }

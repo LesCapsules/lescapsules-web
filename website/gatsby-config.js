@@ -1,5 +1,5 @@
-const description = `Les capsules est un groupe d'amis de Sauclières dans le sud-Aveyron.`
-const title = 'Les capsules'
+const description = `Les Capsules sont un groupe d'amis de Sauclières dans le sud-Aveyron.`
+const title = 'Les Capsules'
 const baseUrl = `https://www.lescapsules.com`
 
 module.exports = {
