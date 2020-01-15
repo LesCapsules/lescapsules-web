@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         id: node.id,
-        location: urlPath,
+        urlPath: urlPath,
         title: node.title,
         isGallery: true,
       },
