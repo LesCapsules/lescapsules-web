@@ -1,23 +1,29 @@
 import React from 'react'
-import slugify from 'slugify'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import GridCard from '../components/card-grid'
 import Row from '../components/row'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-
 import Container from '../components/container'
+import { makeAlbumPagePath } from '../utils'
 
-const PhotoIndexPage = ({ location, data }) => {
+const PhotoIndexPage = ({ data, path }) => {
   const pagesArray = data.allSanityGallery.edges
+  const mostRecentGallery = data.allSanityGallery.edges[0]
+  const seoImage = mostRecentGallery.node.mainPhoto.asset.full.src
   return (
-    <Layout location={location}>
+    <Layout
+      title="Photos"
+      description="Galleries de photos sur les évènements marquants. "
+      image={seoImage}
+      path={path}
+    >
       <Container yPadding={true}>
         <h1>Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
-            const pageUrl = `/photos/${node.year}/${slugify(node.title)}/`
+            const pageUrl = makeAlbumPagePath(node.title, node.year)
             return (
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
@@ -50,6 +56,9 @@ export const pageQuery = graphql`
             asset {
               thumb: fluid(maxWidth: 300, maxHeight: 200) {
                 ...GatsbySanityImageFluid
+              }
+              full: fixed(width: 1024, height: 800) {
+                src
               }
             }
           }

@@ -1,32 +1,27 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { IoMdImages, IoMdVideocam, IoMdHome, IoMdPeople } from 'react-icons/io'
 import NavBav from './nav-bar'
 import NavItem from './nav-item'
 
-const Header = ({ location, data }) => (
+const Header = () => (
   <header>
     <NavBav>
-      <NavItem location={location} to="/">
+      <NavItem to="/">
         <IoMdHome /> Acceuil
       </NavItem>
-      <NavItem location={location} to="/photos/">
+      <NavItem to="/photos/">
         <IoMdImages /> Photos
       </NavItem>
-      <NavItem location={location} to="/videos/">
+      <NavItem to="/videos/">
         <IoMdVideocam /> Vidéos
       </NavItem>
-      <NavItem location={location} to="/drink-team/">
+      <NavItem to="/drink-team/">
         <IoMdPeople /> Drink Team
       </NavItem>
     </NavBav>
   </header>
 )
 
-Header.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }),
-}
+Header.propTypes = {}
 
 export default Header
