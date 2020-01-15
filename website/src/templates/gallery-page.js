@@ -14,7 +14,7 @@ const GalleryPage = ({ data }) => {
   return (
     <Layout
       title={page.title}
-      description={`${page.title}`}
+      description={`Album photo: ${page.title}`}
       image={page.mainPhoto.asset.full.src}
     >
       <Container yPadding={true}>
