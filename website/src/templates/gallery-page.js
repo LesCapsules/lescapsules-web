@@ -11,7 +11,6 @@ const GalleryPage = ({ data, pageContext }) => {
   const images = page.photos
   const fullSize = images.map(imageNode => imageNode.asset.full.src)
   const thumbs = images.map(imageNode => imageNode.asset.thumb)
-  console.log(pageContext.urlPath)
   return (
     <Layout
       title={page.title}

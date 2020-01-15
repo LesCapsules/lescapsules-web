@@ -119,7 +119,7 @@ function SEO({ title, description, image, path, lang, meta }) {
 SEO.defaultProps = {
   description: '',
   image: '',
-  path: '',
+  path: '/',
   lang: 'en',
   meta: [],
 }

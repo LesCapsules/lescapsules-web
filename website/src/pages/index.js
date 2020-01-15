@@ -6,13 +6,12 @@ import Container from '../components/container'
 import Layout from '../components/layout'
 import Row from '../components/row'
 
-const IndexPage = ({ data, path }) => {
-  console.log(path)
+const IndexPage = ({ data }) => {
   return (
     <Layout
       title="Acceuil"
       description="Bienvenue sur le site des Capsules, le comité des fêtes de Sauclières"
-      path={path}
+      path="/"
     >
       <div>
         <Img fluid={data.photo.image.asset.full} />

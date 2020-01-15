@@ -6,13 +6,13 @@ import Container from '../components/container'
 import Layout from '../components/layout'
 import Profile from '../components/profile'
 
-const DrinkTeamPage = ({ data, path }) => {
+const DrinkTeamPage = ({ data }) => {
   const membersArray = data.allSanityMember.edges
   return (
     <Layout
       title="La Drink Team"
       description="Le comité des fêtes de Sauclières, AKA Les Capsules."
-      path={path}
+      path="/drink-team/"
     >
       <Container yPadding={true}>
         <div className="row justify-content-center">
