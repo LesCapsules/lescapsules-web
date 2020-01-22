@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import BlockContent from '@sanity/block-content-to-react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
@@ -19,10 +20,11 @@ const GalleryPage = ({ data, pageContext }) => {
       path={pageContext.urlPath}
     >
       <Container yPadding={true}>
-        <h1 className="mb-5">
+        <h1 className="mb-3">
           {page.title} <br />
           <small>{page.year}</small>
         </h1>
+        <BlockContent blocks={page.overview} />
         <Gallery images={fullSize} thumbs={thumbs} />
       </Container>
     </Layout>
@@ -34,6 +36,7 @@ export const pageQuery = graphql`
     sanityGallery(id: { eq: $id }) {
       title
       year: date(formatString: "YYYY")
+      overview: _rawOverview(resolveReferences: { maxDepth: 50 })
       photos {
         asset {
           thumb: fluid(maxWidth: 270, maxHeight: 270) {
