@@ -16,6 +16,7 @@ export default {
     {
       title: 'Block',
       type: 'block',
+      lists: [], // no lists, thanks
     },
   ],
 }
