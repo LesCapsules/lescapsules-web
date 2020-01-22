@@ -17,6 +17,14 @@ export default {
       title: 'Block',
       type: 'block',
       lists: [], // no lists, thanks
+      styles: [], // no styles, thanks
+      marks: {
+        decorators: [
+          { title: 'Gras', value: 'strong' },
+          { title: 'Italique', value: 'em' },
+          { title: 'Souligné', value: 'underline' },
+        ],
+      },
     },
   ],
 }
