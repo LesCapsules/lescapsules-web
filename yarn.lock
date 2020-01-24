@@ -14850,10 +14850,10 @@ sanitize-html@^1.20.1:
     srcset "^1.0.0"
     xtend "^4.0.1"
 
-sanity-plugin-media@0.2.9:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/sanity-plugin-media/-/sanity-plugin-media-0.2.9.tgz#96d7fab984cfa002d453c8eed2e9dd860b650885"
-  integrity sha512-2j3tZplDulaXCNezDn8u2CuFs4/rXh7wAt6azqHl5n7WDmsXllxOzaeSLAeB4EGXwMSvWeBdaZiIPKLUtSliIA==
+sanity-plugin-media@0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/sanity-plugin-media/-/sanity-plugin-media-0.2.10.tgz#34cfa778799fb374046cff46b94c0a0d1354f1cf"
+  integrity sha512-/NbaquJvVHnR++G1+PjI1N4Gj0NJ32wgtGzdiV9B+t2P6kXWBFUmM1sSj2aoksRSeVlh+S2b3uaWDCruSM9ihA==
   dependencies:
     "@sanity/components" "0.144.2"
     "@tanem/react-nprogress" "3.0.8"
