@@ -12,7 +12,12 @@ const Header = () => (
   <header>
     <nav className="navbar navbar-expand bg-primary navbar-dark">
       <Container>
-        <Link to="/" className="navbar-brand d-flex align-items-center">
+        <Link
+          to="/"
+          className="navbar-brand d-flex align-items-center"
+          title="Acceuil"
+          aria-label="Acceuil"
+        >
           <LogoCapsules />
         </Link>
         <Menu right>
