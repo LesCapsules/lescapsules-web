@@ -89,6 +89,7 @@ module.exports = {
           }),
       },
     },
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-netlify`, // Needs to be last
   ],
 }
