@@ -12,12 +12,18 @@ const Footer = () => (
         <div className="col-md text-center text-md-left">
           <ul className="list-inline">
             <li className="list-inline-item">
-              <ExternalLink to="https://www.facebook.com/lescapsules/">
+              <ExternalLink
+                to="https://www.facebook.com/lescapsules/"
+                title="Les Capsules sur Facebook"
+              >
                 <FaFacebook size="3rem" />
               </ExternalLink>
             </li>
             <li className="list-inline-item">
-              <ExternalLink to="mailto:lescapsules@gmail.com">
+              <ExternalLink
+                to="mailto:lescapsules@gmail.com"
+                title="Contactez nous via email"
+              >
                 <FaEnvelope size="3rem" />
               </ExternalLink>
             </li>
