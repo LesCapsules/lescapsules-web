@@ -24,7 +24,7 @@
     "gatsby-plugin-sharp": "2.4.5",
     "gatsby-plugin-sitemap": "2.2.27",
     "gatsby-source-filesystem": "2.1.48",
-    "gatsby-source-sanity": "5.0.5",
+    "gatsby-source-sanity": "5.0.6",
     "gatsby-transformer-remark": "2.6.53",
     "gatsby-transformer-sharp": "2.3.14",
     "node-sass": "4.13.1",
