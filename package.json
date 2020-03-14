@@ -1,6 +1,9 @@
 {
   "private": true,
-  "workspaces": ["sanity-studio", "website"],
+  "workspaces": [
+    "sanity-studio",
+    "website"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/browniebroke/lescapsules-web"
