@@ -77,6 +77,9 @@ module.exports = {
             if (edge.node.path === '/photos/') {
               priority = 0.7
             }
+            if (['/videos/', '/drink-team/'].includes(edge.node.path)) {
+              priority = 0.6
+            }
             if (edge.node.path === '/') {
               priority = 1
             }
