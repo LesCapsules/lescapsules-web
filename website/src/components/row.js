@@ -6,7 +6,7 @@ const Row = styled.div`
   flex-wrap: wrap;
   margin-right: -${gutterWidth};
   margin-left: -${gutterWidth};
-  ${props =>
+  ${(props) =>
     props.alignItems &&
     css`
       align-items: ${props.alignItems};

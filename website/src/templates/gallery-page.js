@@ -10,8 +10,8 @@ import Container from '../components/container'
 const GalleryPage = ({ data, pageContext }) => {
   const page = data.sanityGallery
   const images = page.photos
-  const fullSize = images.map(imageNode => imageNode.asset.full.src)
-  const thumbs = images.map(imageNode => imageNode.asset.thumb)
+  const fullSize = images.map((imageNode) => imageNode.asset.full.src)
+  const thumbs = images.map((imageNode) => imageNode.asset.thumb)
   return (
     <Layout
       title={page.title}
