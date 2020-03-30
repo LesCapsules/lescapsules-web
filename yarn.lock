@@ -1674,11 +1674,6 @@
   resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-0.140.0.tgz#f60ab75be5fdc346b9f0d1c2a0858aa3c2870109"
   integrity sha512-H/G/WA9S22TXcXST52CIiTsHx3S2hH0gvK7LnI5w76vfKS0obnDPh8jrPg4xeNRYGPuV9MHYRlyERGpRGoo4Qw==
 
-"@sanity/google-maps-input@1.149.0":
-  version "1.149.0"
-  resolved "https://registry.yarnpkg.com/@sanity/google-maps-input/-/google-maps-input-1.149.0.tgz#80afa57d9b4969208177fc86ef5c409d25c42cfd"
-  integrity sha512-d4FJlNshOfeKXr5glStk+TcqYEMzAJLO+ukwjXdYnGT9/MvhO1eup+u+52BzO42oEemKtJlyW99nbJh2foxvjQ==
-
 "@sanity/image-url@0.140.15":
   version "0.140.15"
   resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-0.140.15.tgz#7b8afc49130398e1a6e7bde03b5961d2384f7676"
