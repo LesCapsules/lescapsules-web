@@ -22,6 +22,23 @@ const getFullPreviewURL = (schemaType, document) => {
   }
 }
 
+const pingPreview = () => {
+  fetch(previewUrl)
+    .then((response) => response)
+    .then((response) => {
+      if (response.status === 200) {
+        console.log('Fetch to %s completed OK', previewUrl)
+      } else {
+        console.error(
+          'Fetch to %s replied with status code %s',
+          previewUrl,
+          response.status
+        )
+      }
+    })
+    .catch((err) => console.error('Error while fetching preview site %s', err))
+}
+
 const WebPreview = ({ schemaType, document }) => {
   const fullPreviewUrl = getFullPreviewURL(schemaType, document)
   return (
@@ -43,4 +60,8 @@ export const getDefaultDocumentNode = () => {
   ])
 }
 
-export default S.defaults()
+export default () => {
+  // Ping the preview server to wake up dynos
+  pingPreview()
+  return S.defaults()
+}
