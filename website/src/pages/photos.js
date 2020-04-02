@@ -23,7 +23,7 @@ const PhotoIndexPage = ({ data }) => {
         <h1 className="mb-5">Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
-            const pageUrl = makeAlbumPagePath(node)
+            const pageUrl = makeAlbumPagePath(node.title, node.year)
             return (
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
@@ -50,7 +50,6 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          sanityId: _id
           title
           year: date(formatString: "YYYY")
           mainPhoto {

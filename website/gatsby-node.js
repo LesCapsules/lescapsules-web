@@ -14,7 +14,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
-            sanityId: _id
             title
             year: date(formatString: "YYYY")
           }
@@ -31,7 +30,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Process result & create pages
   result.data.allSanityGallery.edges.forEach(({ node }) => {
-    const urlPath = makeAlbumPagePath(node)
+    const urlPath = makeAlbumPagePath(node.title, node.year)
     actions.createPage({
       path: urlPath,
       component: path.resolve(`./src/templates/gallery-page.js`),
