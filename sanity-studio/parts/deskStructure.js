@@ -22,13 +22,23 @@ const getFullPreviewURL = (schemaType, document) => {
   }
 }
 
+let fetchRequest = null
+
 const pingPreview = () => {
-  fetch(previewUrl)
-    .then((response) => response)
+  if (fetchRequest !== null) {
+    console.debug('Skipping ping: request already in progress %s', fetchRequest)
+    return
+  }
+  fetchRequest = new Request(previewUrl)
+  console.debug('Starting fetch request: %s', fetchRequest)
+  fetch(fetchRequest)
+    .then((fetchResponse) => fetchResponse)
     .then((response) => {
       if (response.status === 200) {
+        fetchRequest = null
         console.log('Fetch to %s completed OK', previewUrl)
       } else {
+        fetchRequest = null
         console.error(
           'Fetch to %s replied with status code %s',
           previewUrl,
@@ -36,7 +46,10 @@ const pingPreview = () => {
         )
       }
     })
-    .catch((err) => console.error('Error while fetching preview site %s', err))
+    .catch((err) => {
+      console.error('Error while fetching preview site %s', err)
+      fetchRequest = null
+    })
 }
 
 const WebPreview = ({ schemaType, document }) => {
