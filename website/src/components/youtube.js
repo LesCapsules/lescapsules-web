@@ -2,11 +2,14 @@ import React, { Fragment, useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './youtube.css'
 
-const LiteYouTubeEmbed = ({ id, title }) => {
+export const getPosterUrl = (videoId) =>
+  `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+
+export const LiteYouTubeEmbed = ({ id, title }) => {
   const [preconnected, setPreconnected] = useState(false)
   const [iframe, setIframe] = useState(false)
   const videoId = encodeURIComponent(id)
-  const posterUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+  const posterUrl = getPosterUrl(videoId)
   const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`
   const refVideo = useRef()
 
@@ -70,4 +73,17 @@ LiteYouTubeEmbed.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export default LiteYouTubeEmbed
+export const LiteYoutubeStatic = ({ id }) => {
+  const videoId = encodeURIComponent(id)
+  const posterUrl = getPosterUrl(videoId)
+
+  return (
+    <div className="yt-lite" style={{ backgroundImage: `url('${posterUrl}')` }}>
+      <div className="lty-playbtn" />
+    </div>
+  )
+}
+
+LiteYoutubeStatic.propTypes = {
+  id: PropTypes.string.isRequired,
+}

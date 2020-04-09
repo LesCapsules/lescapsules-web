@@ -7,3 +7,11 @@ exports.makeAlbumPagePath = (title, year) => {
   })
   return `/photos/${year}/${slug}/`
 }
+
+exports.makeVideoPagePath = (title) => {
+  const slug = slugify(title, {
+    lower: true,
+    remove: /[*+~.()'"!:@]/g,
+  })
+  return `/videos/${slug}/`
+}

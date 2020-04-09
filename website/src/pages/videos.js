@@ -1,11 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import GridCard from '../components/card-grid'
 import Row from '../components/row'
 import Container from '../components/container'
-import LiteYouTubeEmbed from '../components/youtube'
+import { LiteYoutubeStatic } from '../components/youtube'
+import { makeVideoPagePath } from '../utils'
 
 const VideosIndexPage = ({ data }) => {
   const videosArray = data.allSanityVideo.edges
@@ -22,10 +23,12 @@ const VideosIndexPage = ({ data }) => {
             const { id, title, youtubeId } = node
             return (
               <GridCard key={id} width={100} widthSm={100}>
-                <LiteYouTubeEmbed id={youtubeId} title={title} />
-                <div className="m-2">
-                  <h4>{title}</h4>
-                </div>
+                <Link to={makeVideoPagePath(title)}>
+                  <LiteYoutubeStatic id={youtubeId} />
+                  <div className="m-2">
+                    <h4>{title}</h4>
+                  </div>
+                </Link>
               </GridCard>
             )
           })}
