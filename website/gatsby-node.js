@@ -54,7 +54,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create video pages
+  // Create video index page
+  actions.createPage({
+    path: '/videos/',
+    component: path.resolve(`./src/templates/video-page.js`),
+    context: {
+      id: '',
+      urlPath: '/videos/',
+      title: null,
+      isVideo: true,
+    },
+  })
+
+  // Create separate page for each video
   result.data.allSanityVideo.edges.forEach(({ node }) => {
     const urlPath = makeVideoPagePath(node.title)
     console.log('Creating page %s', urlPath)
