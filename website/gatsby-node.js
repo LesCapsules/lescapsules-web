@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`)
-const { makeAlbumPagePath } = require(`./src/utils`)
+const { makeAlbumPagePath, makeVideoPagePath } = require(`./src/utils`)
 
 // Create a page for each markdown file for photos
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -19,6 +19,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allSanityVideo {
+        edges {
+          node {
+            id
+            title
+            youtubeId
+          }
+        }
+      }
     }
   `)
 
@@ -28,7 +37,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  // Process result & create pages
+  // Create gallery pages
   result.data.allSanityGallery.edges.forEach(({ node }) => {
     const urlPath = makeAlbumPagePath(node.title, node.year)
     actions.createPage({
@@ -41,6 +50,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         urlPath: urlPath,
         title: node.title,
         isGallery: true,
+      },
+    })
+  })
+
+  // Create video index page
+  actions.createPage({
+    path: '/videos/',
+    component: path.resolve(`./src/templates/video-page.js`),
+    context: {
+      id: '',
+      urlPath: '/videos/',
+      title: null,
+      isVideo: true,
+    },
+  })
+
+  // Create separate page for each video
+  result.data.allSanityVideo.edges.forEach(({ node }) => {
+    const urlPath = makeVideoPagePath(node.title)
+    actions.createPage({
+      path: urlPath,
+      component: path.resolve(`./src/templates/video-page.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        id: node.id,
+        urlPath: urlPath,
+        title: node.title,
+        isVideo: true,
       },
     })
   })

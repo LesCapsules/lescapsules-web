@@ -3,7 +3,7 @@ import S from '@sanity/desk-tool/structure-builder'
 import { FiEdit3 as EditIcon } from 'react-icons/fi'
 import { FiEye as PreviewIcon } from 'react-icons/fi'
 
-import { makeAlbumPagePath } from '../../website/src/utils'
+import { makeAlbumPagePath, makeVideoPagePath } from 'website/src/utils'
 
 const previewUrl = 'https://capsules-preview.herokuapp.com'
 
@@ -11,12 +11,13 @@ const getFullPreviewURL = (schemaType, document) => {
   switch (schemaType.name) {
     case 'gallery':
       const date = new Date(document.displayed.date)
-      const title = document.displayed.title
-      return previewUrl + makeAlbumPagePath(title, date.getFullYear())
+      const albumTitle = document.displayed.title
+      return previewUrl + makeAlbumPagePath(albumTitle, date.getFullYear())
     case 'member':
       return previewUrl + '/drink-team/'
     case 'video':
-      return previewUrl + '/videos/'
+      const videoTitle = document.displayed.title
+      return previewUrl + makeVideoPagePath(videoTitle)
     default:
       return previewUrl
   }
