@@ -3,7 +3,7 @@ import S from '@sanity/desk-tool/structure-builder'
 import { FiEdit3 as EditIcon } from 'react-icons/fi'
 import { FiEye as PreviewIcon } from 'react-icons/fi'
 
-import { makeAlbumPagePath, makeVideoPagePath } from '../../website/src/utils'
+import { makeAlbumPagePath, makeVideoPagePath } from 'website/src/utils'
 
 const previewUrl = 'https://capsules-preview.herokuapp.com'
 
