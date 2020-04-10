@@ -78,9 +78,10 @@ export const LiteYoutubeStatic = ({ id }) => {
   const posterUrl = getPosterUrl(videoId)
 
   return (
-    <div className="yt-lite" style={{ backgroundImage: `url('${posterUrl}')` }}>
-      <div className="lty-playbtn" />
-    </div>
+    <div
+      className="yt-lite"
+      style={{ backgroundImage: `url('${posterUrl}')` }}
+    />
   )
 }
 

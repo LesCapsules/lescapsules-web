@@ -10,8 +10,10 @@ import { LiteYouTubeEmbed, LiteYoutubeStatic } from '../components/youtube'
 import { makeVideoPagePath } from '../utils'
 
 const VideoPage = ({ data, pageContext }) => {
-  const videosArray = data.allSanityVideo.edges
   const currentVideo = data.sanityVideo
+  const videosArray = data.allSanityVideo.edges.filter((edge) => {
+    return !currentVideo || edge.node.youtubeId !== currentVideo.youtubeId
+  })
   console.log(currentVideo)
   const pageTitle = currentVideo ? currentVideo.title : 'Vidéos'
   return (
