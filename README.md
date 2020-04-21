@@ -1,14 +1,14 @@
 # Les Capsules
 
 <p align="center">
-  <a href="https://lgtm.com/projects/g/browniebroke/lescapsules-web/alerts/">
-    <img src="https://img.shields.io/lgtm/alerts/g/browniebroke/lescapsules-web.svg?logo=lgtm&logoWidth=18"/ alt="Total alerts">
+  <a href="https://lgtm.com/projects/g/LesCapsules/lescapsules-web/alerts/">
+    <img src="https://img.shields.io/lgtm/alerts/g/LesCapsules/lescapsules-web.svg?logo=lgtm&logoWidth=18"/ alt="Total alerts">
   </a>
-  <a href="https://david-dm.org/browniebroke/lescapsules-web">
-    <img src="https://david-dm.org/browniebroke/lescapsules-web/status.svg" alt="dependencies Status"/>
+  <a href="https://david-dm.org/LesCapsules/lescapsules-web">
+    <img src="https://david-dm.org/LesCapsules/lescapsules-web/status.svg" alt="dependencies Status"/>
   </a>
-  <a href="https://travis-ci.com/browniebroke/lescapsules-web">
-    <img src="https://travis-ci.com/browniebroke/lescapsules-web.svg?branch=master"/>
+  <a href="https://travis-ci.com/LesCapsules/lescapsules-web">
+    <img src="https://travis-ci.com/LesCapsules/lescapsules-web.svg?branch=master"/>
   </a>
   <a href="https://lescapsules.netlify.com">
     <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
