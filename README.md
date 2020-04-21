@@ -10,7 +10,7 @@
   <a href="https://travis-ci.com/LesCapsules/lescapsules-web">
     <img src="https://travis-ci.com/LesCapsules/lescapsules-web.svg?branch=master"/>
   </a>
-  <a href="https://lescapsules.netlify.com">
+  <a href="https://lescapsules.netlify.app">
     <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
   </a>
 </p>
