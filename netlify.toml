@@ -6,3 +6,6 @@
 
 [context.production]
   environment = { GA_TRACKING_ID = "UA-134920468-1" }
+
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
