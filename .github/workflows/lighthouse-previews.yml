@@ -19,7 +19,7 @@ jobs:
       uses: jakejarvis/lighthouse-action@master
       with:
         url: 'https://www.lescapsules.com/'
-        netlify_site: 'lescapsules.netlify.com'
+        netlify_site: 'lescapsules.netlify.app'
     - name: Upload report to Zeit
       run: |
         now -t ${{ secrets.ZEIT_TOKEN }} deploy ./report/https*.html | tee zeit-now.log
