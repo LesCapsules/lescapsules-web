@@ -7,9 +7,15 @@ const NavigationStyles = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
+  padding: 0;
 
   li {
     padding: ${spacings[1]};
+  }
+
+  a,
+  a:hover {
+    text-decoration: none;
   }
 `
 
