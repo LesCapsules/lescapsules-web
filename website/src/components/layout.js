@@ -1,13 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { createGlobalStyle } from 'styled-components'
 
 import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
 
+const GlobalStyles = createGlobalStyle`
+  body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+`
+
 const Layout = ({ title, description, image, path, children }) => (
   <>
+    <GlobalStyles />
     <SEO
       title={title}
       description={description}
