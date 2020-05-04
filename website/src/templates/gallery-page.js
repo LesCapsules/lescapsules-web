@@ -19,8 +19,8 @@ const GalleryPage = ({ data, pageContext }) => {
       image={page.mainPhoto.asset.full.src}
       path={pageContext.urlPath}
     >
-      <Container yPadding={true}>
-        <h1 className="mb-3">
+      <Container>
+        <h1 className="mt-5 mb-3">
           {page.title} <br />
           <small>{page.year}</small>
         </h1>

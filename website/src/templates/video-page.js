@@ -22,8 +22,8 @@ const VideoPage = ({ data, pageContext }) => {
       description="Quelques vidéos retraçant des bons moments."
       path={pageContext.urlPath}
     >
-      <Container yPadding={true}>
-        <h1 className="mb-5">{pageTitle}</h1>
+      <Container>
+        <h1 className="my-5">{pageTitle}</h1>
         {currentVideo && (
           <Row>
             <div className="col-md-12">

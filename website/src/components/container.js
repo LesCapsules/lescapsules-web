@@ -1,24 +1,29 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-const Container = ({
-  children,
-  style,
-  className = 'container',
-  yPadding = false,
-}) => {
-  const cssClasses = `${className} ${yPadding ? 'py-5' : ''}`
-  return (
-    <div className={cssClasses} style={style}>
-      {children}
-    </div>
-  )
-}
+import { containersMaxWidth, gridBreakpoints, gutterWidth } from './constants'
 
-Container.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  style: PropTypes.object,
-}
+const Container = styled.div`
+  width: 100%;
+  padding-right: ${gutterWidth};
+  padding-left: ${gutterWidth};
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: ${gridBreakpoints.sm}) {
+    max-width: ${containersMaxWidth.sm};
+  }
+
+  @media (min-width: ${gridBreakpoints.md}) {
+    max-width: ${containersMaxWidth.md};
+  }
+
+  @media (min-width: ${gridBreakpoints.lg}) {
+    max-width: ${containersMaxWidth.lg};
+  }
+
+  @media (min-width: ${gridBreakpoints.xl}) {
+    max-width: ${containersMaxWidth.xl};
+  }
+`
 
 export default Container

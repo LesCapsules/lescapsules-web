@@ -11,7 +11,7 @@ import LogoCapsules from '../images/icons/lescapsules-name.svg'
 const Header = () => (
   <header>
     <nav className="navbar navbar-expand bg-primary navbar-dark">
-      <Container>
+      <div className="container">
         <Link
           to="/"
           className="navbar-brand d-flex align-items-center"
@@ -36,7 +36,7 @@ const Header = () => (
             </NavItem>
           </NavItemList>
         </Menu>
-      </Container>
+      </div>
     </nav>
   </header>
 )

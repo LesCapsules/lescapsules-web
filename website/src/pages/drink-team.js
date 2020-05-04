@@ -14,10 +14,10 @@ const DrinkTeamPage = ({ data }) => {
       description="Le comité des fêtes de Sauclières, AKA Les Capsules."
       path="/drink-team/"
     >
-      <Container yPadding={true}>
+      <Container>
         <div className="row justify-content-center">
           <div className="col-10 col-md-8">
-            <h1 className="mb-5">La Drink Team</h1>
+            <h1 className="my-5">La Drink Team</h1>
             {membersArray.map(({ node }) => {
               return (
                 <div className="mb-3" key={node.id}>

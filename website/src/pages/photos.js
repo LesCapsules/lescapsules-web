@@ -19,8 +19,8 @@ const PhotoIndexPage = ({ data }) => {
       image={seoImage}
       path="/photos/"
     >
-      <Container yPadding={true}>
-        <h1 className="mb-5">Galleries de photos:</h1>
+      <Container>
+        <h1 className="my-5">Galleries de photos:</h1>
         <Row>
           {pagesArray.map(({ node }) => {
             const pageUrl = makeAlbumPagePath(node.title, node.year)
