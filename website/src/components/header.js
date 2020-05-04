@@ -19,21 +19,22 @@ const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 0;
-  padding-left: 0;
+  padding: ${spacings[1]} 0;
+`
+
+const StyledLogo = styled(LogoCapsules)`
+  height: 40px;
+  path {
+    fill: ${colors.secondary};
+  }
 `
 
 const Header = () => (
   <header>
     <SiteNavBar>
       <HeaderContainer>
-        <Link
-          to="/"
-          className="navbar-brand d-flex align-items-center"
-          title="Acceuil"
-          aria-label="Acceuil"
-        >
-          <LogoCapsules />
+        <Link to="/" title="Acceuil" aria-label="Acceuil">
+          <StyledLogo />
         </Link>
         <Menu right>
           <Navigation>
