@@ -3,15 +3,15 @@ import styled from 'styled-components'
 
 import { spacings } from './constants'
 
-const NavigationStyles = styled.ul`
+const NavigationList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: 0;
+`
 
-  li {
-    padding: ${spacings[1]};
-  }
+const NavItem = styled.li`
+  padding: ${spacings[1]};
 
   a,
   a:hover {
@@ -20,11 +20,11 @@ const NavigationStyles = styled.ul`
 `
 
 const Navigation = ({ children }) => (
-  <NavigationStyles>
+  <NavigationList>
     {React.Children.map(children, (child) => (
-      <li>{child}</li>
+      <NavItem>{child}</NavItem>
     ))}
-  </NavigationStyles>
+  </NavigationList>
 )
 
 export default Navigation
