@@ -9,15 +9,24 @@ import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import NavItem from './nav-item'
 import NavItemList from './nav-item-list'
 
+import { colors, spacings } from './constants'
+
+const SiteNavBar = styled.nav`
+  background-color: ${colors.primary};
+  padding: ${spacings[1]} ${spacings[2]};
+`
+
 const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 0;
+  padding-left: 0;
 `
 
 const Header = () => (
   <header>
-    <nav className="navbar navbar-expand bg-primary navbar-dark">
+    <SiteNavBar>
       <HeaderContainer>
         <Link
           to="/"
@@ -44,7 +53,7 @@ const Header = () => (
           </NavItemList>
         </Menu>
       </HeaderContainer>
-    </nav>
+    </SiteNavBar>
   </header>
 )
 
