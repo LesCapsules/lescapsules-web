@@ -6,8 +6,7 @@ import styled from 'styled-components'
 
 import Container from './container'
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
-import NavItem from './nav-item'
-import NavItemList from './nav-item-list'
+import Navigation from './navigation'
 
 import { colors, spacings } from './constants'
 
@@ -37,20 +36,20 @@ const Header = () => (
           <LogoCapsules />
         </Link>
         <Menu right>
-          <NavItemList>
-            <NavItem to="/">
+          <Navigation>
+            <Link to="/">
               <IoMdHome /> Acceuil
-            </NavItem>
-            <NavItem to="/photos/">
+            </Link>
+            <Link to="/photos/">
               <IoMdImages /> Photos
-            </NavItem>
-            <NavItem to="/videos/">
+            </Link>
+            <Link to="/videos/">
               <IoMdVideocam /> Vidéos
-            </NavItem>
-            <NavItem to="/drink-team/">
+            </Link>
+            <Link to="/drink-team/">
               <IoMdPeople /> Drink Team
-            </NavItem>
-          </NavItemList>
+            </Link>
+          </Navigation>
         </Menu>
       </HeaderContainer>
     </SiteNavBar>
