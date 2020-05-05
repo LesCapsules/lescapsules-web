@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
+
+const ContentWrapper = styled.div`
+  min-height: calc(100vh - 100px - 6rem);
+`
 
 const Layout = ({ title, description, image, path, children }) => (
   <>
@@ -16,7 +21,7 @@ const Layout = ({ title, description, image, path, children }) => (
       lang="fr"
     />
     <Header />
-    <div style={{ minHeight: 'calc(100vh - 100px - 6rem)' }}>{children}</div>
+    <ContentWrapper>{children}</ContentWrapper>
     <Footer />
   </>
 )
