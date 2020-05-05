@@ -1,3 +1,5 @@
+import { rhythm } from '../typography'
+
 export const gridBreakpoints = {
   xs: '0',
   sm: '576px',
@@ -14,7 +16,13 @@ export const containersMaxWidth = {
 
 export const gutterWidth = '15px'
 
-export const spacings = ['0.25rem', '0.5rem', '1rem', '1.5rem', '3rem']
+export const spacings = [
+  rhythm(1 / 6),
+  rhythm(1 / 3),
+  rhythm(2 / 3),
+  rhythm(1),
+  rhythm(2),
+]
 
 export const colors = {
   primary: '#0054c7',
