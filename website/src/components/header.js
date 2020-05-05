@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { slide as Menu } from 'react-burger-menu'
 import { IoMdImages, IoMdVideocam, IoMdHome, IoMdPeople } from 'react-icons/io'
 import styled from 'styled-components'
 
 import Container from './container'
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import Navigation from './navigation'
+import SideMenu from './side-menu'
 
 import { colors, spacings } from './constants'
 
@@ -36,7 +36,7 @@ const Header = () => (
         <Link to="/" title="Acceuil" aria-label="Acceuil">
           <StyledLogo />
         </Link>
-        <Menu right>
+        <SideMenu right>
           <Navigation>
             <Link to="/">
               <IoMdHome /> Acceuil
@@ -51,12 +51,10 @@ const Header = () => (
               <IoMdPeople /> Drink Team
             </Link>
           </Navigation>
-        </Menu>
+        </SideMenu>
       </HeaderContainer>
     </SiteNavBar>
   </header>
 )
-
-Header.propTypes = {}
 
 export default Header
