@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import PageHeader from '../components/headers'
+import PageHeader from '../components/headings'
 
 const title = 'Page introuvable'
 const description = 'Impossible de trouver cette page...'
