@@ -7,6 +7,7 @@ export const gridBreakpoints = {
   lg: '992px',
   xl: '1200px',
 }
+// Not: all the keys in the below object should exist above
 export const containersMaxWidth = {
   sm: '540px',
   md: '720px',

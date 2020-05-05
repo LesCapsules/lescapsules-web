@@ -9,21 +9,13 @@ const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: ${gridBreakpoints.sm}) {
-    max-width: ${containersMaxWidth.sm};
-  }
-
-  @media (min-width: ${gridBreakpoints.md}) {
-    max-width: ${containersMaxWidth.md};
-  }
-
-  @media (min-width: ${gridBreakpoints.lg}) {
-    max-width: ${containersMaxWidth.lg};
-  }
-
-  @media (min-width: ${gridBreakpoints.xl}) {
-    max-width: ${containersMaxWidth.xl};
-  }
+  ${Object.keys(containersMaxWidth).map(
+    (k) =>
+      `@media (min-width: ${gridBreakpoints[k]}) {
+        max-width: ${containersMaxWidth[k]};
+      }
+      `
+  )}
 `
 
 export default Container
