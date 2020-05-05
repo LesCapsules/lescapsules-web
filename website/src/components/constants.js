@@ -28,3 +28,5 @@ export const colors = {
   primary: '#0054c7',
   secondary: '#f4d62e',
 }
+
+export const boxShadow = 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px'

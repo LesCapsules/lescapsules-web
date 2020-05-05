@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { gridBreakpoints, spacings } from './constants'
+import { boxShadow, gridBreakpoints, spacings } from './constants'
 
 const ProfileStyles = styled.div`
-  box-shadow: rgba(29, 33, 41, 0.15) 0px 2px 40px 0px;
+  box-shadow: ${boxShadow};
   padding: ${spacings[2]};
   display: flex;
   flex-direction: column;
