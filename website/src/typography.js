@@ -8,6 +8,5 @@ const typography = new Typography({
   bodyFontFamily: ['Roboto Slab', 'Times New Roman', 'Times', 'serif'],
 })
 
+export const { scale, rhythm, options } = typography
 export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
