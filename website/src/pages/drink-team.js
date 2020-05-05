@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import Container from '../components/container'
 import Layout from '../components/layout'
+import PageHeader from '../components/headings'
 import Profile from '../components/profile'
 
 const DrinkTeamPage = ({ data }) => {
@@ -17,7 +18,7 @@ const DrinkTeamPage = ({ data }) => {
       <Container>
         <div className="row justify-content-center">
           <div className="col-10 col-md-8">
-            <h1 className="my-5">La Drink Team</h1>
+            <PageHeader>La Drink Team</PageHeader>
             {membersArray.map(({ node }) => {
               return (
                 <div className="mb-3" key={node.id}>

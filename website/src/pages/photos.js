@@ -2,10 +2,11 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Layout from '../components/layout'
-import GridCard from '../components/card-grid'
-import Row from '../components/row'
 import Container from '../components/container'
+import GridCard from '../components/card-grid'
+import Layout from '../components/layout'
+import PageHeader from '../components/headings'
+import Row from '../components/row'
 import { makeAlbumPagePath } from '../utils'
 
 const PhotoIndexPage = ({ data }) => {
@@ -20,7 +21,7 @@ const PhotoIndexPage = ({ data }) => {
       path="/photos/"
     >
       <Container>
-        <h1 className="my-5">Galleries de photos:</h1>
+        <PageHeader>Galleries de photos:</PageHeader>
         <Row>
           {pagesArray.map(({ node }) => {
             const pageUrl = makeAlbumPagePath(node.title, node.year)

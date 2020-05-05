@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import PageHeader from '../components/headers'
 
 const title = 'Page introuvable'
 const description = 'Impossible de trouver cette page...'
@@ -18,7 +19,7 @@ const ContentStyles = styled.div`
 const NotFoundPage = () => (
   <Layout title={title} description={description}>
     <ContentStyles>
-      <h1>{title}</h1>
+      <PageHeader>{title}</PageHeader>
       <p>
         {description}
         <br />

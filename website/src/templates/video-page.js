@@ -2,10 +2,11 @@ import { graphql, Link } from 'gatsby'
 import React from 'react'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
-import Layout from '../components/layout'
 import Container from '../components/container'
-import Row from '../components/row'
 import GridCard from '../components/card-grid'
+import Layout from '../components/layout'
+import PageHeader from '../components/headings'
+import Row from '../components/row'
 import { LiteYouTubeEmbed, LiteYoutubeStatic } from '../components/youtube'
 import { makeVideoPagePath } from '../utils'
 
@@ -14,7 +15,6 @@ const VideoPage = ({ data, pageContext }) => {
   const videosArray = data.allSanityVideo.edges.filter((edge) => {
     return !currentVideo || edge.node.youtubeId !== currentVideo.youtubeId
   })
-  console.log(currentVideo)
   const pageTitle = currentVideo ? currentVideo.title : 'Vidéos'
   return (
     <Layout
@@ -23,7 +23,7 @@ const VideoPage = ({ data, pageContext }) => {
       path={pageContext.urlPath}
     >
       <Container>
-        <h1 className="my-5">{pageTitle}</h1>
+        <PageHeader>{pageTitle}</PageHeader>
         {currentVideo && (
           <Row>
             <div className="col-md-12">

@@ -4,8 +4,9 @@ import BlockContent from '@sanity/block-content-to-react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
-import Layout from '../components/layout'
 import Container from '../components/container'
+import Layout from '../components/layout'
+import PageHeader from '../components/headings'
 
 const GalleryPage = ({ data, pageContext }) => {
   const page = data.sanityGallery
@@ -20,10 +21,10 @@ const GalleryPage = ({ data, pageContext }) => {
       path={pageContext.urlPath}
     >
       <Container>
-        <h1 className="mt-5 mb-3">
+        <PageHeader>
           {page.title} <br />
           <small>{page.year}</small>
-        </h1>
+        </PageHeader>
         <BlockContent blocks={page.overview} />
         <Gallery images={fullSize} thumbs={thumbs} />
       </Container>
