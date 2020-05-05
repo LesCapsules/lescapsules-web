@@ -21,7 +21,7 @@ const PhotoIndexPage = ({ data }) => {
       path="/photos/"
     >
       <Container>
-        <PageHeader>Galleries de photos:</PageHeader>
+        <PageHeader>Galleries de photos</PageHeader>
         <Row>
           {pagesArray.map(({ node }) => {
             const pageUrl = makeAlbumPagePath(node.title, node.year)
