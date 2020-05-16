@@ -61,7 +61,7 @@
   "bundlesize": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "33.10KB"
+      "maxSize": "33.5KB"
     },
     {
       "path": "./public/commons-*.js",
@@ -69,23 +69,23 @@
     },
     {
       "path": "./public/component---src-pages-drink-team-*.js",
-      "maxSize": "837B"
+      "maxSize": "1.1KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "716B"
+      "maxSize": "990B"
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
-      "maxSize": "3.56KB"
+      "maxSize": "3.8KB"
     },
     {
       "path": "./public/component---src-templates-gallery-*.js",
-      "maxSize": "24.34KB"
+      "maxSize": "24.5KB"
     },
     {
       "path": "./public/component---src-templates-video-*.js",
-      "maxSize": "4.22KB"
+      "maxSize": "4.5KB"
     },
     {
       "path": "./public/styles-*.js",
@@ -93,7 +93,7 @@
     },
     {
       "path": "./public/styles*.css",
-      "maxSize": "13.65KB"
+      "maxSize": "4.4KB"
     }
   ]
 }
