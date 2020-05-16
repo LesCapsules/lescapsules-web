@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ExternalLink = ({ children, to, title, className }) => (
+const ExternalLink = ({ children, to, title }) => (
   <a
     href={to}
     title={title}
     aria-label={title}
-    className={className}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -16,8 +15,7 @@ const ExternalLink = ({ children, to, title, className }) => (
 
 ExternalLink.propTypes = {
   to: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  className: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 export default ExternalLink

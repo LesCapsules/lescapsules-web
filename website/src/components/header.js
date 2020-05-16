@@ -1,46 +1,65 @@
 import React from 'react'
-import Container from './container'
 import { Link } from 'gatsby'
-import { slide as Menu } from 'react-burger-menu'
 import { IoMdImages, IoMdVideocam, IoMdHome, IoMdPeople } from 'react-icons/io'
+import styled from 'styled-components'
 
-import NavItem from './nav-item'
-import NavItemList from './nav-item-list'
+import Container from './container'
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
+import Navigation from './navigation'
+import SideMenu from './side-menu'
+
+import { colors, spacings } from './constants'
+
+const SiteNavBar = styled.nav`
+  background-color: ${colors.primary};
+  padding: ${spacings[1]} ${spacings[2]};
+`
+
+const HeaderContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: ${spacings[1]} 0;
+
+  > a {
+    display: flex;
+    align-items: center;
+  }
+`
+
+const StyledLogo = styled(LogoCapsules)`
+  height: 40px;
+  path {
+    fill: ${colors.secondary};
+  }
+`
 
 const Header = () => (
   <header>
-    <nav className="navbar navbar-expand bg-primary navbar-dark">
-      <Container>
-        <Link
-          to="/"
-          className="navbar-brand d-flex align-items-center"
-          title="Acceuil"
-          aria-label="Acceuil"
-        >
-          <LogoCapsules />
+    <SiteNavBar>
+      <HeaderContainer>
+        <Link to="/" title="Acceuil" aria-label="Acceuil">
+          <StyledLogo />
         </Link>
-        <Menu right>
-          <NavItemList>
-            <NavItem to="/">
+        <SideMenu right>
+          <Navigation>
+            <Link to="/">
               <IoMdHome /> Acceuil
-            </NavItem>
-            <NavItem to="/photos/">
+            </Link>
+            <Link to="/photos/">
               <IoMdImages /> Photos
-            </NavItem>
-            <NavItem to="/videos/">
+            </Link>
+            <Link to="/videos/">
               <IoMdVideocam /> Vidéos
-            </NavItem>
-            <NavItem to="/drink-team/">
+            </Link>
+            <Link to="/drink-team/">
               <IoMdPeople /> Drink Team
-            </NavItem>
-          </NavItemList>
-        </Menu>
-      </Container>
-    </nav>
+            </Link>
+          </Navigation>
+        </SideMenu>
+      </HeaderContainer>
+    </SiteNavBar>
   </header>
 )
-
-Header.propTypes = {}
 
 export default Header

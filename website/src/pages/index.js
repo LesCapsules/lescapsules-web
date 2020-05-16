@@ -1,10 +1,26 @@
 import React from 'react'
-
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
+
 import Container from '../components/container'
 import Layout from '../components/layout'
 import Row from '../components/row'
+import { colors, spacings } from '../components/constants'
+
+const ContentStyles = styled.div`
+  padding: ${spacings[4]};
+`
+
+const ContentTitle = styled.h2`
+  text-align: center;
+  color: ${colors.primary};
+  margin-bottom: ${spacings[4]};
+`
+
+const LeadParagraph = styled.p`
+  font-size: 1.25em;
+`
 
 const IndexPage = ({ data }) => {
   return (
@@ -18,21 +34,17 @@ const IndexPage = ({ data }) => {
       </div>
       <Container>
         <Row>
-          <div className="col">
-            <div className="p-5 pb-0">
-              <h2 className="text-center text-primary">
-                Bienvenue sur le site de la Bandade!
-              </h2>
-              <p className="lead mt-5">
-                Ce site a pour vocation de réunir une bande de collègues autour
-                d'un centre d'intérêt : l'art de la fête !!! Cette passion les
-                rassemble au sein du comité des fêtes de Sauclières, où les
-                Capsules peuvent donner libre cours à leur imagination pour
-                faire bouger ce petit village du sud Aveyron. Vous trouverez ici
-                des photos de leurs plus célèbres exploits !!
-              </p>
-            </div>
-          </div>
+          <ContentStyles>
+            <ContentTitle>Bienvenue sur le site de la Bandade!</ContentTitle>
+            <LeadParagraph>
+              Ce site a pour vocation de réunir une bande de collègues autour
+              d'un centre d'intérêt : l'art de la fête !!! Cette passion les
+              rassemble au sein du comité des fêtes de Sauclières, où les
+              Capsules peuvent donner libre cours à leur imagination pour faire
+              bouger ce petit village du sud Aveyron. Vous trouverez ici des
+              photos de leurs plus célèbres exploits !!
+            </LeadParagraph>
+          </ContentStyles>
         </Row>
       </Container>
     </Layout>

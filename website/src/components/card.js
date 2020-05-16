@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { gutterWidth } from './constants'
+import { boxShadow, gutterWidth } from './constants'
 
 const Card = styled.div`
   position: relative;
@@ -12,7 +12,7 @@ const Card = styled.div`
   margin: ${gutterWidth};
 
   :hover {
-    box-shadow: rgba(29, 33, 41, 0.15) 0px 2px 40px 0px;
+    box-shadow: ${boxShadow};
   }
 
   img {

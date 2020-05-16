@@ -1,24 +1,33 @@
 import React from 'react'
-import Layout from '../components/layout'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+import Layout from '../components/layout'
+import PageHeader from '../components/headings'
 
 const title = 'Page introuvable'
 const description = 'Impossible de trouver cette page...'
 
+const ContentStyles = styled.div`
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 const NotFoundPage = () => (
   <Layout title={title} description={description}>
-    <div className="row my-5 text-center">
-      <div className="col-md-12">
-        <h1>{title}</h1>
-        <p>
-          {description}
-          <br />
-        </p>
-        <p>
-          <Link to="/">Retour à l'acceuil</Link>
-        </p>
-      </div>
-    </div>
+    <ContentStyles>
+      <PageHeader>{title}</PageHeader>
+      <p>
+        {description}
+        <br />
+      </p>
+      <p>
+        <Link to="/">Retour à l'acceuil</Link>
+      </p>
+    </ContentStyles>
   </Layout>
 )
 

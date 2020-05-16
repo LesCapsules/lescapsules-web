@@ -40,6 +40,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/typography`,
+        omitGoogleFont: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: title,
@@ -69,7 +76,6 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-sitemap`,

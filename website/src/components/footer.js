@@ -1,40 +1,58 @@
 import React from 'react'
 import { FaFacebook, FaEnvelope } from 'react-icons/fa'
+import styled from 'styled-components'
 
 import Container from './container'
-import Row from './row'
 import ExternalLink from './external-link'
+import ListInline from './list-inline'
+import { colors, gridBreakpoints, spacings } from './constants'
+
+const FooterStyles = styled.footer`
+  color: ${colors.primary};
+  background-color: ${colors.secondary};
+  padding: ${spacings[4]} 0;
+`
+
+const FooterContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: ${spacings[1]} 0;
+  justify-content: space-between;
+
+  @media (min-width: ${gridBreakpoints.md}) {
+    flex-direction: row;
+  }
+`
+
+const CopyrightStyles = styled.div`
+  padding-top: ${spacings[2]};
+
+  @media (min-width: ${gridBreakpoints.md}) {
+    padding: 0;
+  }
+`
 
 const Footer = () => (
-  <footer className="footer mt-auto bg-secondary text-primary py-5">
-    <Container>
-      <Row alignItems="center">
-        <div className="col-md text-center text-md-left">
-          <ul className="list-inline">
-            <li className="list-inline-item">
-              <ExternalLink
-                to="https://www.facebook.com/lescapsules/"
-                title="Les Capsules sur Facebook"
-              >
-                <FaFacebook size="3rem" />
-              </ExternalLink>
-            </li>
-            <li className="list-inline-item">
-              <ExternalLink
-                to="mailto:lescapsules@gmail.com"
-                title="Contactez nous via email"
-              >
-                <FaEnvelope size="3rem" />
-              </ExternalLink>
-            </li>
-          </ul>
-        </div>
-        <div className="col-md text-center text-md-right">
-          © Capsules {new Date().getFullYear()}
-        </div>
-      </Row>
-    </Container>
-  </footer>
+  <FooterStyles>
+    <FooterContainer>
+      <ListInline>
+        <ExternalLink
+          to="https://www.facebook.com/lescapsules/"
+          title="Les Capsules sur Facebook"
+        >
+          <FaFacebook size="3rem" />
+        </ExternalLink>
+        <ExternalLink
+          to="mailto:lescapsules@gmail.com"
+          title="Contactez nous via email"
+        >
+          <FaEnvelope size="3rem" />
+        </ExternalLink>
+      </ListInline>
+      <CopyrightStyles>© Capsules {new Date().getFullYear()}</CopyrightStyles>
+    </FooterContainer>
+  </FooterStyles>
 )
 
 export default Footer
