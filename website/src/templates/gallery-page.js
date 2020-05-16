@@ -21,7 +21,7 @@ const GalleryPage = ({ data, pageContext }) => {
       path={pageContext.urlPath}
     >
       <Container>
-        <PageHeader>
+        <PageHeader bottomPadding={2}>
           {page.title} <br />
           <small>{page.year}</small>
         </PageHeader>

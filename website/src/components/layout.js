@@ -6,7 +6,7 @@ import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
-import { colors } from './constants'
+import { colors, spacings } from './constants'
 
 const ContentWrapper = styled.div`
   min-height: calc(100vh - 100px - 6rem);
@@ -40,6 +40,10 @@ a {
     color: ${colors.primaryDark};
     text-decoration: underline;
   }
+}
+
+p {
+  margin-bottom: ${spacings[2]};
 }
 `
 
