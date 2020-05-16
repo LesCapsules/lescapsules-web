@@ -27,7 +27,9 @@ export const spacings = [
 
 export const colors = {
   primary: '#0054c7',
+  primaryDark: '#00347b',
   secondary: '#f4d62e',
+  secondaryDark: '#e3c20c',
 }
 
 export const boxShadow = 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px'

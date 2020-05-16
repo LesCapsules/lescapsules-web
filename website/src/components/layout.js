@@ -6,6 +6,7 @@ import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
+import { colors } from './constants'
 
 const ContentWrapper = styled.div`
   min-height: calc(100vh - 100px - 6rem);
@@ -27,6 +28,18 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
+}
+
+
+a {
+  color: ${colors.primary};
+  text-decoration: none;
+  background-color: transparent;
+
+  :hover {
+    color: ${colors.primaryDark};
+    text-decoration: underline;
+  }
 }
 `
 
