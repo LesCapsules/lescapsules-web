@@ -1,7 +1,8 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
-import '@browniebroke/gatsby-image-gallery/dist/style.css'
+import styled from 'styled-components'
 
+import CardCaption from '../components/card-caption'
 import Container from '../components/container'
 import GridCard from '../components/card-grid'
 import Layout from '../components/layout'
@@ -9,6 +10,12 @@ import PageHeader from '../components/headings'
 import Row from '../components/row'
 import { LiteYouTubeEmbed, LiteYoutubeStatic } from '../components/youtube'
 import { makeVideoPagePath } from '../utils'
+import { spacings } from '../components/constants'
+
+const SectionTitle = styled.h2`
+  padding-top: ${spacings[4]};
+  padding-bottom: ${spacings[2]};
+`
 
 const VideoPage = ({ data, pageContext }) => {
   const currentVideo = data.sanityVideo
@@ -25,20 +32,12 @@ const VideoPage = ({ data, pageContext }) => {
       <Container>
         <PageHeader>{pageTitle}</PageHeader>
         {currentVideo && (
-          <Row>
-            <div className="col-md-12">
-              <LiteYouTubeEmbed
-                id={currentVideo.youtubeId}
-                title={currentVideo.title}
-              />
-            </div>
-          </Row>
+          <LiteYouTubeEmbed
+            id={currentVideo.youtubeId}
+            title={currentVideo.title}
+          />
         )}
-        {currentVideo && (
-          <Row className="pt-5">
-            <h2 className="m-3">Plus de vidéos</h2>
-          </Row>
-        )}
+        {currentVideo && <SectionTitle>Plus de vidéos</SectionTitle>}
         <Row>
           {videosArray.map(({ node }) => {
             const { id, title, youtubeId } = node
@@ -46,9 +45,7 @@ const VideoPage = ({ data, pageContext }) => {
               <GridCard key={id} width={100} widthSm={100}>
                 <Link to={makeVideoPagePath(title)}>
                   <LiteYoutubeStatic id={youtubeId} />
-                  <div className="m-2">
-                    <h4>{title}</h4>
-                  </div>
+                  <CardCaption>{title}</CardCaption>
                 </Link>
               </GridCard>
             )

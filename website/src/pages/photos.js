@@ -1,23 +1,14 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
 
+import CardCaption from '../components/card-caption'
 import Container from '../components/container'
 import GridCard from '../components/card-grid'
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
 import Row from '../components/row'
 import { makeAlbumPagePath } from '../utils'
-import { spacings } from '../components/constants'
-
-const CaptionStyles = styled.h4`
-  margin: ${spacings[1]} 0;
-
-  .year {
-    font-size: 1rem;
-  }
-`
 
 const PhotoIndexPage = ({ data }) => {
   const pagesArray = data.allSanityGallery.edges
@@ -39,11 +30,11 @@ const PhotoIndexPage = ({ data }) => {
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
                   <Img fluid={node.mainPhoto.asset.thumb} />
-                  <CaptionStyles>
+                  <CardCaption>
                     {node.title}
                     <br />
                     <span className="year">{node.year}</span>
-                  </CaptionStyles>
+                  </CardCaption>
                 </Link>
               </GridCard>
             )
