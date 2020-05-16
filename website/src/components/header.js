@@ -20,6 +20,11 @@ const HeaderContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
   padding: ${spacings[1]} 0;
+
+  > a {
+    display: flex;
+    align-items: center;
+  }
 `
 
 const StyledLogo = styled(LogoCapsules)`
