@@ -61,7 +61,7 @@
   "bundlesize": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "33.5KB"
+      "maxSize": "34KB"
     },
     {
       "path": "./public/commons-*.js",
