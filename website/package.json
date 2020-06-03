@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "3.2.1",
+    "@browniebroke/gatsby-image-gallery": "3.3.3",
     "@sanity/block-content-to-react": "2.0.7",
     "babel-plugin-styled-components": "1.10.7",
     "gatsby": "2.22.10",
@@ -81,7 +81,7 @@
     },
     {
       "path": "./public/component---src-templates-gallery-*.js",
-      "maxSize": "24.5KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/component---src-templates-video-*.js",
