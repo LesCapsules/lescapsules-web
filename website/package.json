@@ -81,7 +81,7 @@
     },
     {
       "path": "./public/component---src-templates-gallery-*.js",
-      "maxSize": "24.5KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/component---src-templates-video-*.js",
