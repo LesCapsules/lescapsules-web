@@ -10,9 +10,7 @@ import PageHeader from '../components/headings'
 
 const GalleryPage = ({ data, pageContext }) => {
   const page = data.sanityGallery
-  const images = page.photos
-  const fullSize = images.map((imageNode) => imageNode.asset.full.src)
-  const thumbs = images.map((imageNode) => imageNode.asset.thumb)
+  const images = page.photos.map(({ asset }) => asset)
   return (
     <Layout
       title={page.title}
@@ -25,8 +23,8 @@ const GalleryPage = ({ data, pageContext }) => {
           {page.title} <br />
           <small>{page.year}</small>
         </PageHeader>
-        <BlockContent blocks={page.overview} />
-        <Gallery images={fullSize} thumbs={thumbs} />
+        {page.overview && <BlockContent blocks={page.overview} />}
+        <Gallery images={images} />
       </Container>
     </Layout>
   )
