@@ -4,7 +4,7 @@
   "major": {
     "automerge": false
   },
-  "schedule": ["on the 3rd through 5th day of the month"],
+  "schedule": ["on Monday"],
   "prConcurrentLimit": 2,
   "prHourlyLimit": 1,
   "supportPolicy": ["current"]
