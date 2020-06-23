@@ -65,7 +65,7 @@
     },
     {
       "path": "./public/commons-*.js",
-      "maxSize": "5.27KB"
+      "maxSize": "5.35KB"
     },
     {
       "path": "./public/component---src-pages-drink-team-*.js",
