@@ -1,7 +1,7 @@
 const description = `Les Capsules sont un groupe d'amis de Sauclières dans le sud-Aveyron.`
 const title = 'Les Capsules'
 const baseUrl = process.env.REVIEW_ID
-  ? `https://deploy-preview-${process.env.REVIEW_ID}--lescapsules.netlify.com`
+  ? `https://deploy-preview-${process.env.REVIEW_ID}--lescapsules.netlify.app`
   : `https://www.lescapsules.com`
 const previewMode = process.env.PREVIEW_MODE === '1'
 
