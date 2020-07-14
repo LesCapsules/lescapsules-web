@@ -10,8 +10,10 @@
     "deploy": "yarn run deploy:studio && yarn run deploy:graphql",
     "deploy:studio": "sanity deploy",
     "deploy:graphql": "sanity graphql deploy --no-playground",
+    "build": "sanity build",
     "start": "sanity start",
-    "test": "sanity build && sanity check"
+    "pretest": "yarn build",
+    "test": "sanity check"
   },
   "keywords": [
     "sanity"

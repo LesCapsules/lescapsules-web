@@ -2,16 +2,19 @@
 
 <p align="center">
   <a href="https://lgtm.com/projects/g/LesCapsules/lescapsules-web/alerts/">
-    <img src="https://img.shields.io/lgtm/alerts/g/LesCapsules/lescapsules-web.svg?logo=lgtm&logoWidth=18"/ alt="Total alerts">
+    <img src="https://img.shields.io/lgtm/alerts/github/LesCapsules/lescapsules-web?logo=lgtm&logoColor=white&style=flat-square" alt="Total alerts">
   </a>
   <a href="https://david-dm.org/LesCapsules/lescapsules-web">
-    <img src="https://david-dm.org/LesCapsules/lescapsules-web/status.svg" alt="dependencies Status"/>
+    <img src="https://img.shields.io/david/LesCapsules/lescapsules-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
   </a>
-  <a href="https://travis-ci.com/LesCapsules/lescapsules-web">
-    <img src="https://travis-ci.com/LesCapsules/lescapsules-web.svg?branch=master"/>
+  <a href="https://github.com/LesCapsules/lescapsules-web/actions?query=workflow%3ALint">
+    <img alt="Linting Workflow status" src="https://img.shields.io/github/workflow/status/LesCapsules/lescapsules-web/Lint/master?label=Lint&logo=github&logoColor=white&style=flat-square">
   </a>
-  <a href="https://lescapsules.netlify.app">
-    <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
+  <a href="https://github.com/LesCapsules/lescapsules-web/actions">
+    <img src="https://img.shields.io/github/workflow/status/LesCapsules/lescapsules-web/Lighthouse%20Prod/master?label=Lighthouse&logo=github&logoColor=white&style=flat-square" alt="Lighthouse"/>
+  </a>
+  <a href="https://app.netlify.com/sites/chez-nicole/deploys">
+    <img src="https://img.shields.io/netlify/4b203ef5-3ac6-4b51-afcb-564239b2ef86?label=Netlify&logo=netlify&logoColor=white&style=flat-square" alt="Deployed on Netlify"/>
   </a>
 </p>
 

@@ -1,15 +1,17 @@
-name: Deploy
+name: Test
 
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
 
     # Setup node based on .nvmrc
     # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
@@ -20,9 +22,5 @@ jobs:
       with:
         node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-    - name: Install Deps
-      run: yarn
-    - name: Deploy
-      run: yarn workspace sanity-studio deploy
-      env:
-        SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+    - run: yarn
+    - run: yarn test
