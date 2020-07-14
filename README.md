@@ -10,8 +10,8 @@
   <a href="https://github.com/LesCapsules/lescapsules-web/actions?query=workflow%3ALint">
     <img alt="Linting Workflow status" src="https://img.shields.io/github/workflow/status/LesCapsules/lescapsules-web/Lint/master?label=Lint&logo=github&logoColor=white&style=flat-square">
   </a>
-  <a href="https://github.com/LesCapsules/lescapsules-web/actions">
-    <img src="https://img.shields.io/github/workflow/status/LesCapsules/lescapsules-web/Lighthouse%20Prod/master?label=Lighthouse&logo=github&logoColor=white&style=flat-square" alt="Lighthouse"/>
+  <a href="https://github.com/LesCapsules/lescapsules-web/actions?query=workflow%3ALighthouse">
+    <img src="https://img.shields.io/github/workflow/status/LesCapsules/lescapsules-web/Lighthouse/master?label=Lighthouse&logo=github&logoColor=white&style=flat-square" alt="Lighthouse"/>
   </a>
   <a href="https://app.netlify.com/sites/lescapsules/deploys">
     <img src="https://img.shields.io/netlify/4b203ef5-3ac6-4b51-afcb-564239b2ef86?label=Netlify&logo=netlify&logoColor=white&style=flat-square" alt="Deployed on Netlify"/>
