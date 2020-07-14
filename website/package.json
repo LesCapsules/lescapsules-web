@@ -40,25 +40,17 @@
     "typography": "0.16.19"
   },
   "devDependencies": {
-    "bundlesize": "0.18.0",
-    "eslint": "7.4.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-react": "7.20.3",
-    "prettier": "2.0.5",
-    "textlint": "11.6.3"
+    "bundlewatch": "0.2.7"
   },
   "license": "MIT",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "prebundlesize": "gatsby build",
-    "bundlesize": "bundlesize",
+    "prebundlewatch": "gatsby build",
+    "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
-    "preview": "gatsby develop -p $PORT -H 0.0.0.0",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
-    "test": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
+    "preview": "gatsby develop -p $PORT -H 0.0.0.0"
   },
-  "bundlesize": [
+  "bundlewatch": [
     {
       "path": "./public/app-*.js",
       "maxSize": "34KB"

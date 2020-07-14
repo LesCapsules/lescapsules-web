@@ -4,8 +4,22 @@
     "sanity-studio",
     "website"
   ],
+  "devDependencies": {
+    "eslint": "7.4.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.3",
+    "prettier": "2.0.5"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "lint:eslint": "eslint --ext .js,.jsx .",
+    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\"",
+    "bundlewatch": "yarn workspace website bundlewatch",
+    "test": "yarn workspace sanity-studio test"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/browniebroke/lescapsules-web"
+    "url": "https://github.com/LesCapsules/lescapsules-web"
   }
 }

@@ -1,19 +1,19 @@
-name: Deploy Sanity Studio
+name: Deploy
 
 on:
   push:
-    branches:
-    - master
+    branches: [ master ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v1
     - name: Setup nodejs
       uses: actions/setup-node@v1
       with:
-        node-version: 13.x
+        node-version: 13
     - name: Install Deps
       run: yarn
     - name: Deploy

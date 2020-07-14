@@ -2,8 +2,7 @@ name: Lighthouse Deploy Previews
 
 on:
   pull_request:
-    branches:
-    - master
+    branches: [ master ]
 
 jobs:
   build:
