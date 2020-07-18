@@ -9,6 +9,14 @@ import Layout from '../components/layout'
 import PageHeader from '../components/headings'
 
 const GalleryPage = ({ data, pageContext }) => {
+  const lightboxOptions = {
+    imageLoadErrorMessage: 'Impossible de charger cette image',
+    nextLabel: 'Image suivante',
+    prevLabel: 'Image précédente',
+    zoomInLabel: 'Zoomer',
+    zoomOutLabel: 'Dézoomer',
+    closeLabel: 'Fermer',
+  }
   const page = data.sanityGallery
   const images = page.photos.map(({ asset }) => asset)
   return (
@@ -24,7 +32,7 @@ const GalleryPage = ({ data, pageContext }) => {
           <small>{page.year}</small>
         </PageHeader>
         {page.overview && <BlockContent blocks={page.overview} />}
-        <Gallery images={images} />
+        <Gallery images={images} lightboxOptions={lightboxOptions} />
       </Container>
     </Layout>
   )
