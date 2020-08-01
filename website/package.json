@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "3.5.1",
     "@sanity/block-content-to-react": "2.0.7",
-    "babel-plugin-styled-components": "1.10.7",
+    "babel-plugin-styled-components": "1.11.1",
     "gatsby": "2.24.2",
     "gatsby-image": "2.4.13",
     "gatsby-plugin-google-analytics": "2.3.11",
