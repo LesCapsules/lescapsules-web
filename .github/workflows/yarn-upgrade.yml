@@ -5,6 +5,9 @@ on:
   # On the 5th day of each month at midnight
   - cron: "0 0 5 * *"
 
+  # Manual trigger
+  workflow_dispatch:
+
 jobs:
   upgrade:
     runs-on: ubuntu-latest
