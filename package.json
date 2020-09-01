@@ -9,7 +9,7 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.6",
-    "prettier": "2.0.5"
+    "prettier": "2.1.1"
   },
   "scripts": {
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
