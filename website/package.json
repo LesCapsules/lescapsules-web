@@ -40,7 +40,7 @@
     "typography": "0.16.19"
   },
   "devDependencies": {
-    "bundlewatch": "0.3.0"
+    "bundlewatch": "0.3.1"
   },
   "license": "MIT",
   "scripts": {
