@@ -30,7 +30,7 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-icons": "3.11.0",
-    "sanity-plugin-media": "0.3.1",
+    "sanity-plugin-media": "0.4.0",
     "slugify": "1.4.5"
   },
   "devDependencies": {}
