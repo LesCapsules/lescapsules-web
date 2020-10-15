@@ -18711,10 +18711,10 @@ typeface-raleway@0.0.75:
   resolved "https://registry.yarnpkg.com/typeface-raleway/-/typeface-raleway-0.0.75.tgz#cc79688aa3175452744ecd19540b54dad153e8f3"
   integrity sha512-mUvT/klCTGA2HporaIMNY3ap45YxBErxFv/1pv82LhbFdNc3m+6ddfoexP6xxwMZ5yZ2VmDhMqk1yikDEoxU/Q==
 
-typeface-roboto-slab@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/typeface-roboto-slab/-/typeface-roboto-slab-1.1.4.tgz#4b35c91d287acd93a598cc7db4e00b8b703c32e4"
-  integrity sha512-/v4k/tcXDxOus6f6tZGtHlh9IB2vDXC2bkeaZ6X6+OZlEA0rHLnoCju+SQjDJc8aIOKSEJETVP2Ia9kTumKAKQ==
+typeface-roboto-slab@1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-roboto-slab/-/typeface-roboto-slab-1.1.13.tgz#e2b76ea7f5114d8869f29ca39c1a5b8ded51aa77"
+  integrity sha512-2oDTI2Z8GC/ijzhEXPYFA2EmF2Rm446skjY3gK56EzfVEX3BBgil1H9/ifqx9/IfBNwlqVoVs9Ez/g6zOhvC1Q==
 
 typesafe-actions@5.1.0:
   version "5.1.0"

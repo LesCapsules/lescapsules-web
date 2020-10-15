@@ -36,7 +36,7 @@
     "slugify": "1.4.5",
     "styled-components": "5.2.0",
     "typeface-raleway": "0.0.75",
-    "typeface-roboto-slab": "1.1.4",
+    "typeface-roboto-slab": "1.1.13",
     "typography": "0.16.19"
   },
   "devDependencies": {
