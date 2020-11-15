@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaFacebook, FaEnvelope } from 'react-icons/fa'
 import styled from 'styled-components'
+import { ExternalLink } from '@browniebroke/react-ui-components'
 
 import Container from './container'
-import ExternalLink from './external-link'
 import ListInline from './list-inline'
 import { colors, gridBreakpoints, spacings } from './constants'
 
