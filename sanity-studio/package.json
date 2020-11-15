@@ -27,8 +27,8 @@
     "@sanity/default-login": "2.0.9",
     "@sanity/desk-tool": "2.0.9",
     "prop-types": "15.7.2",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-icons": "3.11.0",
     "sanity-plugin-media": "0.4.0",
     "slugify": "1.4.6"
