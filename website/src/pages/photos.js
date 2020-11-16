@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import { Container, Row } from '@browniebroke/react-ui-components'
 
 import CardCaption from '../components/card-caption'
-import Container from '../components/container'
 import GridCard from '../components/card-grid'
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
-import Row from '../components/row'
 import { makeAlbumPagePath } from '../utils'
 
 const PhotoIndexPage = ({ data }) => {

@@ -2,10 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { Container, Row } from '@browniebroke/react-ui-components'
 
-import Container from '../components/container'
 import Layout from '../components/layout'
-import Row from '../components/row'
 
 const ContentStyles = styled.div`
   padding: ${(props) => props.theme.spacings[4]};

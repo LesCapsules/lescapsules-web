@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
+import { ContentWrapper, GlobalStyles } from '@browniebroke/react-ui-components'
 
-import ContentWrapper from './content-wrapper'
 import Footer from './footer'
-import GlobalStyles from './global-styles'
 import Header from './header'
 import SEO from './seo'
 import theme from '../theme'
