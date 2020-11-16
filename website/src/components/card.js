@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { boxShadow, gutterWidth } from './constants'
 
 const Card = styled.div`
   position: relative;
@@ -9,10 +8,10 @@ const Card = styled.div`
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  margin: ${gutterWidth};
+  margin: ${(props) => props.theme.gutterWidth};
 
   :hover {
-    box-shadow: ${boxShadow};
+    box-shadow: ${(props) => props.theme.boxShadow};
   }
 
   img {

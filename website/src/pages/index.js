@@ -6,16 +6,15 @@ import styled from 'styled-components'
 import Container from '../components/container'
 import Layout from '../components/layout'
 import Row from '../components/row'
-import { colors, spacings } from '../components/constants'
 
 const ContentStyles = styled.div`
-  padding: ${spacings[4]};
+  padding: ${(props) => props.theme.spacings[4]};
 `
 
 const ContentTitle = styled.h2`
   text-align: center;
-  color: ${colors.primary};
-  margin-bottom: ${spacings[4]};
+  color: ${(props) => props.theme.colors.primary};
+  margin-bottom: ${(props) => props.theme.spacings[4]};
 `
 
 const LeadParagraph = styled.p`

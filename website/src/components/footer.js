@@ -5,30 +5,29 @@ import { ExternalLink } from '@browniebroke/react-ui-components'
 
 import Container from './container'
 import ListInline from './list-inline'
-import { colors, gridBreakpoints, spacings } from './constants'
 
 const FooterStyles = styled.footer`
-  color: ${colors.primary};
-  background-color: ${colors.secondary};
-  padding: ${spacings[4]} 0;
+  color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.secondary};
+  padding: ${(props) => props.theme.spacings[4]} 0;
 `
 
 const FooterContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${spacings[1]} 0;
+  padding: ${(props) => props.theme.spacings[1]} 0;
   justify-content: space-between;
 
-  @media (min-width: ${gridBreakpoints.md}) {
+  @media (min-width: ${(props) => props.theme.gridBreakpoints.md}) {
     flex-direction: row;
   }
 `
 
 const CopyrightStyles = styled.div`
-  padding-top: ${spacings[2]};
+  padding-top: ${(props) => props.theme.spacings[2]};
 
-  @media (min-width: ${gridBreakpoints.md}) {
+  @media (min-width: ${(props) => props.theme.gridBreakpoints.md}) {
     padding: 0;
   }
 `

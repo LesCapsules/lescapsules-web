@@ -10,11 +10,10 @@ import PageHeader from '../components/headings'
 import Row from '../components/row'
 import { LiteYouTubeEmbed, LiteYoutubeStatic } from '../components/youtube'
 import { makeVideoPagePath } from '../utils'
-import { spacings } from '../components/constants'
 
 const SectionTitle = styled.h2`
-  padding-top: ${spacings[4]};
-  padding-bottom: ${spacings[2]};
+  padding-top: ${(props) => props.theme.spacings[4]};
+  padding-bottom: ${(props) => props.theme.spacings[2]};
 `
 
 const VideoPage = ({ data, pageContext }) => {

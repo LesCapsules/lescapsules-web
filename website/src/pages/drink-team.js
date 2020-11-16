@@ -2,12 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Container from '../components/container'
 import Layout from '../components/layout'
-import PageHeader from '../components/headings'
 import Profile from '../components/profile'
-
-import { containersMaxWidth, spacings } from '../components/constants'
+import Container from '../components/container'
+import PageHeader from '../components/headings'
 
 const TeamContainer = styled(Container)`
   display: flex;
@@ -16,12 +14,12 @@ const TeamContainer = styled(Container)`
 `
 
 const ContentWrapper = styled.div`
-  flex-basis: ${containersMaxWidth.md};
+  flex-basis: ${(props) => props.theme.containersMaxWidth.md};
 `
 
 const ProfileSpacer = styled.div`
   :not(:last-child) {
-    margin-bottom: ${spacings[2]};
+    margin-bottom: ${(props) => props.theme.spacings[2]};
   }
 `
 
