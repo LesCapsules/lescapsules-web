@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { spacings } from './constants'
-
 const ListInlineStyle = styled.ul`
   list-style: none;
   margin: 0;
@@ -13,7 +11,7 @@ const ListItemStyle = styled.li`
   display: inline-block;
 
   :not(:last-child) {
-    margin-right: ${spacings[1]};
+    margin-right: ${(props) => props.theme.spacings[1]};
   }
 `
 

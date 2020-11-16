@@ -1,21 +1,23 @@
 import styled from 'styled-components'
 
-import { containersMaxWidth, gridBreakpoints, gutterWidth } from './constants'
+const genMediaQueries = (props) => {
+  return Object.keys(props.theme.containersMaxWidth).map(
+    (k) =>
+      `@media (min-width: ${props.theme.gridBreakpoints[k]}) {
+        max-width: ${props.theme.containersMaxWidth[k]};
+      }
+      `
+  )
+}
 
 const Container = styled.div`
   width: 100%;
-  padding-right: ${gutterWidth};
-  padding-left: ${gutterWidth};
+  padding-right: ${(props) => props.theme.gutterWidth};
+  padding-left: ${(props) => props.theme.gutterWidth};
   margin-right: auto;
   margin-left: auto;
 
-  ${Object.keys(containersMaxWidth).map(
-    (k) =>
-      `@media (min-width: ${gridBreakpoints[k]}) {
-        max-width: ${containersMaxWidth[k]};
-      }
-      `
-  )}
+  ${genMediaQueries}
 `
 
 export default Container

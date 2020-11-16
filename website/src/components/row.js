@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components'
-import { gutterWidth } from './constants'
 
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-right: -${gutterWidth};
-  margin-left: -${gutterWidth};
+  margin-right: -${(props) => props.theme.gutterWidth};
+  margin-left: -${(props) => props.theme.gutterWidth};
   ${(props) =>
     props.alignItems &&
     css`

@@ -8,18 +8,17 @@ import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import Navigation from './navigation'
 import SideMenu from './side-menu'
 
-import { colors, spacings } from './constants'
-
 const SiteNavBar = styled.nav`
-  background-color: ${colors.primary};
-  padding: ${spacings[1]} ${spacings[2]};
+  background-color: ${(props) => props.theme.colors.primary};
+  padding: ${(props) => props.theme.spacings[1]}
+    ${(props) => props.theme.spacings[2]};
 `
 
 const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${spacings[1]} 0;
+  padding: ${(props) => props.theme.spacings[1]} 0;
 
   > a {
     display: flex;
@@ -30,7 +29,7 @@ const HeaderContainer = styled(Container)`
 const StyledLogo = styled(LogoCapsules)`
   height: 40px;
   path {
-    fill: ${colors.secondary};
+    fill: ${(props) => props.theme.colors.secondary};
   }
 `
 

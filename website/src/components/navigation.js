@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { spacings } from './constants'
-
 const NavigationList = styled.ul`
   list-style: none;
   display: flex;
@@ -11,7 +9,7 @@ const NavigationList = styled.ul`
 `
 
 const NavItem = styled.li`
-  padding: ${spacings[1]};
+  padding: ${(props) => props.theme.spacings[1]};
 
   a,
   a:hover {
