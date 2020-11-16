@@ -1,10 +1,9 @@
 import React from 'react'
 import { FaFacebook, FaEnvelope } from 'react-icons/fa'
 import styled from 'styled-components'
-import { ExternalLink } from '@browniebroke/react-ui-components'
+import { ExternalLink, ListInline } from '@browniebroke/react-ui-components'
 
 import Container from './container'
-import ListInline from './list-inline'
 
 const FooterStyles = styled.footer`
   color: ${(props) => props.theme.colors.primary};
