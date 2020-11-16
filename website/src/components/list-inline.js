@@ -9,17 +9,16 @@ const ListInlineStyle = styled.ul`
 const ListItemStyle = styled.li`
   margin-bottom: 0;
   display: inline-block;
-
-  :not(:last-child) {
-    margin-right: ${(props) => props.theme.spacings[1]};
-  }
+  padding: 0
+    ${(props) =>
+      props.padding !== null ? props.padding : props.theme.spacings[1]};
 `
 
-const ListInline = ({ children, compact = false }) => {
+const ListInline = ({ children, padding = null }) => {
   return (
     <ListInlineStyle>
       {React.Children.map(children, (child, i) => (
-        <ListItemStyle key={i} compact={compact}>
+        <ListItemStyle key={i} padding={padding}>
           {child}
         </ListItemStyle>
       ))}
