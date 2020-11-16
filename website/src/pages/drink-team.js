@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import { Container } from '@browniebroke/react-ui-components'
 
 import Layout from '../components/layout'
 import Profile from '../components/profile'
-import Container from '../components/container'
 import PageHeader from '../components/headings'
 
 const TeamContainer = styled(Container)`

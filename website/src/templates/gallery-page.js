@@ -2,9 +2,9 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import BlockContent from '@sanity/block-content-to-react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
+import { Container } from '@browniebroke/react-ui-components'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
-import Container from '../components/container'
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
 
