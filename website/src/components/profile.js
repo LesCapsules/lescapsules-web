@@ -15,6 +15,7 @@ const ProfileStyles = styled.div`
 
 const ImgProfile = styled.img`
   flex: 0 1 150px;
+  max-width: 150px;
   border-radius: 50%;
   border: 1px solid rgb(81, 85, 93);
   padding: ${(props) => props.theme.spacings[0]};

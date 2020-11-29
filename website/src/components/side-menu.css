@@ -1,6 +1,7 @@
 :root {
   --rbm-button-size: 36px;
   --primary: #0054c7;
+  --primary-dark: #004096;
   --secondary: #f4d62e;
   --secondary-dark: #e3c20c;
 }
@@ -60,9 +61,18 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: var(--primary);
   padding: 0.8em;
   list-style: none;
+}
+
+.bm-item-list > ul > li > a,
+.bm-item-list > ul > li > a:visited {
+  color: var(--primary);
+}
+
+.bm-item-list > ul > li > a:focus,
+.bm-item-list > ul > li > a:hover {
+  color: var(--primary-dark);
 }
 
 /* Individual item */
