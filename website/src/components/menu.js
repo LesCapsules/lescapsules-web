@@ -23,8 +23,13 @@ const StyledBurger = styled.button`
   padding: 0;
   z-index: ${menuZIndex + 1};
 
+  &:focus {
+    outline: none;
+  }
+
   span {
     height: 20%;
+    width: 100%;
     background: ${({ theme, open }) =>
       open ? theme.colors.primary : theme.colors.secondary};
     border-radius: 10px;
