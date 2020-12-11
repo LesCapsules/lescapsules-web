@@ -42,8 +42,9 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
-  opacity: ${({ open }) => (open ? '1' : '0')};
   transition: opacity 0.3s ease 0s;
+  opacity: ${({ open }) => (open ? '1' : '0')};
+  ${({ open }) => (open ? '' : 'display: none;')}
 `
 
 const Menu = ({ children }) => {
