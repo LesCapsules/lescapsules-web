@@ -1051,6 +1051,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/raleway@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.1.0.tgz#561cfac61b828b9580371d30e943d49dba5247c7"
+  integrity sha512-eFA/+PEQ/avDDxMSlYEifPDh7fNlgZCIvVrKmm1eUB6oYT27OQOtVgC5LcG4QbWvNDr2zTEnDA0dltUZIljT+w==
+
+"@fontsource/roboto-slab@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.1.0.tgz#6f1b17f05f6de32175f25ee43a661bc6d7416de9"
+  integrity sha512-+AyTvfJqJaFCYZ04HHsYWNcozTDO5Rv9CkjDZYIcLMZh/HlrdTea0frgK6l+0QGhA+wZiaUUbMTW+6ycqLiniw==
+
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.0.0.tgz#e79d11bd5b39f29172f6ec2eafa71103c6a6c85b"
@@ -18188,16 +18198,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-raleway@1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-raleway/-/typeface-raleway-1.1.13.tgz#5dd44c7029c69991f3e8a66f4434ba62bcf0886a"
-  integrity sha512-iouV4D1dv4Ylm++j2PmPW7HKJH7zTKu5xXsta1hqQ2oG8+9fSpocuF40xCSTckaa1DLYbk1TUiU14wr2nCUBqg==
-
-typeface-roboto-slab@1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-roboto-slab/-/typeface-roboto-slab-1.1.13.tgz#e2b76ea7f5114d8869f29ca39c1a5b8ded51aa77"
-  integrity sha512-2oDTI2Z8GC/ijzhEXPYFA2EmF2Rm446skjY3gK56EzfVEX3BBgil1H9/ifqx9/IfBNwlqVoVs9Ez/g6zOhvC1Q==
 
 typesafe-actions@5.1.0:
   version "5.1.0"
