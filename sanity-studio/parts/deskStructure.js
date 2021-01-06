@@ -1,3 +1,20 @@
+/**
+ * Enable preview panel
+ *
+ * To use, add this section to `sanity.json`:
+ *
+ * {
+ *   ...
+ *   "parts": [
+ *     ...
+ * +   {
+ * +     "name": "part:@sanity/desk-tool/structure",
+ * +     "path": "./parts/deskStructure.js"
+ * +   }
+ *   ]
+ * }
+ */
+
 import React from 'react'
 import S from '@sanity/desk-tool/structure-builder'
 import { FiEdit3 as EditIcon } from 'react-icons/fi'
