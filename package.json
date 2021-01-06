@@ -16,6 +16,7 @@
     "lint:eslint": "eslint --ext .js,.jsx .",
     "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\"",
     "bundlewatch": "yarn workspace website bundlewatch",
+    "purge-assets": "yarn workspace sanity-studio purge-assets",
     "test": "yarn workspace sanity-studio test"
   },
   "repository": {
