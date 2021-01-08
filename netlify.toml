@@ -1,7 +1,7 @@
 [build]
   base    = ""
-  publish = "website/public"
-  command = "yarn workspace website build"
+  publish = "public"
+  command = "yarn build"
   environment = { GATSBY_CPU_COUNT = "1" }
 
 [context.production]

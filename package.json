@@ -1,26 +1,95 @@
 {
-  "private": true,
-  "workspaces": [
-    "sanity-studio",
-    "website"
-  ],
+  "name": "lescapsules-web",
+  "description": "Website for Les Capsules",
+  "version": "1.0.0",
+  "author": "Bruno Alla <alla.brunoo@gmail.com>",
+  "dependencies": {
+    "@browniebroke/gatsby-image-gallery": "4.0.2",
+    "@browniebroke/react-ui-components": "1.6.0",
+    "@fontsource/raleway": "4.1.0",
+    "@fontsource/roboto-slab": "4.1.0",
+    "@sanity/block-content-to-react": "2.0.7",
+    "babel-plugin-styled-components": "1.12.0",
+    "gatsby": "2.29.3",
+    "gatsby-image": "2.8.0",
+    "gatsby-plugin-google-analytics": "2.8.0",
+    "gatsby-plugin-manifest": "2.9.1",
+    "gatsby-plugin-netlify": "2.8.0",
+    "gatsby-plugin-offline": "3.7.1",
+    "gatsby-plugin-react-helmet": "3.7.0",
+    "gatsby-plugin-react-svg": "3.0.0",
+    "gatsby-plugin-robots-txt": "1.5.5",
+    "gatsby-plugin-sentry": "1.0.1",
+    "gatsby-plugin-sharp": "2.11.2",
+    "gatsby-plugin-sitemap": "2.9.0",
+    "gatsby-plugin-styled-components": "3.7.0",
+    "gatsby-plugin-typography": "2.9.0",
+    "gatsby-source-filesystem": "2.8.1",
+    "gatsby-source-sanity": "6.0.4",
+    "gatsby-transformer-remark": "2.13.1",
+    "gatsby-transformer-sharp": "2.9.0",
+    "gray-percentage": "2.0.0",
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-helmet": "6.1.0",
+    "react-icons": "4.1.0",
+    "react-typography": "0.16.19",
+    "slugify": "1.4.6",
+    "styled-components": "5.2.1",
+    "typography": "0.16.19"
+  },
   "devDependencies": {
+    "bundlewatch": "0.3.1",
     "eslint": "7.16.0",
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-prettier": "3.3.0",
     "eslint-plugin-react": "7.22.0",
     "prettier": "2.2.1"
   },
+  "license": "MIT",
   "scripts": {
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss|md)\"",
     "lint:eslint": "eslint --ext .js,.jsx .",
-    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\"",
-    "bundlewatch": "yarn workspace website bundlewatch",
-    "purge-assets": "yarn workspace sanity-studio purge-assets",
-    "test": "yarn workspace sanity-studio test"
+    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss|md)\"",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "prebundlewatch": "gatsby build",
+    "bundlewatch": "bundlewatch",
+    "develop": "gatsby develop",
+    "preview": "gatsby develop -p $PORT -H 0.0.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LesCapsules/lescapsules-web"
-  }
+  "bundlewatch": [
+    {
+      "path": "./public/app-*.js",
+      "maxSize": "34KB"
+    },
+    {
+      "path": "./public/component---src-pages-drink-team-*.js",
+      "maxSize": "1.1KB"
+    },
+    {
+      "path": "./public/component---src-pages-index-*.js",
+      "maxSize": "990B"
+    },
+    {
+      "path": "./public/component---src-pages-photos-*.js",
+      "maxSize": "3.8KB"
+    },
+    {
+      "path": "./public/component---src-templates-gallery-*.js",
+      "maxSize": "28KB"
+    },
+    {
+      "path": "./public/component---src-templates-video-*.js",
+      "maxSize": "4.5KB"
+    },
+    {
+      "path": "./public/styles-*.js",
+      "maxSize": "120B"
+    },
+    {
+      "path": "./public/styles*.css",
+      "maxSize": "4.5KB"
+    }
+  ]
 }
