@@ -1027,10 +1027,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.1.0.tgz#561cfac61b828b9580371d30e943d49dba5247c7"
   integrity sha512-eFA/+PEQ/avDDxMSlYEifPDh7fNlgZCIvVrKmm1eUB6oYT27OQOtVgC5LcG4QbWvNDr2zTEnDA0dltUZIljT+w==
 
-"@fontsource/roboto-slab@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.1.0.tgz#6f1b17f05f6de32175f25ee43a661bc6d7416de9"
-  integrity sha512-+AyTvfJqJaFCYZ04HHsYWNcozTDO5Rv9CkjDZYIcLMZh/HlrdTea0frgK6l+0QGhA+wZiaUUbMTW+6ycqLiniw==
+"@fontsource/roboto-slab@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.1.1.tgz#968c3119a8e5decd09e1ef7cb65dce7390cf24eb"
+  integrity sha512-mbOOEO19fepauO+pv3Wg1nXDUd6GC8w9f+ogRBNl1yWEy6qaNWhYefWvzmwG2kq5Q1wdsMvr4Jr1VYTSs/QqYg==
 
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
