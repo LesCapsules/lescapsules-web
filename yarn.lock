@@ -1022,10 +1022,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/raleway@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.1.1.tgz#74682ff766ffa36c96f7f4ee200b993536ac357e"
-  integrity sha512-1MLn6ec7rFlkIZMOA/eYbSufp+YLmfIEsJcP0RsV1TdjFROQNMYQK4tAEbkS3iSU3Ou/BNB7NEoaNLT/BRUvLw==
+"@fontsource/raleway@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.2.1.tgz#66ca2d8f52fa95146958c8b2e107e2e0d12aca52"
+  integrity sha512-8fCewKYITHW0rQmqWvdP5Xy3qdX3n0Mx/27qBmLlAVDM8B+MMpN0HBux00RETiX0pX3Y3/5ekDAHtiEyyktwew==
 
 "@fontsource/roboto-slab@4.1.1":
   version "4.1.1"
