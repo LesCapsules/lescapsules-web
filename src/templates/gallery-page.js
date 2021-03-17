@@ -3,7 +3,6 @@ import React from 'react'
 import BlockContent from '@sanity/block-content-to-react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import { Container } from '@browniebroke/react-ui-components'
-import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
@@ -23,7 +22,7 @@ const GalleryPage = ({ data, pageContext }) => {
     <Layout
       title={page.title}
       description={`Album photo: ${page.title} (${page.year})`}
-      image={page.mainPhoto.asset.full.src}
+      image={page.mainPhoto.asset.full.images.fallback.src}
       path={pageContext.urlPath}
     >
       <Container>
@@ -46,19 +45,13 @@ export const pageQuery = graphql`
       overview: _rawOverview(resolveReferences: { maxDepth: 50 })
       photos {
         asset {
-          thumb: fluid(maxWidth: 270, maxHeight: 270) {
-            ...GatsbySanityImageFluid
-          }
-          full: fluid(maxWidth: 1024) {
-            ...GatsbySanityImageFluid
-          }
+          thumb: gatsbyImageData(width: 270, height: 270, placeholder: BLURRED)
+          full: gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       mainPhoto {
         asset {
-          full: fixed(width: 1024, height: 800) {
-            src
-          }
+          full: gatsbyImageData(width: 1200, height: 600, layout: FULL_WIDTH)
         }
       }
     }

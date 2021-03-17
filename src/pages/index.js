@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { Container, Row } from '@browniebroke/react-ui-components'
 
@@ -28,7 +28,10 @@ const IndexPage = ({ data }) => {
       path="/"
     >
       <div>
-        <Img fluid={data.photo.image.asset.full} />
+        <GatsbyImage
+          image={getImage(data.photo.image.asset)}
+          alt="Les Capsules"
+        />
       </div>
       <Container>
         <Row>
@@ -58,9 +61,12 @@ export const pageQuery = graphql`
       title
       image {
         asset {
-          full: fluid(maxWidth: 1024, maxHeight: 600) {
-            ...GatsbySanityImageFluid
-          }
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            width: 1024
+            height: 600
+            placeholder: BLURRED
+          )
         }
       }
     }

@@ -39,7 +39,7 @@ const DrinkTeamPage = ({ data }) => {
               <ProfileSpacer key={node.id}>
                 <Profile
                   name={node.name}
-                  imgSrc={node.photo.asset.fixed.src}
+                  image={node.photo.asset}
                   favouritePlace={node.favouritePlace}
                   hobbies={node.hobbies}
                 />
@@ -65,9 +65,12 @@ export const pageQuery = graphql`
           favouritePlace
           photo {
             asset {
-              fixed(height: 300, width: 300) {
-                ...GatsbySanityImageFixed
-              }
+              gatsbyImageData(
+                layout: FIXED
+                width: 150
+                height: 150
+                placeholder: BLURRED
+              )
             }
           }
         }
