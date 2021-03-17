@@ -12,8 +12,12 @@ const ProfileStyles = styled.div`
   @media (min-width: ${(props) => props.theme.gridBreakpoints.sm}) {
     flex-direction: row;
   }
+`
 
+const ImgProfile = styled(GatsbyImage)`
   img {
+    flex: 0 1 150px;
+    max-width: 150px;
     border-radius: 50%;
     border: 1px solid rgb(81, 85, 93);
     padding: ${(props) => props.theme.spacings[0]};
@@ -27,7 +31,7 @@ const BioStyles = styled.div`
 const Profile = ({ name, image, favouritePlace, hobbies }) => {
   return (
     <ProfileStyles>
-      <GatsbyImage image={getImage(image)} alt={name} />
+      <ImgProfile image={getImage(image)} alt={name} />
       <BioStyles>
         <h4>{name}</h4>
         <p>Lieu de bandade favori: {favouritePlace}</p>
