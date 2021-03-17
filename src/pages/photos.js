@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Container, Row } from '@browniebroke/react-ui-components'
 
 import CardCaption from '../components/card-caption'
@@ -12,7 +12,8 @@ import { makeAlbumPagePath } from '../utils'
 const PhotoIndexPage = ({ data }) => {
   const pagesArray = data.allSanityGallery.edges
   const mostRecentGallery = data.allSanityGallery.edges[0]
-  const seoImage = mostRecentGallery.node.mainPhoto.asset.full.src
+  const seoImage =
+    mostRecentGallery.node.mainPhoto.asset.full.images.fallback.src
   return (
     <Layout
       title="Photos"
@@ -28,7 +29,7 @@ const PhotoIndexPage = ({ data }) => {
             return (
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
-                  <Img fluid={node.mainPhoto.asset.thumb} />
+                  <GatsbyImage image={getImage(node.mainPhoto.asset)} alt="" />
                   <CardCaption>
                     {node.title}
                     <br />
@@ -56,12 +57,12 @@ export const pageQuery = graphql`
           year: date(formatString: "YYYY")
           mainPhoto {
             asset {
-              thumb: fluid(maxWidth: 300, maxHeight: 200) {
-                ...GatsbySanityImageFluid
-              }
-              full: fixed(width: 1024, height: 800) {
-                src
-              }
+              gatsbyImageData(width: 300, height: 200, placeholder: BLURRED)
+              full: gatsbyImageData(
+                layout: FULL_WIDTH
+                width: 1200
+                height: 600
+              )
             }
           }
         }
