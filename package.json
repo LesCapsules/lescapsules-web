@@ -114,7 +114,7 @@
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
-      "maxSize": "3.8KB"
+      "maxSize": "4KB"
     },
     {
       "path": "./public/component---src-templates-gallery-*.js",
