@@ -2,28 +2,52 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Container } from '@browniebroke/react-ui-components'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import Layout from '../components/layout'
 import Profile from '../components/profile'
 import PageHeader from '../components/headings'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-const TeamContainer = styled(Container)`
+const TeamContainer = styled(Container)<ThemeProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.div<ThemeProps>`
   flex-basis: ${(props) => props.theme.containersMaxWidth.md};
 `
 
-const ProfileSpacer = styled.div`
+const ProfileSpacer = styled.div<ThemeProps>`
   :not(:last-child) {
     margin-bottom: ${(props) => props.theme.spacings[2]};
   }
 `
 
-const DrinkTeamPage = ({ data }) => {
+interface TeamMemberNode {
+  node: {
+    id: string
+    name: string
+    hobbies: string
+    favouritePlace: string
+    photo: {
+      asset: {
+        gatsbyImageData: IGatsbyImageData
+      }
+    }
+  }
+}
+
+interface DrinkTeamPageProps {
+  data: {
+    allSanityMember: {
+      edges: TeamMemberNode[]
+    }
+  }
+}
+
+const DrinkTeamPage: React.FC<DrinkTeamPageProps> = ({ data }) => {
   const membersArray = data.allSanityMember.edges
   return (
     <Layout
@@ -39,7 +63,7 @@ const DrinkTeamPage = ({ data }) => {
               <ProfileSpacer key={node.id}>
                 <Profile
                   name={node.name}
-                  image={node.photo.asset}
+                  image={node.photo.asset.gatsbyImageData}
                   favouritePlace={node.favouritePlace}
                   hobbies={node.hobbies}
                 />

@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
-const ProfileStyles = styled.div`
+const ProfileStyles = styled.div<ThemeProps>`
   box-shadow: ${(props) => props.theme.boxShadow};
   padding: ${(props) => props.theme.spacings[2]};
   display: flex;
@@ -14,7 +15,7 @@ const ProfileStyles = styled.div`
   }
 `
 
-const ImgProfile = styled(GatsbyImage)`
+const ImgProfile = styled(GatsbyImage)<ThemeProps>`
   img {
     flex: 0 1 150px;
     max-width: 150px;
@@ -24,14 +25,26 @@ const ImgProfile = styled(GatsbyImage)`
   }
 `
 
-const BioStyles = styled.div`
+const BioStyles = styled.div<ThemeProps>`
   margin-left: ${(props) => props.theme.spacings[2]};
 `
 
-const Profile = ({ name, image, favouritePlace, hobbies }) => {
+interface ProfileProps {
+  name: string
+  image: IGatsbyImageData
+  favouritePlace: string
+  hobbies: string
+}
+
+const Profile: React.FC<ProfileProps> = ({
+  name,
+  image,
+  favouritePlace,
+  hobbies,
+}) => {
   return (
     <ProfileStyles>
-      <ImgProfile image={getImage(image)} alt={name} />
+      <ImgProfile image={image} alt={name} />
       <BioStyles>
         <h4>{name}</h4>
         <p>Lieu de bandade favori: {favouritePlace}</p>

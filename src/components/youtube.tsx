@@ -1,17 +1,24 @@
-import React, { Fragment, useState, useRef, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useRef, useLayoutEffect } from 'react'
 import './youtube.css'
 
-export const getPosterUrl = (videoId) =>
+export const getPosterUrl = (videoId: string) =>
   `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
 
-export const LiteYouTubeEmbed = ({ id, title }) => {
+interface LiteYouTubeEmbedProps {
+  id: string
+  title: string
+}
+
+export const LiteYouTubeEmbed: React.FC<LiteYouTubeEmbedProps> = ({
+  id,
+  title,
+}) => {
   const [preconnected, setPreconnected] = useState(false)
   const [iframe, setIframe] = useState(false)
   const videoId = encodeURIComponent(id)
   const posterUrl = getPosterUrl(videoId)
   const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`
-  const refVideo = useRef()
+  const refVideo = useRef<HTMLDivElement>(null)
 
   const warmConnections = () => {
     if (preconnected) return
@@ -23,20 +30,24 @@ export const LiteYouTubeEmbed = ({ id, title }) => {
     setIframe(true)
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const { current } = refVideo
-    current.style.backgroundImage = `url('${posterUrl}')`
-    current.addEventListener('pointerover', warmConnections, true)
-    current.addEventListener('click', addIframe, true)
+    if (current !== null) {
+      current.style.backgroundImage = `url('${posterUrl}')`
+      current.addEventListener('pointerover', warmConnections, true)
+      current.addEventListener('click', addIframe, true)
 
-    return () => {
-      current.removeEventListener('pointerover', warmConnections)
-      current.removeEventListener('click', addIframe)
+      return () => {
+        current.removeEventListener('pointerover', warmConnections)
+        current.removeEventListener('click', addIframe)
+      }
+    } else {
+      return () => {}
     }
   })
 
   return (
-    <Fragment>
+    <>
       <link rel="preload" href={posterUrl} as="image" />
       <>
         {preconnected && (
@@ -64,16 +75,11 @@ export const LiteYouTubeEmbed = ({ id, title }) => {
           />
         )}
       </div>
-    </Fragment>
+    </>
   )
 }
 
-LiteYouTubeEmbed.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-}
-
-export const LiteYoutubeStatic = ({ id }) => {
+export const LiteYoutubeStatic: React.FC<{ id: string }> = ({ id }) => {
   const videoId = encodeURIComponent(id)
   const posterUrl = getPosterUrl(videoId)
 
@@ -83,8 +89,4 @@ export const LiteYoutubeStatic = ({ id }) => {
       style={{ backgroundImage: `url('${posterUrl}')` }}
     />
   )
-}
-
-LiteYoutubeStatic.propTypes = {
-  id: PropTypes.string.isRequired,
 }

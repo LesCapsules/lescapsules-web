@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const urlPath = makeAlbumPagePath(node.title, node.year)
     actions.createPage({
       path: urlPath,
-      component: path.resolve(`./src/templates/gallery-page.js`),
+      component: path.resolve(`./src/templates/gallery-page.tsx`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
@@ -57,7 +57,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create video index page
   actions.createPage({
     path: '/videos/',
-    component: path.resolve(`./src/templates/video-page.js`),
+    component: path.resolve(`./src/templates/video-page.tsx`),
     context: {
       id: '',
       urlPath: '/videos/',
@@ -71,7 +71,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const urlPath = makeVideoPagePath(node.title)
     actions.createPage({
       path: urlPath,
-      component: path.resolve(`./src/templates/video-page.js`),
+      component: path.resolve(`./src/templates/video-page.tsx`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.

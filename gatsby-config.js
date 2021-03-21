@@ -74,6 +74,7 @@ module.exports = {
           ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
       },
     },
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     'gatsby-transformer-sharp',

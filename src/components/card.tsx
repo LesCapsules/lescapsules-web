@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
-const Card = styled.div`
+const Card = styled.div<ThemeProps>`
   position: relative;
   display: flex;
   flex-direction: column;
