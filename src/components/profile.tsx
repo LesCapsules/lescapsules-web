@@ -16,7 +16,7 @@ const ProfileStyles = styled.div<ThemeProps>`
 `
 
 const ImgProfile = styled(GatsbyImage)<ThemeProps>`
-  img {
+  & > img {
     flex: 0 1 150px;
     max-width: 150px;
     border-radius: 50%;
