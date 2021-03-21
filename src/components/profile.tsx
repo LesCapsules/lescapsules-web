@@ -16,12 +16,12 @@ const ProfileStyles = styled.div<ThemeProps>`
 `
 
 const ImgProfile = styled(GatsbyImage)<ThemeProps>`
-  img {
+  & > img {
     flex: 0 1 150px;
     max-width: 150px;
-    border-radius: 50%;
-    border: 1px solid rgb(81, 85, 93);
-    padding: ${(props) => props.theme.spacings[0]};
+    border-radius: 50% !important;
+    border: 1px solid rgb(81, 85, 93) !important;
+    padding: ${(props) => props.theme.spacings[0]} !important;
   }
 `
 
