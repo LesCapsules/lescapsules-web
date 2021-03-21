@@ -1,24 +1,48 @@
-import { graphql, Link } from 'gatsby'
 import React from 'react'
+import { graphql, Link } from 'gatsby'
+import { PageContext } from 'gatsby/internal'
 import styled from 'styled-components'
 import { Container, Row } from '@browniebroke/react-ui-components'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import CardCaption from '../components/card-caption'
 import GridCard from '../components/card-grid'
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
 import { LiteYouTubeEmbed, LiteYoutubeStatic } from '../components/youtube'
+// @ts-ignore
 import { makeVideoPagePath } from '../utils'
 
-const SectionTitle = styled.h2`
+const SectionTitle = styled.h2<ThemeProps>`
   padding-top: ${(props) => props.theme.spacings[4]};
   padding-bottom: ${(props) => props.theme.spacings[2]};
 `
 
-const VideoPage = ({ data, pageContext }) => {
+interface SanityVideoEdge {
+  node: {
+    id: string
+    title: string
+    youtubeId: string
+  }
+}
+
+interface VideoPageProps {
+  data: {
+    allSanityVideo: {
+      edges: SanityVideoEdge[]
+    }
+    sanityVideo: {
+      title: string
+      youtubeId: string
+    }
+  }
+  pageContext: PageContext
+}
+
+const VideoPage: React.FC<VideoPageProps> = ({ data, pageContext }) => {
   const currentVideo = data.sanityVideo
-  const videosArray = data.allSanityVideo.edges.filter((edge) => {
-    return !currentVideo || edge.node.youtubeId !== currentVideo.youtubeId
+  const videosArray = data.allSanityVideo.edges.filter(({ node }) => {
+    return !currentVideo || node.youtubeId !== currentVideo.youtubeId
   })
   const pageTitle = currentVideo ? currentVideo.title : 'Vidéos'
   return (

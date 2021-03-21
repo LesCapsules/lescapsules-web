@@ -1,16 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { Container, Row } from '@browniebroke/react-ui-components'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import Layout from '../components/layout'
 
-const ContentStyles = styled.div`
+const ContentStyles = styled.div<ThemeProps>`
   padding: ${(props) => props.theme.spacings[4]};
 `
 
-const ContentTitle = styled.h2`
+const ContentTitle = styled.h2<ThemeProps>`
   text-align: center;
   color: ${(props) => props.theme.colors.primary};
   margin-bottom: ${(props) => props.theme.spacings[4]};
@@ -20,7 +21,20 @@ const LeadParagraph = styled.p`
   font-size: 1.25em;
 `
 
-const IndexPage = ({ data }) => {
+interface IndexPageProps {
+  data: {
+    photo: {
+      title: string
+      image: {
+        asset: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
+    }
+  }
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   return (
     <Layout
       title="Acceuil"
@@ -29,8 +43,8 @@ const IndexPage = ({ data }) => {
     >
       <div>
         <GatsbyImage
-          image={getImage(data.photo.image.asset)}
-          alt="Les Capsules"
+          image={data.photo.image.asset.gatsbyImageData}
+          alt={data.photo.title}
         />
       </div>
       <Container>
@@ -57,7 +71,6 @@ export default IndexPage
 export const pageQuery = graphql`
   query HomePage {
     photo: sanityPhoto(name: { eq: "all-staff-big" }) {
-      name
       title
       image {
         asset {

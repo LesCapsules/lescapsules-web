@@ -1,5 +1,8 @@
-import { graphql } from 'gatsby'
 import React from 'react'
+import { graphql } from 'gatsby'
+import { PageContext } from 'gatsby/internal'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
+// @ts-ignore
 import BlockContent from '@sanity/block-content-to-react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import { Container } from '@browniebroke/react-ui-components'
@@ -7,7 +10,31 @@ import { Container } from '@browniebroke/react-ui-components'
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
 
-const GalleryPage = ({ data, pageContext }) => {
+interface GalleryPhotoNode {
+  asset: {
+    thumb: IGatsbyImageData
+    full: IGatsbyImageData
+  }
+}
+
+interface GalleryPageProps {
+  data: {
+    sanityGallery: {
+      title: string
+      year: string
+      overview: string
+      mainPhoto: {
+        asset: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
+      photos: GalleryPhotoNode[]
+    }
+  }
+  pageContext: PageContext
+}
+
+const GalleryPage: React.FC<GalleryPageProps> = ({ data, pageContext }) => {
   const lightboxOptions = {
     imageLoadErrorMessage: 'Impossible de charger cette image',
     nextLabel: 'Image suivante',
@@ -22,7 +49,7 @@ const GalleryPage = ({ data, pageContext }) => {
     <Layout
       title={page.title}
       description={`Album photo: ${page.title} (${page.year})`}
-      image={page.mainPhoto.asset.full.images.fallback.src}
+      image={page.mainPhoto.asset.gatsbyImageData?.images?.fallback?.src}
       path={pageContext.urlPath}
     >
       <Container>
@@ -51,7 +78,7 @@ export const pageQuery = graphql`
       }
       mainPhoto {
         asset {
-          full: gatsbyImageData(width: 1200, height: 600, layout: FULL_WIDTH)
+          gatsbyImageData(width: 1200, height: 600, layout: FULL_WIDTH)
         }
       }
     }

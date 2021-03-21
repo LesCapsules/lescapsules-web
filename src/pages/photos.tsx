@@ -1,19 +1,42 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { Container, Row } from '@browniebroke/react-ui-components'
 
 import CardCaption from '../components/card-caption'
 import GridCard from '../components/card-grid'
 import Layout from '../components/layout'
 import PageHeader from '../components/headings'
+// @ts-ignore
 import { makeAlbumPagePath } from '../utils'
 
-const PhotoIndexPage = ({ data }) => {
+interface GalleryNode {
+  node: {
+    id: string
+    title: string
+    year: string
+    mainPhoto: {
+      asset: {
+        gatsbyImageData: IGatsbyImageData
+        full: IGatsbyImageData
+      }
+    }
+  }
+}
+
+interface PhotoIndexPageProps {
+  data: {
+    allSanityGallery: {
+      edges: GalleryNode[]
+    }
+  }
+}
+
+const PhotoIndexPage: React.FC<PhotoIndexPageProps> = ({ data }) => {
   const pagesArray = data.allSanityGallery.edges
   const mostRecentGallery = data.allSanityGallery.edges[0]
   const seoImage =
-    mostRecentGallery.node.mainPhoto.asset.full.images.fallback.src
+    mostRecentGallery?.node?.mainPhoto?.asset?.full?.images?.fallback?.src
   return (
     <Layout
       title="Photos"
@@ -29,7 +52,10 @@ const PhotoIndexPage = ({ data }) => {
             return (
               <GridCard key={node.id}>
                 <Link to={pageUrl}>
-                  <GatsbyImage image={getImage(node.mainPhoto.asset)} alt="" />
+                  <GatsbyImage
+                    image={node.mainPhoto.asset.gatsbyImageData}
+                    alt=""
+                  />
                   <CardCaption>
                     {node.title}
                     <br />

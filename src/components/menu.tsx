@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 const menuZIndex = 10
 const transitionSpeed = '0.3s'
@@ -8,7 +8,11 @@ const transitionSpeed = '0.3s'
 // Just to make sure the menu starts after side header
 const headerHeight = '80px'
 
-const StyledBurger = styled.button`
+interface StyledBurgerProps extends ThemeProps {
+  open: boolean
+}
+
+const StyledBurger = styled.button<StyledBurgerProps>`
   position: relative;
   width: 36px;
   height: 36px;
@@ -50,13 +54,16 @@ const StyledBurger = styled.button`
   }
 `
 
-const Burger = ({ open, setOpen, ...props }) => {
-  const isExpanded = !!open
+interface BurgerProps {
+  open: boolean
+  setOpen: (v: boolean) => void
+}
 
+const Burger: React.FC<BurgerProps> = ({ open, setOpen, ...props }) => {
   return (
     <StyledBurger
       aria-label="Accès au menu"
-      aria-expanded={isExpanded}
+      aria-expanded={open}
       open={open}
       onClick={() => setOpen(!open)}
       {...props}
@@ -68,12 +75,7 @@ const Burger = ({ open, setOpen, ...props }) => {
   )
 }
 
-Burger.propTypes = {
-  open: PropTypes.bool.isRequired,
-  setOpen: PropTypes.func.isRequired,
-}
-
-export const StyledMenu = styled.nav`
+export const StyledMenu = styled.nav<StyledBurgerProps>`
   position: fixed;
   right: 0;
   top: 0;
@@ -104,7 +106,7 @@ export const StyledMenu = styled.nav`
   }
 `
 
-const Overlay = styled.div`
+const Overlay = styled.div<StyledBurgerProps>`
   left: 0;
   top: 0;
   position: fixed;
@@ -117,16 +119,16 @@ const Overlay = styled.div`
   ${({ open }) => (open ? '' : 'transform: translate3d(100%, 0px, 0px);')}
 `
 
-const Menu = ({ children }) => {
+const Menu: React.FC = ({ children }) => {
   const [open, setOpen] = useState(false)
   const menuId = 'site-menu'
-  const isHidden = !!open
+  const isHidden = !open
 
   return (
     <>
       <Overlay open={open} />
       <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-      <StyledMenu open={open} aria-hidden={!isHidden}>
+      <StyledMenu open={open} aria-hidden={isHidden}>
         {children}
       </StyledMenu>
     </>

@@ -16,7 +16,7 @@ const ContentStyles = styled.div`
   justify-content: center;
 `
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <Layout title={title} description={description}>
     <ContentStyles>
       <PageHeader>{title}</PageHeader>

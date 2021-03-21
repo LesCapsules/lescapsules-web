@@ -3,18 +3,19 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { IoMdHome, IoMdImages, IoMdPeople, IoMdVideocam } from 'react-icons/io'
 import { Header as HeaderContainer } from '@browniebroke/react-ui-components'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import Menu from './menu'
 
-const StyledLogo = styled(LogoCapsules)`
+const StyledLogo = styled(LogoCapsules)<ThemeProps>`
   height: 40px;
   path {
     fill: ${(props) => props.theme.colors.secondary};
   }
 `
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <Link to="/" title="Acceuil" aria-label="Acceuil">
