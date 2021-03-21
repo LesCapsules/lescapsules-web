@@ -17,12 +17,11 @@ const TeamContainer = styled(Container)<ThemeProps>`
 
 const ContentWrapper = styled.div<ThemeProps>`
   flex-basis: ${(props) => props.theme.containersMaxWidth.md};
+  margin-bottom: ${(props) => props.theme.spacings[4]};
 `
 
 const ProfileSpacer = styled.div<ThemeProps>`
-  :not(:last-child) {
-    margin-bottom: ${(props) => props.theme.spacings[2]};
-  }
+  margin-bottom: ${(props) => props.theme.spacings[2]};
 `
 
 interface TeamMemberNode {
