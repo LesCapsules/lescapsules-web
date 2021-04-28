@@ -30,9 +30,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, path, lang }) => {
         defaultImage: sanityPhoto(name: { eq: "all-staff-big" }) {
           image {
             asset {
-              fixed(width: 1024, height: 800) {
-                src
-              }
+              gatsbyImageData(layout: FIXED, width: 1024, height: 800)
             }
           }
         }
@@ -43,7 +41,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, path, lang }) => {
   const metaDescription = description || site.siteMetadata.description
   const imageUrl =
     image === undefined
-      ? defaultImage.image.asset.fixed.src
+      ? defaultImage.image.asset.gatsbyImageData.images.fallback.src
       : image.includes('https://')
       ? image
       : `${site.siteMetadata.siteUrl}${image}`
