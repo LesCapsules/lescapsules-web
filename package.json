@@ -124,7 +124,7 @@
     },
     {
       "path": "./public/component---src-templates-video-*.js",
-      "maxSize": "4.5KB"
+      "maxSize": "5KB"
     },
     {
       "path": "./public/styles*.css",
