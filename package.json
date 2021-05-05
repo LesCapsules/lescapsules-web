@@ -128,7 +128,7 @@
     },
     {
       "path": "./public/styles*.css",
-      "maxSize": "4.5KB"
+      "maxSize": "5KB"
     }
   ],
   "renovate": {
