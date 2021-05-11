@@ -82,25 +82,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            let priority = 0.5
-            if (edge.node.path === '/photos/') {
-              priority = 0.7
-            }
-            if (['/videos/', '/drink-team/'].includes(edge.node.path)) {
-              priority = 0.6
-            }
-            if (edge.node.path === '/') {
-              priority = 1
-            }
-
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: `weekly`,
-              priority: priority,
-            }
-          }),
+        output: '/',
+        resolveSiteUrl: () => baseUrl,
+        serialize: (page, tools) => {
+          let priority = 0.5
+          const pagePath = tools.resolvePagePath(page)
+          if (pagePath === '/photos/') {
+            priority = 0.7
+          } else if (['/videos/', '/drink-team/'].includes(pagePath)) {
+            priority = 0.6
+          } else if (pagePath === '/') {
+            priority = 1
+          }
+          return {
+            url: `${baseUrl}${pagePath}`,
+            changefreq: `monthly`,
+            priority: priority,
+          }
+        },
       },
     },
     `gatsby-plugin-robots-txt`,
