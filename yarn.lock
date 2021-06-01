@@ -1105,15 +1105,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/raleway@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.3.0.tgz#8ca67d6f521f07c6e1fa611adea6a2e1cf1b23af"
-  integrity sha512-uXY9PH241WKop5jOXvG7azKc/cTuyEKM+TIlV6Xos+lUGfPqBNmiR5J0IX4sJkyOq59UJjYcYCvEU/rOqfh/Tw==
+"@fontsource/raleway@4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.4.2.tgz#98035d0f7e52ee7d66e1174f7b573069d284373d"
+  integrity sha512-mpu/jyL8NbJZIMyq/UjbFN9g3SZmFZ7FFG74FoU1wyj72sGH/ppjcJ66FrCxPKKkPyA8cfaAy4QzsdnD+nXqkQ==
 
-"@fontsource/roboto-slab@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.3.0.tgz#9e2ede370085d07b4a1a8b723ae0faa826f32f3a"
-  integrity sha512-SElIGfsOu3eA8s7hm/6SpX8Zc6wCahF2SO5a7sUO3SMtkZfPF6Y4YmHp4E0NzbwIxvsyBA+AeKQiW7NU2F7rNw==
+"@fontsource/roboto-slab@4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.4.2.tgz#e4b2abd3bdbeb57341a23ef388b92573f1624e1b"
+  integrity sha512-xeioc8k23yzRGZhpIPx0adxJECwS/kmEdSZHias+MhCa+/ubaBq5WJKaVZ0gaU2j3CiZ7gppZmnHDisav5wqwA==
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
