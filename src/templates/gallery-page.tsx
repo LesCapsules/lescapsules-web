@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { PageContext } from 'gatsby/internal'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 // @ts-ignore
 import BlockContent from '@sanity/block-content-to-react'
@@ -31,7 +30,9 @@ interface GalleryPageProps {
       photos: GalleryPhotoNode[]
     }
   }
-  pageContext: PageContext
+  pageContext: {
+    urlPath: string
+  }
 }
 
 const GalleryPage: React.FC<GalleryPageProps> = ({ data, pageContext }) => {
