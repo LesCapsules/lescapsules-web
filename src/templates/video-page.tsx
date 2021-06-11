@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { PageContext } from 'gatsby/internal'
 import styled from 'styled-components'
 import { Container, Row } from '@browniebroke/react-ui-components'
 import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
@@ -36,7 +35,9 @@ interface VideoPageProps {
       youtubeId: string
     }
   }
-  pageContext: PageContext
+  pageContext: {
+    urlPath: string
+  }
 }
 
 const VideoPage: React.FC<VideoPageProps> = ({ data, pageContext }) => {
