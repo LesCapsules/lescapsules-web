@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "6.2.1",
-    "@browniebroke/react-ui-components": "1.7.3",
+    "@browniebroke/react-ui-components": "1.8.0",
     "@fontsource/raleway": "4.4.5",
     "@fontsource/roboto-slab": "4.4.5",
     "@sanity/block-content-to-react": "3.0.0",
