@@ -5,7 +5,7 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "6.2.1",
+    "@browniebroke/gatsby-image-gallery": "6.2.2",
     "@browniebroke/react-ui-components": "1.8.0",
     "@fontsource/raleway": "4.5.0",
     "@fontsource/roboto-slab": "4.5.0",
@@ -45,7 +45,7 @@
     "@types/react-dom": "17.0.9",
     "@types/react-helmet": "6.1.2",
     "@types/styled-components": "5.1.11",
-    "@typescript-eslint/parser": "4.28.2",
+    "@typescript-eslint/parser": "4.28.4",
     "bundlewatch": "0.3.2",
     "eslint": "7.30.0",
     "eslint-config-prettier": "8.3.0",
