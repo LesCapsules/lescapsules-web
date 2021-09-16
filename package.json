@@ -59,7 +59,6 @@
     "lint:prettier": "prettier --check .",
     "lint:tsc": "tsc",
     "build": "gatsby build --log-pages",
-    "prebundlewatch": "gatsby build",
     "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
     "preview": "gatsby develop -p $PORT -H 0.0.0.0"
