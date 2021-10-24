@@ -27,7 +27,7 @@
     "gatsby-plugin-typescript": "4.0.0",
     "gatsby-plugin-typography": "4.0.0",
     "gatsby-source-filesystem": "4.0.0",
-    "gatsby-source-sanity": "7.0.7",
+    "gatsby-source-sanity": "7.1.0-next.2",
     "gatsby-transformer-sharp": "4.0.0",
     "gray-percentage": "2.0.0",
     "react": "17.0.2",
