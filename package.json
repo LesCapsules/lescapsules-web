@@ -11,7 +11,7 @@
     "@fontsource/roboto-slab": "4.5.1",
     "@sanity/block-content-to-react": "3.0.0",
     "babel-plugin-styled-components": "1.13.3",
-    "gatsby": "4.0.0",
+    "gatsby": "4.0.1",
     "gatsby-plugin-google-analytics": "4.0.0",
     "gatsby-plugin-image": "2.0.0",
     "gatsby-plugin-manifest": "4.0.0",
@@ -27,7 +27,7 @@
     "gatsby-plugin-typescript": "4.0.0",
     "gatsby-plugin-typography": "4.0.0",
     "gatsby-source-filesystem": "4.0.0",
-    "gatsby-source-sanity": "7.1.0-next.2",
+    "gatsby-source-sanity": "7.1.0",
     "gatsby-transformer-sharp": "4.0.0",
     "gray-percentage": "2.0.0",
     "react": "17.0.2",
@@ -41,7 +41,7 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@types/react": "17.0.31",
+    "@types/react": "17.0.32",
     "@types/react-dom": "17.0.10",
     "@types/react-helmet": "6.1.4",
     "@types/styled-components": "5.1.15",
