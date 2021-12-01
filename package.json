@@ -10,7 +10,7 @@
     "@fontsource/raleway": "4.5.0",
     "@fontsource/roboto-slab": "4.5.1",
     "@sanity/block-content-to-react": "3.0.0",
-    "babel-plugin-styled-components": "1.13.3",
+    "babel-plugin-styled-components": "2.0.2",
     "gatsby": "4.3.0",
     "gatsby-plugin-google-analytics": "4.3.0",
     "gatsby-plugin-image": "2.2.0",
