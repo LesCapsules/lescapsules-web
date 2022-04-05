@@ -11,7 +11,7 @@
     "@fontsource/roboto-slab": "4.5.6",
     "@sanity/block-content-to-react": "3.0.0",
     "babel-plugin-styled-components": "2.0.6",
-    "gatsby": "4.11.1",
+    "gatsby": "4.11.2",
     "gatsby-plugin-google-gtag": "4.11.0",
     "gatsby-plugin-image": "2.11.1",
     "gatsby-plugin-manifest": "4.11.1",
@@ -27,7 +27,7 @@
     "gatsby-plugin-typescript": "4.11.1",
     "gatsby-plugin-typography": "4.11.0",
     "gatsby-source-filesystem": "4.11.1",
-    "gatsby-source-sanity": "7.4.1",
+    "gatsby-source-sanity": "7.4.2",
     "gatsby-transformer-sharp": "4.11.0",
     "gray-percentage": "2.0.0",
     "react": "17.0.2",
@@ -51,7 +51,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.4",
-    "prettier": "2.6.1"
+    "prettier": "2.6.2"
   },
   "scripts": {
     "format": "prettier --write .",
