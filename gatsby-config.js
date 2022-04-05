@@ -4,6 +4,8 @@ const baseUrl = process.env.REVIEW_ID
   ? `https://deploy-preview-${process.env.REVIEW_ID}--lescapsules.netlify.app`
   : `https://www.lescapsules.com`
 const previewMode = process.env.PREVIEW_MODE === '1'
+const gaTrackingId =
+  process.env.PRODUCTION_DEPLOY === 'true' ? 'G-Q6XBC0V997' : 'G-xxx'
 
 module.exports = {
   siteMetadata: {
@@ -62,7 +64,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          process.env.GA_TRACKING_ID || 'G-xxx', // Google Analytics / GA
+          gaTrackingId, // Google Analytics / GA
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
