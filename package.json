@@ -7,7 +7,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "7.0.6",
     "@browniebroke/react-ui-components": "1.8.3",
-    "@fontsource/raleway": "4.5.8",
+    "@fontsource/raleway": "4.5.9",
     "@fontsource/roboto-slab": "4.5.8",
     "@sanity/block-content-to-react": "3.0.0",
     "babel-plugin-styled-components": "2.0.7",
