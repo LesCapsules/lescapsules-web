@@ -3,10 +3,10 @@ import { graphql, Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { Container, Row } from '@browniebroke/react-ui-components'
 
-import CardCaption from '../components/card-caption'
-import GridCard from '../components/card-grid'
-import Layout from '../components/layout'
-import PageHeader from '../components/headings'
+import { CardCaption } from '../components/card-caption'
+import { GridCard } from '../components/card-grid'
+import { Layout } from '../components/layout'
+import { PageHeader } from '../components/headings'
 // @ts-ignore
 import { makeAlbumPagePath } from '../utils'
 

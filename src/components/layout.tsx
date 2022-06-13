@@ -2,10 +2,10 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { ContentWrapper, GlobalStyles } from '@browniebroke/react-ui-components'
 
-import Footer from './footer'
-import Header from './header'
-import SEO from './seo'
-import theme from '../theme'
+import { Footer } from './footer'
+import { Header } from './header'
+import { SEO } from './seo'
+import { theme } from '../theme'
 
 interface LayoutProps {
   title: string
@@ -14,7 +14,7 @@ interface LayoutProps {
   path?: string
 }
 
-const Layout: React.FC<LayoutProps> = ({
+export const Layout: React.FC<LayoutProps> = ({
   title,
   description,
   image,
@@ -37,5 +37,3 @@ const Layout: React.FC<LayoutProps> = ({
     </ThemeProvider>
   </>
 )
-
-export default Layout

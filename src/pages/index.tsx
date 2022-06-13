@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Container, Row } from '@browniebroke/react-ui-components'
 import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 
 const ContentStyles = styled.div<ThemeProps>`
   padding: ${(props) => props.theme.spacings[4]};

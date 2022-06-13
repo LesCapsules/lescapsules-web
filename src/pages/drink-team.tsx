@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import { Container } from '@browniebroke/react-ui-components'
 import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
-import Layout from '../components/layout'
-import Profile from '../components/profile'
-import PageHeader from '../components/headings'
+import { Layout } from '../components/layout'
+import { Profile } from '../components/profile'
+import { PageHeader } from '../components/headings'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 const TeamContainer = styled(Container)<ThemeProps>`

@@ -36,7 +36,7 @@ interface ProfileProps {
   hobbies: string
 }
 
-const Profile: React.FC<ProfileProps> = ({
+export const Profile: React.FC<ProfileProps> = ({
   name,
   image,
   favouritePlace,
@@ -53,5 +53,3 @@ const Profile: React.FC<ProfileProps> = ({
     </ProfileStyles>
   )
 }
-
-export default Profile
