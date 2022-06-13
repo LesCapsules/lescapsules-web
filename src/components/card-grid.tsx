@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Card from './card'
+import { Card } from './card'
 import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 interface GridCardProps extends ThemeProps {
@@ -8,7 +8,7 @@ interface GridCardProps extends ThemeProps {
   widthMd?: string | number
 }
 
-const GridCard = styled(Card)<GridCardProps>`
+export const GridCard = styled(Card)<GridCardProps>`
   width: calc(
     ${(props) => (props.width ? `${props.width}%` : '50%')} -
       ${(props) => props.theme.gutterWidth} * 2
@@ -28,5 +28,3 @@ const GridCard = styled(Card)<GridCardProps>`
     );
   }
 `
-
-export default GridCard

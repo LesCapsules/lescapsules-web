@@ -6,8 +6,8 @@ import BlockContent from '@sanity/block-content-to-react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import { Container } from '@browniebroke/react-ui-components'
 
-import Layout from '../components/layout'
-import PageHeader from '../components/headings'
+import { Layout } from '../components/layout'
+import { PageHeader } from '../components/headings'
 
 interface GalleryPhotoNode {
   asset: {

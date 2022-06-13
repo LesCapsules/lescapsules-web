@@ -34,7 +34,7 @@ const CopyrightStyles = styled.div<ThemeProps>`
   }
 `
 
-const Footer: React.FC = () => (
+export const Footer: React.FC = () => (
   <FooterStyles>
     <FooterContainer>
       <ListInline>
@@ -55,5 +55,3 @@ const Footer: React.FC = () => (
     </FooterContainer>
   </FooterStyles>
 )
-
-export default Footer

@@ -119,7 +119,7 @@ const Overlay = styled.div<StyledBurgerProps>`
   ${({ open }) => (open ? '' : 'transform: translate3d(100%, 0px, 0px);')}
 `
 
-const Menu: React.FC = ({ children }) => {
+export const Menu: React.FC = ({ children }) => {
   const [open, setOpen] = useState(false)
   const menuId = 'site-menu'
   const isHidden = !open
@@ -134,5 +134,3 @@ const Menu: React.FC = ({ children }) => {
     </>
   )
 }
-
-export default Menu

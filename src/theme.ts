@@ -1,6 +1,6 @@
 import { styledComponentsTheme } from '@browniebroke/react-ui-components'
 
-const theme = {
+export const theme = {
   ...styledComponentsTheme,
   colors: {
     ...styledComponentsTheme.colors,
@@ -12,5 +12,3 @@ const theme = {
   boxShadow: 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px',
   overlay: 'rgba(0, 0, 0, 0.85)', // Aligned with lightbox
 }
-
-export default theme
