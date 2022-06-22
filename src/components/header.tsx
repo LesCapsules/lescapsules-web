@@ -15,7 +15,7 @@ const StyledLogo = styled(LogoCapsules)<ThemeProps>`
   }
 `
 
-export const Header: React.FC = () => {
+export const Header = () => {
   return (
     <HeaderContainer>
       <Link to="/" title="Acceuil" aria-label="Acceuil">

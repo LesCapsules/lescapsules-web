@@ -32,7 +32,7 @@ interface PhotoIndexPageProps {
   }
 }
 
-const PhotoIndexPage: React.FC<PhotoIndexPageProps> = ({ data }) => {
+const PhotoIndexPage = ({ data }: PhotoIndexPageProps) => {
   const pagesArray = data.allSanityGallery.edges
   const mostRecentGallery = data.allSanityGallery.edges[0]
   const seoImage =

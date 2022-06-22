@@ -9,10 +9,7 @@ interface LiteYouTubeEmbedProps {
   title: string
 }
 
-export const LiteYouTubeEmbed: React.FC<LiteYouTubeEmbedProps> = ({
-  id,
-  title,
-}) => {
+export const LiteYouTubeEmbed = ({ id, title }: LiteYouTubeEmbedProps) => {
   const [preconnected, setPreconnected] = useState(false)
   const [iframe, setIframe] = useState(false)
   const videoId = encodeURIComponent(id)
@@ -79,7 +76,11 @@ export const LiteYouTubeEmbed: React.FC<LiteYouTubeEmbedProps> = ({
   )
 }
 
-export const LiteYoutubeStatic: React.FC<{ id: string }> = ({ id }) => {
+type LiteYoutubeStaticProps = {
+  id: string
+}
+
+export const LiteYoutubeStatic = ({ id }: LiteYoutubeStaticProps) => {
   const videoId = encodeURIComponent(id)
   const posterUrl = getPosterUrl(videoId)
 
