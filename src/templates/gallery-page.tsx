@@ -35,7 +35,7 @@ interface GalleryPageProps {
   }
 }
 
-const GalleryPage: React.FC<GalleryPageProps> = ({ data, pageContext }) => {
+const GalleryPage = ({ data, pageContext }: GalleryPageProps) => {
   const lightboxOptions = {
     imageLoadErrorMessage: 'Impossible de charger cette image',
     nextLabel: 'Image suivante',

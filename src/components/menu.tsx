@@ -59,7 +59,7 @@ interface BurgerProps {
   setOpen: (v: boolean) => void
 }
 
-const Burger: React.FC<BurgerProps> = ({ open, setOpen, ...props }) => {
+const Burger = ({ open, setOpen, ...props }: BurgerProps) => {
   return (
     <StyledBurger
       aria-label="Accès au menu"
@@ -119,7 +119,11 @@ const Overlay = styled.div<StyledBurgerProps>`
   ${({ open }) => (open ? '' : 'transform: translate3d(100%, 0px, 0px);')}
 `
 
-export const Menu: React.FC = ({ children }) => {
+type MenuProps = {
+  children?: React.ReactNode
+}
+
+export const Menu = ({ children }: MenuProps) => {
   const [open, setOpen] = useState(false)
   const menuId = 'site-menu'
   const isHidden = !open

@@ -13,15 +13,16 @@ interface LayoutProps {
   description: string
   image?: string
   path?: string
+  children?: React.ReactNode
 }
 
-export const Layout: React.FC<LayoutProps> = ({
+export const Layout = ({
   title,
   description,
   image,
   path,
   children,
-}) => (
+}: LayoutProps) => (
   <>
     <ThemeProvider theme={theme}>
       <GlobalStyles />

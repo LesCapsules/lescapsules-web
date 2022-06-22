@@ -40,7 +40,7 @@ interface VideoPageProps {
   }
 }
 
-const VideoPage: React.FC<VideoPageProps> = ({ data, pageContext }) => {
+const VideoPage = ({ data, pageContext }: VideoPageProps) => {
   const currentVideo = data.sanityVideo
   const videosArray = data.allSanityVideo.edges.filter(({ node }) => {
     return !currentVideo || node.youtubeId !== currentVideo.youtubeId

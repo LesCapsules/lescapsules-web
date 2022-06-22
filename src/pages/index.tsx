@@ -34,7 +34,7 @@ interface IndexPageProps {
   }
 }
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
+const IndexPage = ({ data }: IndexPageProps) => {
   return (
     <Layout
       title="Acceuil"
