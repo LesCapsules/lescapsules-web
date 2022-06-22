@@ -1,10 +1,11 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { ContentWrapper, GlobalStyles } from '@browniebroke/react-ui-components'
+import { ContentWrapper } from '@browniebroke/react-ui-components'
 
 import { Footer } from './footer'
 import { Header } from './header'
 import { SEO } from './seo'
+import { GlobalStyles } from './global-style'
 import { theme } from '../theme'
 
 interface LayoutProps {
