@@ -36,12 +36,12 @@ interface ProfileProps {
   hobbies: string
 }
 
-export const Profile: React.FC<ProfileProps> = ({
+export const Profile = ({
   name,
   image,
   favouritePlace,
   hobbies,
-}) => {
+}: ProfileProps) => {
   return (
     <ProfileStyles>
       <ImgProfile image={image} alt={name} />

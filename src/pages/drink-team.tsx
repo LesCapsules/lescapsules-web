@@ -46,7 +46,7 @@ interface DrinkTeamPageProps {
   }
 }
 
-const DrinkTeamPage: React.FC<DrinkTeamPageProps> = ({ data }) => {
+const DrinkTeamPage = ({ data }: DrinkTeamPageProps) => {
   const membersArray = data.allSanityMember.edges
   return (
     <Layout
