@@ -5,7 +5,7 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "7.0.6",
+    "@browniebroke/gatsby-image-gallery": "7.0.7",
     "@browniebroke/react-ui-components": "1.8.4",
     "@fontsource/raleway": "4.5.9",
     "@fontsource/roboto-slab": "4.5.8",
