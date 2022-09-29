@@ -26,7 +26,7 @@
     "gatsby-plugin-styled-components": "5.24.0",
     "gatsby-plugin-typescript": "4.24.0",
     "gatsby-source-filesystem": "4.24.0",
-    "gatsby-source-sanity": "7.4.2",
+    "gatsby-source-sanity": "7.5.1",
     "gatsby-transformer-sharp": "4.24.0",
     "gray-percentage": "2.0.0",
     "react": "18.2.0",
