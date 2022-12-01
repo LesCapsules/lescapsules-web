@@ -75,7 +75,7 @@ export default PhotoIndexPage
 
 export const pageQuery = graphql`
   query GalleryPagesList {
-    allSanityGallery(sort: { fields: date, order: DESC }) {
+    allSanityGallery(sort: { date: DESC }) {
       edges {
         node {
           id
