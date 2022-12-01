@@ -10,7 +10,7 @@ const { makeAlbumPagePath, makeVideoPagePath } = require(`./src/utils`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
-      allSanityGallery(sort: { fields: date, order: DESC }) {
+      allSanityGallery(sort: { date: DESC }) {
         edges {
           node {
             id

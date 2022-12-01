@@ -79,7 +79,7 @@ export default DrinkTeamPage
 
 export const pageQuery = graphql`
   query DrinkTeamQuery {
-    allSanityMember(sort: { fields: name }) {
+    allSanityMember(sort: { name: ASC }) {
       edges {
         node {
           id
