@@ -105,15 +105,15 @@
     },
     {
       "path": "./public/component---src-pages-drink-team-*.js",
-      "maxSize": "1.1KB"
+      "maxSize": "5KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "990B"
+      "maxSize": "10KB"
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
-      "maxSize": "5KB"
+      "maxSize": "10KB"
     },
     {
       "path": "./public/component---src-templates-gallery-*.js",
