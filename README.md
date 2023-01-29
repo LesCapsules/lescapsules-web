@@ -1,12 +1,6 @@
 # Les Capsules
 
 <p align="center">
-  <a href="https://lgtm.com/projects/g/LesCapsules/lescapsules-web/alerts/">
-    <img src="https://img.shields.io/lgtm/alerts/github/LesCapsules/lescapsules-web?logo=lgtm&logoColor=white&style=flat-square" alt="Total alerts">
-  </a>
-  <a href="https://david-dm.org/LesCapsules/lescapsules-web">
-    <img src="https://img.shields.io/david/LesCapsules/lescapsules-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
-  </a>
   <a href="https://github.com/LesCapsules/lescapsules-web/actions/workflows/ci.yml?query=branch%3Amain">
     <img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/LesCapsules/lescapsules-web/ci.yml?branch=main&label=CI&logo=github&logoColor=white&style=flat-square">
   </a>
