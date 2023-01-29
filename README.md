@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/david/LesCapsules/lescapsules-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
   </a>
   <a href="https://github.com/LesCapsules/lescapsules-web/actions?query=workflow%3ACI">
-    <img alt="CI status" src="https://img.shields.io/github/workflow/status/LesCapsules/lescapsules-web/CI/main?label=CI&logo=github&logoColor=white&style=flat-square">
+    <img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/LesCapsules/lescapsules-web/ci.yml?branch=main&label=CI&logo=github&logoColor=white&style=flat-square">
   </a>
   <a href="https://app.netlify.com/sites/lescapsules/deploys">
     <img src="https://img.shields.io/netlify/4b203ef5-3ac6-4b51-afcb-564239b2ef86?label=Netlify&logo=netlify&logoColor=white&style=flat-square" alt="Deployed on Netlify"/>
