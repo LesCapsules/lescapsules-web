@@ -1,33 +1,29 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 
 import { Layout } from '../components/layout'
-import { PageHeader } from '../components/headings'
+import { Flex, Heading, Text } from '@chakra-ui/react'
 
 const title = 'Page introuvable'
 const description = 'Impossible de trouver cette page...'
 
-const ContentStyles = styled.div`
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
 const NotFoundPage = () => (
   <Layout title={title} description={description}>
-    <ContentStyles>
-      <PageHeader>{title}</PageHeader>
-      <p>
+    <Flex
+      direction="column"
+      height="60vh"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Heading>{title}</Heading>
+      <Text>
         {description}
         <br />
-      </p>
-      <p>
+      </Text>
+      <Text>
         <Link to="/">Retour à l'acceuil</Link>
-      </p>
-    </ContentStyles>
+      </Text>
+    </Flex>
   </Layout>
 )
 
