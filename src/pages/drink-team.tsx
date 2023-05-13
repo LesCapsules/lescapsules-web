@@ -1,28 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import { Container } from '@browniebroke/react-ui-components'
-import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { Container, Heading } from '@chakra-ui/react'
 
 import { Layout } from '../components/layout'
 import { Profile } from '../components/profile'
-import { PageHeader } from '../components/headings'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
-
-const TeamContainer = styled(Container)<ThemeProps>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const ContentWrapper = styled.div<ThemeProps>`
-  flex-basis: ${(props) => props.theme.containersMaxWidth.md};
-  margin-bottom: ${(props) => props.theme.spacings[4]};
-`
-
-const ProfileSpacer = styled.div<ThemeProps>`
-  margin-bottom: ${(props) => props.theme.spacings[2]};
-`
 
 interface TeamMemberNode {
   node: {
@@ -54,23 +36,19 @@ const DrinkTeamPage = ({ data }: DrinkTeamPageProps) => {
       description="Le comité des fêtes de Sauclières, AKA Les Capsules."
       path="/drink-team/"
     >
-      <TeamContainer>
-        <ContentWrapper>
-          <PageHeader>La Drink Team</PageHeader>
-          {membersArray.map(({ node }) => {
-            return (
-              <ProfileSpacer key={node.id}>
-                <Profile
-                  name={node.name}
-                  image={node.photo.asset.gatsbyImageData}
-                  favouritePlace={node.favouritePlace}
-                  hobbies={node.hobbies}
-                />
-              </ProfileSpacer>
-            )
-          })}
-        </ContentWrapper>
-      </TeamContainer>
+      <Container maxWidth={{ base: '100%', lg: '960px' }}>
+        <Heading>La Drink Team</Heading>
+        {membersArray.map(({ node }, index) => {
+          return (
+            <Profile
+              name={node.name}
+              image={node.photo.asset.gatsbyImageData}
+              favouritePlace={node.favouritePlace}
+              hobbies={node.hobbies}
+            />
+          )
+        })}
+      </Container>
     </Layout>
   )
 }
