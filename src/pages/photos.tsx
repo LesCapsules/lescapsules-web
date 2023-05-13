@@ -51,8 +51,8 @@ const PhotoIndexPage = ({ data }: PhotoIndexPageProps) => {
     >
       <Container
         maxWidth={{
-          base: '100%',
-          xl: '1140px',
+          base: 'full',
+          xl: '5xl',
         }}
       >
         <Heading>Galleries de photos</Heading>
@@ -75,7 +75,7 @@ const PhotoIndexPage = ({ data }: PhotoIndexPageProps) => {
                 }}
               >
                 <Link to={pageUrl}>
-                  <Card height="100%" borderRadius={0}>
+                  <Card height="full" borderRadius={0}>
                     <CardBody padding={0}>
                       <GatsbyImage
                         image={node.mainPhoto.asset.gatsbyImageData}

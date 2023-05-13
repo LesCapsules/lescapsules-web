@@ -52,8 +52,8 @@ const VideoPage = ({ data, pageContext }: VideoPageProps) => {
     >
       <Container
         maxWidth={{
-          base: '100%',
-          xl: '1140px',
+          base: 'full',
+          xl: '5xl',
         }}
       >
         <Heading>{pageTitle}</Heading>

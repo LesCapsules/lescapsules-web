@@ -36,7 +36,7 @@ const DrinkTeamPage = ({ data }: DrinkTeamPageProps) => {
       description="Le comité des fêtes de Sauclières, AKA Les Capsules."
       path="/drink-team/"
     >
-      <Container maxWidth={{ base: '100%', lg: '960px' }}>
+      <Container maxWidth={{ base: 'full', lg: '3xl' }}>
         <Heading>La Drink Team</Heading>
         {membersArray.map(({ node }, index) => {
           return (
