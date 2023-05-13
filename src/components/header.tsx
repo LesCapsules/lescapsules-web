@@ -1,40 +1,42 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import { Box, Container, Flex, Icon } from '@chakra-ui/react'
 import { IoMdHome, IoMdImages, IoMdPeople, IoMdVideocam } from 'react-icons/io'
-import { Header as HeaderContainer } from '@browniebroke/react-ui-components'
-import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import { Menu } from './menu'
 
-const StyledLogo = styled(LogoCapsules)<ThemeProps>`
-  height: 40px;
-  path {
-    fill: ${(props) => props.theme.colors.secondary};
-  }
-`
-
 export const Header = () => {
   return (
-    <HeaderContainer>
-      <Link to="/" title="Acceuil" aria-label="Acceuil">
-        <StyledLogo />
-      </Link>
-      <Menu>
-        <Link to="/">
-          <IoMdHome /> Acceuil
-        </Link>
-        <Link to="/photos/">
-          <IoMdImages /> Photos
-        </Link>
-        <Link to="/videos/">
-          <IoMdVideocam /> Vidéos
-        </Link>
-        <Link to="/drink-team/">
-          <IoMdPeople /> Drink Team
-        </Link>
-      </Menu>
-    </HeaderContainer>
+    <Box as="header" backgroundColor="primary" color="secondary">
+      <Box as="nav" padding={4}>
+        <Container maxWidth={{ base: 'full', lg: '5xl' }}>
+          <Flex justifyContent="space-between" alignItems="center">
+            <Link to="/" title="Acceuil" aria-label="Acceuil">
+              <Icon
+                as={LogoCapsules}
+                height="site-logo.height"
+                width="auto"
+                sx={{ path: { fill: 'currentColor' } }}
+              />
+            </Link>
+            <Menu>
+              <Link to="/">
+                <IoMdHome /> Acceuil
+              </Link>
+              <Link to="/photos/">
+                <IoMdImages /> Photos
+              </Link>
+              <Link to="/videos/">
+                <IoMdVideocam /> Vidéos
+              </Link>
+              <Link to="/drink-team/">
+                <IoMdPeople /> Drink Team
+              </Link>
+            </Menu>
+          </Flex>
+        </Container>
+      </Box>
+    </Box>
   )
 }
