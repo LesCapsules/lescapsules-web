@@ -1,12 +1,17 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import { Container, Row } from '@browniebroke/react-ui-components'
+import {
+  Heading,
+  Container,
+  Grid,
+  GridItem,
+  Card,
+  CardBody,
+  Box,
+} from '@chakra-ui/react'
 
-import { CardCaption } from '../components/card-caption'
-import { GridCard } from '../components/card-grid'
 import { Layout } from '../components/layout'
-import { PageHeader } from '../components/headings'
 // @ts-ignore
 import { makeAlbumPagePath } from '../utils'
 
@@ -44,28 +49,54 @@ const PhotoIndexPage = ({ data }: PhotoIndexPageProps) => {
       image={seoImage}
       path="/photos/"
     >
-      <Container>
-        <PageHeader>Galleries de photos</PageHeader>
-        <Row>
+      <Container
+        maxWidth={{
+          base: '100%',
+          xl: '1140px',
+        }}
+      >
+        <Heading>Galleries de photos</Heading>
+        <Grid
+          templateColumns={{
+            base: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(4, 1fr)',
+          }}
+          gap={6}
+        >
           {pagesArray.map(({ node }) => {
             const pageUrl = makeAlbumPagePath(node.title, node.year)
             return (
-              <GridCard key={node.id}>
+              <GridItem
+                sx={{
+                  ':hover': {
+                    boxShadow: 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px',
+                  },
+                }}
+              >
                 <Link to={pageUrl}>
-                  <GatsbyImage
-                    image={node.mainPhoto.asset.gatsbyImageData}
-                    alt=""
-                  />
-                  <CardCaption>
-                    {node.title}
-                    <br />
-                    <span className="year">{node.year}</span>
-                  </CardCaption>
+                  <Card height="100%" borderRadius={0}>
+                    <CardBody padding={0}>
+                      <GatsbyImage
+                        image={node.mainPhoto.asset.gatsbyImageData}
+                        alt=""
+                      />
+                      <Box padding={2}>
+                        <Heading size="md">
+                          {node.title}
+                          <br />
+                          <Box as="span" fontSize="0.8em">
+                            {node.year}
+                          </Box>
+                        </Heading>
+                      </Box>
+                    </CardBody>
+                  </Card>
                 </Link>
-              </GridCard>
+              </GridItem>
             )
           })}
-        </Row>
+        </Grid>
       </Container>
     </Layout>
   )
