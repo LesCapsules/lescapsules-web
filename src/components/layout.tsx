@@ -7,6 +7,9 @@ import { Header } from './header'
 import { SEO } from './seo'
 import { GlobalStyles } from './global-style'
 import { theme } from '../theme'
+// ChakraUI
+import { ChakraProvider } from '@chakra-ui/react'
+import { theme as chakraTheme } from '../utils/theme'
 
 interface LayoutProps {
   title: string
@@ -24,18 +27,20 @@ export const Layout = ({
   children,
 }: LayoutProps) => (
   <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <SEO
-        title={title}
-        description={description}
-        image={image}
-        path={path}
-        lang="fr"
-      />
-      <Header />
-      <ContentWrapper>{children}</ContentWrapper>
-      <Footer />
-    </ThemeProvider>
+    <ChakraProvider theme={chakraTheme}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <SEO
+          title={title}
+          description={description}
+          image={image}
+          path={path}
+          lang="fr"
+        />
+        <Header />
+        <ContentWrapper>{children}</ContentWrapper>
+        <Footer />
+      </ThemeProvider>
+    </ChakraProvider>
   </>
 )
