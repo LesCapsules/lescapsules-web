@@ -16,8 +16,6 @@ import { IoMdHome, IoMdImages, IoMdPeople, IoMdVideocam } from 'react-icons/io'
 
 export const Menu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
-
   return (
     <>
       <Button onClick={onOpen} colorScheme="primary">
