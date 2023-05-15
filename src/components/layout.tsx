@@ -1,14 +1,9 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import { ContentWrapper } from '@browniebroke/react-ui-components'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 
 import { Footer } from './footer'
 import { Header } from './header'
 import { SEO } from './seo'
-import { GlobalStyles } from './global-style'
-import { theme } from '../theme'
-// ChakraUI
-import { Box, ChakraProvider } from '@chakra-ui/react'
 import { theme as chakraTheme } from '../utils/theme'
 
 interface LayoutProps {
@@ -30,21 +25,18 @@ export const Layout = ({
 }: LayoutProps) => (
   <>
     <ChakraProvider theme={chakraTheme}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <SEO
-          title={title}
-          description={description}
-          image={image}
-          path={path}
-          lang="fr"
-        />
-        <Header />
-        <Box paddingY={paddingY} minHeight="80vh">
-          {children}
-        </Box>
-        <Footer />
-      </ThemeProvider>
+      <SEO
+        title={title}
+        description={description}
+        image={image}
+        path={path}
+        lang="fr"
+      />
+      <Header />
+      <Box paddingY={paddingY} minHeight="80vh">
+        {children}
+      </Box>
+      <Footer />
     </ChakraProvider>
   </>
 )

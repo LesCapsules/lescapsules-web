@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Box, Container, Flex, Icon } from '@chakra-ui/react'
-import { IoMdHome, IoMdImages, IoMdPeople, IoMdVideocam } from 'react-icons/io'
 
 import LogoCapsules from '../images/icons/lescapsules-name.svg'
 import { Menu } from './menu'

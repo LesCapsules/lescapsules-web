@@ -13,6 +13,26 @@ const customTheme = {
       height: '40px',
     },
   },
+  styles: {
+    global: {
+      html: {
+        fontSize: '1.25rem',
+        letterSpacing: '.03em',
+        overflowY: 'scroll',
+      },
+    },
+  },
+  components: {
+    Heading: {
+      baseStyle: {
+        marginTop: 0,
+        marginBottom: 8,
+        lineHeight: '1.2',
+        fontWeight: '400',
+        textRendering: 'optimizeLegibility',
+      },
+    },
+  },
 }
 
 export const theme = extendTheme(customTheme)

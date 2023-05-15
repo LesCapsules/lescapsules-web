@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 
 import { Layout } from '../components/layout'
+import { SubHeading } from '../components/subheading'
 // @ts-ignore
 import { makeAlbumPagePath } from '../utils'
 
@@ -85,9 +86,7 @@ const PhotoIndexPage = ({ data }: PhotoIndexPageProps) => {
                         <Heading size="md">
                           {node.title}
                           <br />
-                          <Box as="span" fontSize="0.8em">
-                            {node.year}
-                          </Box>
+                          <SubHeading>{node.year}</SubHeading>
                         </Heading>
                       </Box>
                     </CardBody>

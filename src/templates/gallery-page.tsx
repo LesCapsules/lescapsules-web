@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
-import { Container, Heading } from '@chakra-ui/react'
+import { Box, Container, Heading } from '@chakra-ui/react'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 // @ts-ignore
 import BlockContent from '@sanity/block-content-to-react'
 
 import { Layout } from '../components/layout'
+import { SubHeading } from '../components/subheading'
 
 interface GalleryPhotoNode {
   asset: {
@@ -55,9 +56,13 @@ const GalleryPage = ({ data, pageContext }: GalleryPageProps) => {
       <Container maxWidth="4xl">
         <Heading>
           {page.title} <br />
-          <small>{page.year}</small>
+          <SubHeading>{page.year}</SubHeading>
         </Heading>
-        {page.overview && <BlockContent blocks={page.overview} />}
+        {page.overview && (
+          <Box marginY={8}>
+            <BlockContent blocks={page.overview} />
+          </Box>
+        )}
         <Gallery images={images} lightboxOptions={lightboxOptions} />
       </Container>
     </Layout>
