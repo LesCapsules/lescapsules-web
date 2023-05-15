@@ -8,7 +8,7 @@ import { SEO } from './seo'
 import { GlobalStyles } from './global-style'
 import { theme } from '../theme'
 // ChakraUI
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 import { theme as chakraTheme } from '../utils/theme'
 
 interface LayoutProps {
@@ -16,6 +16,7 @@ interface LayoutProps {
   description: string
   image?: string
   path?: string
+  paddingY?: number
   children?: React.ReactNode
 }
 
@@ -24,6 +25,7 @@ export const Layout = ({
   description,
   image,
   path,
+  paddingY = 10,
   children,
 }: LayoutProps) => (
   <>
@@ -38,7 +40,9 @@ export const Layout = ({
           lang="fr"
         />
         <Header />
-        <ContentWrapper>{children}</ContentWrapper>
+        <Box paddingY={paddingY} minHeight="80vh">
+          {children}
+        </Box>
         <Footer />
       </ThemeProvider>
     </ChakraProvider>

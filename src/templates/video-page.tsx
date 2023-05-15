@@ -58,15 +58,15 @@ const VideoPage = ({ data, pageContext }: VideoPageProps) => {
       >
         <Heading>{pageTitle}</Heading>
         {currentVideo && (
-          <LiteYouTubeEmbed
-            id={currentVideo.youtubeId}
-            title={currentVideo.title}
-          />
-        )}
-        {currentVideo && (
-          <Heading as="h3" size="md">
-            Plus de vidéos
-          </Heading>
+          <>
+            <LiteYouTubeEmbed
+              id={currentVideo.youtubeId}
+              title={currentVideo.title}
+            />
+            <Heading as="h3" size="md" marginTop={10}>
+              Plus de vidéos
+            </Heading>
+          </>
         )}
         <Grid
           templateColumns={{

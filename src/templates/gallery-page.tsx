@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { Container, Heading } from '@chakra-ui/react'
+import Gallery from '@browniebroke/gatsby-image-gallery'
 // @ts-ignore
 import BlockContent from '@sanity/block-content-to-react'
-import Gallery from '@browniebroke/gatsby-image-gallery'
-import { Container } from '@browniebroke/react-ui-components'
 
 import { Layout } from '../components/layout'
-import { PageHeader } from '../components/headings'
 
 interface GalleryPhotoNode {
   asset: {
@@ -53,11 +52,11 @@ const GalleryPage = ({ data, pageContext }: GalleryPageProps) => {
       image={page.mainPhoto.asset.gatsbyImageData?.images?.fallback?.src}
       path={pageContext.urlPath}
     >
-      <Container>
-        <PageHeader bottomPadding={2}>
+      <Container maxWidth="4xl">
+        <Heading>
           {page.title} <br />
           <small>{page.year}</small>
-        </PageHeader>
+        </Heading>
         {page.overview && <BlockContent blocks={page.overview} />}
         <Gallery images={images} lightboxOptions={lightboxOptions} />
       </Container>

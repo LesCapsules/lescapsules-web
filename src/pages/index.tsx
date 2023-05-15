@@ -24,6 +24,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
       title="Acceuil"
       description="Bienvenue sur le site des Capsules, le comité des fêtes de Sauclières"
       path="/"
+      paddingY={0}
     >
       <div>
         <GatsbyImage
