@@ -20,20 +20,7 @@ export const Header = () => {
                 sx={{ path: { fill: 'currentColor' } }}
               />
             </Link>
-            <Menu>
-              <Link to="/">
-                <IoMdHome /> Acceuil
-              </Link>
-              <Link to="/photos/">
-                <IoMdImages /> Photos
-              </Link>
-              <Link to="/videos/">
-                <IoMdVideocam /> Vidéos
-              </Link>
-              <Link to="/drink-team/">
-                <IoMdPeople /> Drink Team
-              </Link>
-            </Menu>
+            <Menu />
           </Flex>
         </Container>
       </Box>
