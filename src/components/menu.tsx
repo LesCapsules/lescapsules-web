@@ -20,15 +20,10 @@ export const Menu = () => {
 
   return (
     <>
-      <Button ref={btnRef} onClick={onOpen} colorScheme="primary">
+      <Button onClick={onOpen} colorScheme="primary">
         <Icon as={HiMenu} boxSize={10} color="secondary" />
       </Button>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent
           backgroundColor="secondary"
