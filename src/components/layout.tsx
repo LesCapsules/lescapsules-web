@@ -1,18 +1,17 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import { ContentWrapper } from '@browniebroke/react-ui-components'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 
 import { Footer } from './footer'
 import { Header } from './header'
 import { SEO } from './seo'
-import { GlobalStyles } from './global-style'
-import { theme } from '../theme'
+import { theme as chakraTheme } from '../utils/theme'
 
 interface LayoutProps {
   title: string
   description: string
   image?: string
   path?: string
+  paddingY?: number
   children?: React.ReactNode
 }
 
@@ -21,11 +20,11 @@ export const Layout = ({
   description,
   image,
   path,
+  paddingY = 10,
   children,
 }: LayoutProps) => (
   <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
+    <ChakraProvider theme={chakraTheme}>
       <SEO
         title={title}
         description={description}
@@ -34,8 +33,10 @@ export const Layout = ({
         lang="fr"
       />
       <Header />
-      <ContentWrapper>{children}</ContentWrapper>
+      <Box paddingY={paddingY} minHeight="80vh">
+        {children}
+      </Box>
       <Footer />
-    </ThemeProvider>
+    </ChakraProvider>
   </>
 )

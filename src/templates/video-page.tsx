@@ -1,21 +1,19 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import styled from 'styled-components'
-import { Container, Row } from '@browniebroke/react-ui-components'
-import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
+import {
+  Box,
+  Card,
+  CardBody,
+  Container,
+  Grid,
+  GridItem,
+  Heading,
+} from '@chakra-ui/react'
 
-import { CardCaption } from '../components/card-caption'
-import { GridCard } from '../components/card-grid'
 import { Layout } from '../components/layout'
-import { PageHeader } from '../components/headings'
 import { LiteYouTubeEmbed, LiteYoutubeStatic } from '../components/youtube'
 // @ts-ignore
 import { makeVideoPagePath } from '../utils'
-
-const SectionTitle = styled.h2<ThemeProps>`
-  padding-top: ${(props) => props.theme.spacings[4]};
-  padding-bottom: ${(props) => props.theme.spacings[2]};
-`
 
 interface SanityVideoEdge {
   node: {
@@ -52,28 +50,57 @@ const VideoPage = ({ data, pageContext }: VideoPageProps) => {
       description="Quelques vidéos retraçant des bons moments."
       path={pageContext.urlPath}
     >
-      <Container>
-        <PageHeader>{pageTitle}</PageHeader>
+      <Container
+        maxWidth={{
+          base: 'full',
+          xl: '5xl',
+        }}
+      >
+        <Heading>{pageTitle}</Heading>
         {currentVideo && (
-          <LiteYouTubeEmbed
-            id={currentVideo.youtubeId}
-            title={currentVideo.title}
-          />
+          <>
+            <LiteYouTubeEmbed
+              id={currentVideo.youtubeId}
+              title={currentVideo.title}
+            />
+            <Heading as="h3" size="md" marginTop={10}>
+              Plus de vidéos
+            </Heading>
+          </>
         )}
-        {currentVideo && <SectionTitle>Plus de vidéos</SectionTitle>}
-        <Row>
+        <Grid
+          templateColumns={{
+            base: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(4, 1fr)',
+          }}
+          gap={6}
+        >
           {videosArray.map(({ node }) => {
             const { id, title, youtubeId } = node
             return (
-              <GridCard key={id} width={100} widthSm={100}>
+              <GridItem
+                key={id}
+                sx={{
+                  ':hover': {
+                    boxShadow: 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px',
+                  },
+                }}
+              >
                 <Link to={makeVideoPagePath(title)}>
-                  <LiteYoutubeStatic id={youtubeId} />
-                  <CardCaption>{title}</CardCaption>
+                  <Card height="100%" borderRadius={0}>
+                    <CardBody padding={0}>
+                      <LiteYoutubeStatic id={youtubeId} />
+                    </CardBody>
+                    <Box padding={2}>
+                      <Heading size="md">{title}</Heading>
+                    </Box>
+                  </Card>
                 </Link>
-              </GridCard>
+              </GridItem>
             )
           })}
-        </Row>
+        </Grid>
       </Container>
     </Layout>
   )
