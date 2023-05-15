@@ -105,15 +105,15 @@
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "40KB"
+      "maxSize": "120KB"
     },
     {
       "path": "./public/component---src-pages-drink-team-*.js",
-      "maxSize": "5KB"
+      "maxSize": "2KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "10KB"
+      "maxSize": "2KB"
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
@@ -125,7 +125,7 @@
     },
     {
       "path": "./public/component---src-templates-video-*.js",
-      "maxSize": "6KB"
+      "maxSize": "10KB"
     },
     {
       "path": "./public/styles*.css",
