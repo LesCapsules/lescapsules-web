@@ -14,7 +14,7 @@
     "@fontsource/roboto-slab": "4.5.11",
     "@sanity/block-content-to-react": "3.0.0",
     "babel-plugin-styled-components": "2.1.1",
-    "framer-motion": "10.12.11",
+    "framer-motion": "10.12.12",
     "gatsby": "5.10.0",
     "gatsby-plugin-google-gtag": "5.10.0",
     "gatsby-plugin-image": "3.10.0",
