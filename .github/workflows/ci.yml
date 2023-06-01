@@ -12,10 +12,6 @@ concurrency:
 jobs:
   lint:
     uses: browniebroke/github-actions/.github/workflows/ts-lint.yml@v1
-  bundlewatch:
-    uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@v1
-    secrets:
-      bundlewatch_token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
   deploy:
     uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@v1
     with:
