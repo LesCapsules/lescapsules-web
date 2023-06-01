@@ -48,7 +48,6 @@
     "@types/react-helmet": "6.1.6",
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/parser": "5.59.8",
-    "bundlewatch": "0.3.3",
     "eslint": "8.41.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
@@ -61,8 +60,6 @@
     "lint:prettier": "prettier --check .",
     "lint:tsc": "tsc",
     "build": "gatsby build --log-pages",
-    "prebundlewatch": "gatsby build",
-    "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
     "preview": "gatsby develop -p $PORT -H 0.0.0.0"
   },
@@ -102,36 +99,6 @@
       ]
     }
   },
-  "bundlewatch": [
-    {
-      "path": "./public/app-*.js",
-      "maxSize": "120KB"
-    },
-    {
-      "path": "./public/component---src-pages-drink-team-*.js",
-      "maxSize": "2KB"
-    },
-    {
-      "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "2KB"
-    },
-    {
-      "path": "./public/component---src-pages-photos-*.js",
-      "maxSize": "10KB"
-    },
-    {
-      "path": "./public/component---src-templates-gallery-*.js",
-      "maxSize": "28KB"
-    },
-    {
-      "path": "./public/component---src-templates-video-*.js",
-      "maxSize": "10KB"
-    },
-    {
-      "path": "./public/styles*.css",
-      "maxSize": "5KB"
-    }
-  ],
   "renovate": {
     "extends": [
       "github>browniebroke/renovate-configs:js-app"
