@@ -17,26 +17,24 @@ interface SEOProps {
 }
 
 export const SEO = ({ title, description, image, path, lang }: SEOProps) => {
-  const { site, defaultImage } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            siteUrl
-          }
+  const { site, defaultImage } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          siteUrl
         }
-        defaultImage: sanityPhoto(name: { eq: "all-staff-big" }) {
-          image {
-            asset {
-              gatsbyImageData(layout: FIXED, width: 1024, height: 800)
-            }
+      }
+      defaultImage: sanityPhoto(name: { eq: "all-staff-big" }) {
+        image {
+          asset {
+            gatsbyImageData(layout: FIXED, width: 1024, height: 800)
           }
         }
       }
-    `
-  )
+    }
+  `)
 
   const metaDescription = description || site.siteMetadata.description
   const imageUrl =
