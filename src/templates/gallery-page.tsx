@@ -1,10 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
-import { Box, Container, Heading } from '@chakra-ui/react'
-import Gallery from '@browniebroke/gatsby-image-gallery'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { Box, Container, Heading, SimpleGrid } from '@chakra-ui/react'
 // @ts-ignore
 import BlockContent from '@sanity/block-content-to-react'
+
+import 'photoswipe/dist/photoswipe.css'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 
 import { Layout } from '../components/layout'
 import { SubHeading } from '../components/subheading'
@@ -12,7 +14,9 @@ import { SubHeading } from '../components/subheading'
 interface GalleryPhotoNode {
   asset: {
     thumb: IGatsbyImageData
-    full: IGatsbyImageData
+    width: number
+    height: number
+    url: string
   }
 }
 
@@ -45,7 +49,7 @@ const GalleryPage = ({ data, pageContext }: GalleryPageProps) => {
     closeLabel: 'Fermer',
   }
   const page = data.sanityGallery
-  const images = page.photos.map(({ asset }) => asset)
+  const photoAssets = page.photos.map(({ asset }) => asset)
   return (
     <Layout
       title={page.title}
@@ -53,7 +57,12 @@ const GalleryPage = ({ data, pageContext }: GalleryPageProps) => {
       image={page.mainPhoto.asset.gatsbyImageData?.images?.fallback?.src}
       path={pageContext.urlPath}
     >
-      <Container maxWidth="4xl">
+      <Container
+        maxWidth={{
+          base: 'full',
+          xl: '5xl',
+        }}
+      >
         <Heading>
           {page.title} <br />
           <SubHeading>{page.year}</SubHeading>
@@ -63,7 +72,31 @@ const GalleryPage = ({ data, pageContext }: GalleryPageProps) => {
             <BlockContent blocks={page.overview} />
           </Box>
         )}
-        <Gallery images={images} lightboxOptions={lightboxOptions} />
+        <Gallery>
+          <SimpleGrid
+            columns={{ base: 2, sm: 3, md: 4, lg: 5 }}
+            spacing={2}
+            marginTop={8}
+          >
+            {photoAssets.map((asset, index) => (
+              <Item
+                original={asset.url}
+                thumbnail={asset.thumb.images.fallback?.src}
+                width={asset.width}
+                height={asset.height}
+              >
+                {({ ref, open }) => (
+                  <Box
+                    ref={ref as React.MutableRefObject<HTMLImageElement>}
+                    onClick={open}
+                  >
+                    <GatsbyImage image={asset.thumb} alt="" />
+                  </Box>
+                )}
+              </Item>
+            ))}
+          </SimpleGrid>
+        </Gallery>
       </Container>
     </Layout>
   )
@@ -78,7 +111,9 @@ export const pageQuery = graphql`
       photos {
         asset {
           thumb: gatsbyImageData(width: 270, height: 270, placeholder: BLURRED)
-          full: gatsbyImageData(layout: FULL_WIDTH)
+          width
+          height
+          url
         }
       }
       mainPhoto {
