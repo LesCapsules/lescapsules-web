@@ -9,8 +9,8 @@
     "@chakra-ui/react": "2.8.0",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
-    "@fontsource/raleway": "5.0.6",
-    "@fontsource/roboto-slab": "5.0.6",
+    "@fontsource/raleway": "5.0.7",
+    "@fontsource/roboto-slab": "5.0.7",
     "@sanity/block-content-to-react": "3.0.0",
     "framer-motion": "10.15.0",
     "gatsby": "5.11.0",
@@ -49,7 +49,7 @@
     "eslint-config-prettier": "8.10.0",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-react": "7.33.1",
-    "prettier": "3.0.0"
+    "prettier": "3.0.1"
   },
   "scripts": {
     "format": "prettier --write .",
