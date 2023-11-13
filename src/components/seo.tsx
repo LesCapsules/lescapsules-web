@@ -41,8 +41,8 @@ export const SEO = ({ title, description, image, path, lang }: SEOProps) => {
     image === undefined
       ? defaultImage.image.asset.gatsbyImageData.images.fallback.src
       : image.includes('https://')
-      ? image
-      : `${site.siteMetadata.siteUrl}${image}`
+        ? image
+        : `${site.siteMetadata.siteUrl}${image}`
   const pageUrl = `${site.siteMetadata.siteUrl}${path}`
   const metaImage = [
     {
