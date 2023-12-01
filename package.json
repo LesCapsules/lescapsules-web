@@ -12,7 +12,7 @@
     "@fontsource/raleway": "5.0.15",
     "@fontsource/roboto-slab": "5.0.17",
     "@sanity/block-content-to-react": "3.0.0",
-    "framer-motion": "10.16.11",
+    "framer-motion": "10.16.12",
     "gatsby": "5.12.11",
     "gatsby-plugin-google-gtag": "5.12.3",
     "gatsby-plugin-image": "3.12.3",
