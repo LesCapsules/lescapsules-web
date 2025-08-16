@@ -19,7 +19,7 @@ export const Footer = () => (
             <FaInstagram size="3rem" />
           </Link>
           <Link
-            href="https://www.facebook.com/lescapsules/"
+            href="https://www.facebook.com/profile.php?id=100083004318802"
             title="Les Capsules sur Facebook"
             isExternal
           >
