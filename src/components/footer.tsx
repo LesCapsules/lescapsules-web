@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa6'
 import { Container, Box, Flex, Stack, Link } from '@chakra-ui/react'
 
 export const Footer = () => (
