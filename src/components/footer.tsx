@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaEnvelope } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa'
 import { Container, Box, Flex, Stack, Link } from '@chakra-ui/react'
 
 export const Footer = () => (
@@ -11,6 +11,13 @@ export const Footer = () => (
         justifyContent="space-between"
       >
         <Stack direction="row" spacing={4}>
+          <Link
+            href="https://www.instagram.com/comite_sauclieres"
+            title="Les Capsules sur Instagram"
+            isExternal
+          >
+            <FaInstagram size="3rem" />
+          </Link>
           <Link
             href="https://www.facebook.com/lescapsules/"
             title="Les Capsules sur Facebook"
