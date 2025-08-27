@@ -17,7 +17,7 @@ It uses npm to manage dependencies, so getting started should be easy:
 
 ```bash
 # Install deps
-$ npm i
+$ npm ci
 # Start the development server
 $ npm run develop
 # Build production
