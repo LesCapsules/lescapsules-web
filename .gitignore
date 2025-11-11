@@ -8,3 +8,10 @@ yarn-error.log
 .DS_Store
 /.python-version
 data-import/
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+.vercel

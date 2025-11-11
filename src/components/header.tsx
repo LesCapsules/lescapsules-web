@@ -1,8 +1,10 @@
+'use client'
+
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 import { Box, Container, Flex, Icon } from '@chakra-ui/react'
 
-import LogoCapsules from '../images/icons/lescapsules-name.svg'
+import LogoCapsules from '@/src/images/icons/lescapsules-name.svg'
 import { Menu } from './menu'
 
 export const Header = () => {
@@ -11,7 +13,7 @@ export const Header = () => {
       <Box as="nav" padding={4}>
         <Container maxWidth={{ base: 'full', lg: '5xl' }}>
           <Flex justifyContent="space-between" alignItems="center">
-            <Link to="/" title="Acceuil" aria-label="Acceuil">
+            <Link href="/" title="Acceuil" aria-label="Acceuil">
               <Icon
                 as={LogoCapsules}
                 height="site-logo.height"
