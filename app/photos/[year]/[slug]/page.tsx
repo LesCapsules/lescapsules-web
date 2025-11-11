@@ -29,9 +29,10 @@ interface GalleryData {
 }
 
 async function getGallery(year: string, slug: string) {
-  // First get all galleries to find the matching one
-  const galleries = await sanityClient.fetch<GalleryData[]>(
-    `*[_type == "gallery"] | order(date desc) {
+  try {
+    // First get all galleries to find the matching one
+    const galleries = await sanityClient.fetch<GalleryData[]>(
+      `*[_type == "gallery"] | order(date desc) {
       _id,
       title,
       date,
@@ -47,41 +48,52 @@ async function getGallery(year: string, slug: string) {
       },
       mainPhoto
     }`
-  )
+    )
 
-  // Find the gallery that matches the slug and year
-  const gallery = galleries.find((g) => {
-    const gYear = new Date(g.date).getFullYear().toString()
-    const gPath = makeAlbumPagePath(g.title, gYear)
-    const expectedPath = `/photos/${year}/${slug}/`
-    return gPath === expectedPath
-  })
+    // Find the gallery that matches the slug and year
+    const gallery = galleries.find((g) => {
+      const gYear = new Date(g.date).getFullYear().toString()
+      const gPath = makeAlbumPagePath(g.title, gYear)
+      const expectedPath = `/photos/${year}/${slug}/`
+      return gPath === expectedPath
+    })
 
-  return gallery
+    return gallery
+  } catch (error) {
+    console.error('Failed to fetch gallery:', error)
+    return undefined
+  }
 }
 
 export async function generateStaticParams() {
-  const galleries = await sanityClient.fetch<
-    Array<{ title: string; date: string }>
-  >(
-    `*[_type == "gallery"] {
+  try {
+    const galleries = await sanityClient.fetch<
+      Array<{ title: string; date: string }>
+    >(
+      `*[_type == "gallery"] {
       title,
       date
     }`
-  )
+    )
 
-  return galleries.map((gallery) => {
-    const year = new Date(gallery.date).getFullYear().toString()
-    const path = makeAlbumPagePath(gallery.title, year)
-    // Extract slug from path: /photos/2024/my-slug/ -> my-slug
-    const parts = path.split('/')
-    const slug = parts[parts.length - 2]
+    return galleries.map((gallery) => {
+      const year = new Date(gallery.date).getFullYear().toString()
+      const path = makeAlbumPagePath(gallery.title, year)
+      // Extract slug from path: /photos/2024/my-slug/ -> my-slug
+      const parts = path.split('/')
+      const slug = parts[parts.length - 2]
 
-    return {
-      year,
-      slug,
-    }
-  })
+      return {
+        year,
+        slug,
+      }
+    })
+  } catch (error) {
+    console.warn('Failed to fetch galleries for static params:', error)
+    // Return empty array to allow build to continue
+    // Pages will be generated on-demand in production
+    return []
+  }
 }
 
 interface PageProps {

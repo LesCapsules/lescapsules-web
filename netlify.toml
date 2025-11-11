@@ -1,6 +1,4 @@
 [build]
-  base    = ""
-  publish = "out"
   command = "npm run build"
 
 [[headers]]

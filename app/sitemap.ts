@@ -15,21 +15,6 @@ interface Video {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteMetadata.siteUrl
 
-  // Fetch galleries
-  const galleries = await sanityClient.fetch<Gallery[]>(
-    `*[_type == "gallery"] {
-      title,
-      date
-    }`
-  )
-
-  // Fetch videos
-  const videos = await sanityClient.fetch<Video[]>(
-    `*[_type == "video"] {
-      title
-    }`
-  )
-
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -58,28 +43,49 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Gallery pages
-  const galleryPages: MetadataRoute.Sitemap = galleries.map((gallery) => {
-    const year = new Date(gallery.date).getFullYear().toString()
-    const path = makeAlbumPagePath(gallery.title, year)
-    return {
-      url: `${baseUrl}${path}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    }
-  })
+  try {
+    // Fetch galleries
+    const galleries = await sanityClient.fetch<Gallery[]>(
+      `*[_type == "gallery"] {
+      title,
+      date
+    }`
+    )
 
-  // Video pages
-  const videoPages: MetadataRoute.Sitemap = videos.map((video) => {
-    const path = makeVideoPagePath(video.title)
-    return {
-      url: `${baseUrl}${path}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    }
-  })
+    // Fetch videos
+    const videos = await sanityClient.fetch<Video[]>(
+      `*[_type == "video"] {
+      title
+    }`
+    )
 
-  return [...staticPages, ...galleryPages, ...videoPages]
+    // Gallery pages
+    const galleryPages: MetadataRoute.Sitemap = galleries.map((gallery) => {
+      const year = new Date(gallery.date).getFullYear().toString()
+      const path = makeAlbumPagePath(gallery.title, year)
+      return {
+        url: `${baseUrl}${path}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.5,
+      }
+    })
+
+    // Video pages
+    const videoPages: MetadataRoute.Sitemap = videos.map((video) => {
+      const path = makeVideoPagePath(video.title)
+      return {
+        url: `${baseUrl}${path}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.5,
+      }
+    })
+
+    return [...staticPages, ...galleryPages, ...videoPages]
+  } catch (error) {
+    console.warn('Failed to fetch dynamic pages for sitemap:', error)
+    // Return only static pages if fetching fails
+    return staticPages
+  }
 }

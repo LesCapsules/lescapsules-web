@@ -9,14 +9,19 @@ interface Video {
 }
 
 async function getAllVideos() {
-  const videos = await sanityClient.fetch<Video[]>(
-    `*[_type == "video"] {
+  try {
+    const videos = await sanityClient.fetch<Video[]>(
+      `*[_type == "video"] {
       "id": _id,
       title,
       youtubeId
     }`
-  )
-  return videos
+    )
+    return videos
+  } catch (error) {
+    console.error('Failed to fetch videos:', error)
+    return []
+  }
 }
 
 export const metadata: Metadata = {

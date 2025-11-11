@@ -11,40 +11,52 @@ interface Video {
 }
 
 async function getVideo(slug: string) {
-  const videos = await sanityClient.fetch<Video[]>(
-    `*[_type == "video"] {
+  try {
+    const videos = await sanityClient.fetch<Video[]>(
+      `*[_type == "video"] {
       "id": _id,
       title,
       youtubeId
     }`
-  )
+    )
 
-  const video = videos.find((v) => {
-    const path = makeVideoPagePath(v.title)
-    const expectedPath = `/videos/${slug}/`
-    return path === expectedPath
-  })
+    const video = videos.find((v) => {
+      const path = makeVideoPagePath(v.title)
+      const expectedPath = `/videos/${slug}/`
+      return path === expectedPath
+    })
 
-  return { video, allVideos: videos }
+    return { video, allVideos: videos }
+  } catch (error) {
+    console.error('Failed to fetch video:', error)
+    return { video: undefined, allVideos: [] }
+  }
 }
 
 export async function generateStaticParams() {
-  const videos = await sanityClient.fetch<Array<{ title: string }>>(
-    `*[_type == "video"] {
+  try {
+    const videos = await sanityClient.fetch<Array<{ title: string }>>(
+      `*[_type == "video"] {
       title
     }`
-  )
+    )
 
-  return videos.map((video) => {
-    const path = makeVideoPagePath(video.title)
-    // Extract slug from path: /videos/my-slug/ -> my-slug
-    const parts = path.split('/')
-    const slug = parts[parts.length - 2]
+    return videos.map((video) => {
+      const path = makeVideoPagePath(video.title)
+      // Extract slug from path: /videos/my-slug/ -> my-slug
+      const parts = path.split('/')
+      const slug = parts[parts.length - 2]
 
-    return {
-      slug,
-    }
-  })
+      return {
+        slug,
+      }
+    })
+  } catch (error) {
+    console.warn('Failed to fetch videos for static params:', error)
+    // Return empty array to allow build to continue
+    // Pages will be generated on-demand in production
+    return []
+  }
 }
 
 interface PageProps {

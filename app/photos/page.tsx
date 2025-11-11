@@ -26,15 +26,20 @@ interface Gallery {
 }
 
 async function getGalleries() {
-  const galleries = await sanityClient.fetch<Gallery[]>(
-    `*[_type == "gallery"] | order(date desc) {
+  try {
+    const galleries = await sanityClient.fetch<Gallery[]>(
+      `*[_type == "gallery"] | order(date desc) {
       "id": _id,
       title,
       date,
       mainPhoto
     }`
-  )
-  return galleries
+    )
+    return galleries
+  } catch (error) {
+    console.error('Failed to fetch galleries:', error)
+    return []
+  }
 }
 
 export const metadata: Metadata = {

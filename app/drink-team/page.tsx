@@ -16,16 +16,21 @@ interface TeamMember {
 }
 
 async function getTeamMembers() {
-  const members = await sanityClient.fetch<TeamMember[]>(
-    `*[_type == "member"] | order(name asc) {
+  try {
+    const members = await sanityClient.fetch<TeamMember[]>(
+      `*[_type == "member"] | order(name asc) {
       "id": _id,
       name,
       hobbies,
       favouritePlace,
       photo
     }`
-  )
-  return members
+    )
+    return members
+  } catch (error) {
+    console.error('Failed to fetch team members:', error)
+    return []
+  }
 }
 
 export const metadata: Metadata = {
