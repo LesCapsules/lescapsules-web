@@ -25,7 +25,8 @@ async function getHomeData() {
 
 export const metadata: Metadata = {
   title: 'Acceuil',
-  description: 'Bienvenue sur le site des Capsules, le comité des fêtes de Sauclières',
+  description:
+    'Bienvenue sur le site des Capsules, le comité des fêtes de Sauclières',
 }
 
 export default async function HomePage() {

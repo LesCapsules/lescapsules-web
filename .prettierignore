@@ -1,4 +1,8 @@
 node_modules
 public
+out
 .cache
+.next
 .vscode
+next-env.d.ts
+package-lock.json
