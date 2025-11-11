@@ -65,6 +65,8 @@ async function getGallery(year: string, slug: string) {
   }
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   try {
     const galleries = await sanityClient.fetch<
@@ -90,9 +92,9 @@ export async function generateStaticParams() {
     })
   } catch (error) {
     console.warn('Failed to fetch galleries for static params:', error)
-    // Return empty array to allow build to continue
-    // Pages will be generated on-demand in production
-    return []
+    // Return a placeholder to satisfy Next.js export requirement
+    // In production with Sanity access, real pages will be generated
+    return [{ year: '2024', slug: 'placeholder' }]
   }
 }
 

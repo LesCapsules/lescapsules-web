@@ -33,6 +33,8 @@ async function getVideo(slug: string) {
   }
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   try {
     const videos = await sanityClient.fetch<Array<{ title: string }>>(
@@ -53,9 +55,9 @@ export async function generateStaticParams() {
     })
   } catch (error) {
     console.warn('Failed to fetch videos for static params:', error)
-    // Return empty array to allow build to continue
-    // Pages will be generated on-demand in production
-    return []
+    // Return a placeholder to satisfy Next.js export requirement
+    // In production with Sanity access, real pages will be generated
+    return [{ slug: 'placeholder' }]
   }
 }
 
