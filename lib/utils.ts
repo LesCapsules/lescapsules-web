@@ -1,6 +1,6 @@
-const slugify = require(`slugify`)
+import slugify from 'slugify'
 
-exports.makeAlbumPagePath = (title, year) => {
+export function makeAlbumPagePath(title: string, year: string): string {
   const slug = slugify(title, {
     lower: true,
     remove: /[*+~.()'"!:@]/g,
@@ -8,7 +8,7 @@ exports.makeAlbumPagePath = (title, year) => {
   return `/photos/${year}/${slug}/`
 }
 
-exports.makeVideoPagePath = (title) => {
+export function makeVideoPagePath(title: string): string {
   const slug = slugify(title, {
     lower: true,
     remove: /[*+~.()'"!:@]/g,

@@ -17,7 +17,14 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/node_modules', '**/public', '**/.cache', '**/.vscode'],
+    ignores: [
+      '**/node_modules',
+      '**/out',
+      '**/.next',
+      '**/.cache',
+      '**/.vscode',
+      'next-env.d.ts',
+    ],
   },
   ...compat.extends('prettier'),
   {
@@ -30,10 +37,11 @@ export default [
     languageOptions: {
       globals: {
         ...globals.node,
+        ...globals.browser,
       },
 
       parser: tsParser,
-      ecmaVersion: 9,
+      ecmaVersion: 'latest',
       sourceType: 'module',
 
       parserOptions: {

@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import {
   Button,
@@ -11,7 +13,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { HiMenu } from 'react-icons/hi'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 import { IoMdHome, IoMdImages, IoMdPeople, IoMdVideocam } from 'react-icons/io'
 
 export const Menu = () => {
@@ -33,16 +35,16 @@ export const Menu = () => {
           <DrawerCloseButton size="lg" />
           <DrawerBody>
             <Stack spacing={4}>
-              <Link to="/">
+              <Link href="/" onClick={onClose}>
                 <Icon as={IoMdHome} /> Acceuil
               </Link>
-              <Link to="/photos/">
+              <Link href="/photos/" onClick={onClose}>
                 <Icon as={IoMdImages} /> Photos
               </Link>
-              <Link to="/videos/">
+              <Link href="/videos/" onClick={onClose}>
                 <Icon as={IoMdVideocam} /> Vidéos
               </Link>
-              <Link to="/drink-team/">
+              <Link href="/drink-team/" onClick={onClose}>
                 <Icon as={IoMdPeople} /> Drink Team
               </Link>
             </Stack>

@@ -9,7 +9,7 @@
   </a>
 </p>
 
-This site is built using [GatsbyJS](https://www.gatsbyjs.org/), a static code generator using [React](https://reactjs.org/) & [GraphQL](https://graphql.org/). It is deployed on [Netlify](https://www.netlify.com/) and the domain is coming from [Cloudflare](https://www.cloudflare.com/). Dependencies are kept up to date using the excellent [Renovate Bot](https://renovatebot.com/).
+This site is built using [Next.js](https://nextjs.org/), a React framework with static site generation capabilities. It is deployed on [Netlify](https://www.netlify.com/) and the domain is coming from [Cloudflare](https://www.cloudflare.com/). Dependencies are kept up to date using the excellent [Renovate Bot](https://renovatebot.com/).
 
 ## Development
 
@@ -19,7 +19,7 @@ It uses npm to manage dependencies, so getting started should be easy:
 # Install deps
 $ npm ci
 # Start the development server
-$ npm run develop
+$ npm run dev
 # Build production
 $ npm run build
 ```
