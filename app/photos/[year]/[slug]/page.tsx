@@ -99,16 +99,17 @@ export async function generateStaticParams() {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     year: string
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const gallery = await getGallery(params.year, params.slug)
+  const { year, slug } = await params
+  const gallery = await getGallery(year, slug)
 
   if (!gallery) {
     return {
@@ -116,28 +117,29 @@ export async function generateMetadata({
     }
   }
 
-  const year = new Date(gallery.date).getFullYear().toString()
+  const galleryYear = new Date(gallery.date).getFullYear().toString()
 
   return {
     title: gallery.title,
-    description: `Album photo: ${gallery.title} (${year})`,
+    description: `Album photo: ${gallery.title} (${galleryYear})`,
   }
 }
 
 export default async function GalleryPage({ params }: PageProps) {
-  const gallery = await getGallery(params.year, params.slug)
+  const { year, slug } = await params
+  const gallery = await getGallery(year, slug)
 
   if (!gallery) {
     notFound()
   }
 
-  const year = new Date(gallery.date).getFullYear().toString()
+  const galleryYear = new Date(gallery.date).getFullYear().toString()
   const mainPhotoUrl = urlFor(gallery.mainPhoto).width(1200).height(600).url()
 
   return (
     <GalleryPageClient
       title={gallery.title}
-      year={year}
+      year={galleryYear}
       overview={gallery.overview}
       mainPhotoUrl={mainPhotoUrl}
       photos={gallery.photos}

@@ -3,6 +3,8 @@ import { sanityClient } from '@/lib/sanity'
 import { makeAlbumPagePath, makeVideoPagePath } from '@/lib/utils'
 import { siteMetadata } from '@/lib/metadata'
 
+export const dynamic = 'force-static'
+
 interface Gallery {
   title: string
   date: string

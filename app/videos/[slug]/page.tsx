@@ -62,15 +62,16 @@ export async function generateStaticParams() {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { video } = await getVideo(params.slug)
+  const { slug } = await params
+  const { video } = await getVideo(slug)
 
   if (!video) {
     return {
@@ -85,7 +86,8 @@ export async function generateMetadata({
 }
 
 export default async function VideoPage({ params }: PageProps) {
-  const { video, allVideos } = await getVideo(params.slug)
+  const { slug } = await params
+  const { video, allVideos } = await getVideo(slug)
 
   if (!video) {
     notFound()

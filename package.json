@@ -17,11 +17,11 @@
     "@sentry/nextjs": "8.47.0",
     "framer-motion": "12.23.24",
     "gray-percentage": "2.0.0",
-    "next": "14.2.25",
+    "next": "^15.5.6",
     "next-sanity": "9.9.8",
     "photoswipe": "5.4.4",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-icons": "5.5.0",
     "react-photoswipe-gallery": "3.1.1",
     "rxjs": "^7.8.1",
@@ -34,8 +34,8 @@
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.39.1",
     "@svgr/webpack": "^8.1.0",
-    "@types/react": "18.3.26",
-    "@types/react-dom": "18.3.7",
+    "@types/react": "19.2.4",
+    "@types/react-dom": "19.2.3",
     "@types/react-helmet": "6.1.11",
     "@typescript-eslint/parser": "8.46.4",
     "eslint": "9.39.1",
@@ -65,5 +65,9 @@
     "extends": [
       "github>browniebroke/renovate-configs:js-app"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.2.4",
+    "@types/react-dom": "19.2.3"
   }
 }

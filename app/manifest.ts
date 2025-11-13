@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { siteMetadata } from '@/lib/metadata'
 
+export const dynamic = 'force-static'
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteMetadata.title,
