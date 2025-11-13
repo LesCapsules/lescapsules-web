@@ -1,15 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import {
-  Heading,
-  Container,
-  Grid,
-  GridItem,
-  Card,
-  CardBody,
-  Box,
-} from '@chakra-ui/react'
+import { Heading, Container, Grid, GridItem, Card, Box } from '@chakra-ui/react'
 import { sanityClient, urlFor } from '@/lib/sanity'
 import { makeAlbumPagePath } from '@/lib/utils'
 import { SubHeading } from '@/src/components/subheading'
@@ -78,15 +70,15 @@ export default async function PhotosPage() {
             return (
               <GridItem
                 key={gallery.id}
-                sx={{
-                  ':hover': {
+                css={{
+                  '&:hover': {
                     boxShadow: 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px',
                   },
                 }}
               >
                 <Link href={pageUrl}>
-                  <Card height="full" borderRadius={0}>
-                    <CardBody padding={0}>
+                  <Card.Root height="full" borderRadius={0}>
+                    <Card.Body padding={0}>
                       <div
                         style={{
                           position: 'relative',
@@ -108,8 +100,8 @@ export default async function PhotosPage() {
                           <SubHeading>{year}</SubHeading>
                         </Heading>
                       </Box>
-                    </CardBody>
-                  </Card>
+                    </Card.Body>
+                  </Card.Root>
                 </Link>
               </GridItem>
             )

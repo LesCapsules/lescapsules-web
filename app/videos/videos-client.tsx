@@ -2,15 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import {
-  Box,
-  Card,
-  CardBody,
-  Container,
-  Grid,
-  GridItem,
-  Heading,
-} from '@chakra-ui/react'
+import { Box, Card, Container, Grid, GridItem, Heading } from '@chakra-ui/react'
 
 import { LiteYouTubeEmbed, LiteYoutubeStatic } from '@/src/components/youtube'
 import { makeVideoPagePath } from '@/lib/utils'
@@ -64,21 +56,21 @@ export function VideosClient({ currentVideo, allVideos }: VideosClientProps) {
             return (
               <GridItem
                 key={video.id}
-                sx={{
-                  ':hover': {
+                css={{
+                  '&:hover': {
                     boxShadow: 'rgba(30, 30, 30, 0.15) 0px 2px 40px 0px',
                   },
                 }}
               >
                 <Link href={makeVideoPagePath(video.title)}>
-                  <Card height="100%" borderRadius={0}>
-                    <CardBody padding={0}>
+                  <Card.Root height="100%" borderRadius={0}>
+                    <Card.Body padding={0}>
                       <LiteYoutubeStatic id={video.youtubeId} />
-                    </CardBody>
+                    </Card.Body>
                     <Box padding={2}>
                       <Heading size="md">{video.title}</Heading>
                     </Box>
-                  </Card>
+                  </Card.Root>
                 </Link>
               </GridItem>
             )

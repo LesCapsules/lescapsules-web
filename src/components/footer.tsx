@@ -10,25 +10,26 @@ export const Footer = () => (
         alignItems="center"
         justifyContent="space-between"
       >
-        <Stack direction="row" spacing={4}>
+        <Stack direction="row" gap={4}>
           <Link
             href="https://www.instagram.com/comite_sauclieres"
             title="Les Capsules sur Instagram"
-            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaInstagram size="3rem" />
           </Link>
           <Link
             href="https://www.facebook.com/profile.php?id=100083004318802"
             title="Les Capsules sur Facebook"
-            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaFacebook size="3rem" />
           </Link>
           <Link
             href="mailto:lescapsules@gmail.com"
             title="Contactez nous via email"
-            isExternal
           >
             <FaEnvelope size="3rem" />
           </Link>
