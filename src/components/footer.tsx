@@ -16,6 +16,7 @@ export const Footer = () => (
             title="Les Capsules sur Instagram"
             target="_blank"
             rel="noopener noreferrer"
+            color="primary"
           >
             <FaInstagram size="3rem" />
           </Link>
@@ -24,12 +25,14 @@ export const Footer = () => (
             title="Les Capsules sur Facebook"
             target="_blank"
             rel="noopener noreferrer"
+            color="primary"
           >
             <FaFacebook size="3rem" />
           </Link>
           <Link
             href="mailto:lescapsules@gmail.com"
             title="Contactez nous via email"
+            color="primary"
           >
             <FaEnvelope size="3rem" />
           </Link>
