@@ -1,38 +1,41 @@
-import { extendTheme } from '@chakra-ui/react'
-const customTheme = {
-  fonts: {
-    body: 'Roboto Slab, Times New Roman, Times, serif',
-    heading: '"Raleway", "Roboto", "Arial", sans-serif',
+import { createSystem, defaultConfig, defineRecipe } from '@chakra-ui/react'
+
+const headingRecipe = defineRecipe({
+  base: {
+    marginTop: 0,
+    marginBottom: 8,
+    lineHeight: '1.2',
+    fontWeight: '400',
+    textRendering: 'optimizeLegibility',
   },
-  colors: {
-    primary: '#0054c7',
-    secondary: '#f4d62e',
-  },
-  sizes: {
-    'site-logo': {
-      height: '40px',
+})
+
+const customConfig = {
+  theme: {
+    recipes: {
+      heading: headingRecipe,
     },
-  },
-  styles: {
-    global: {
-      html: {
-        fontSize: '1.25rem',
-        letterSpacing: '.03em',
-        overflowY: 'scroll',
+    tokens: {
+      fonts: {
+        body: { value: 'Roboto Slab, Times New Roman, Times, serif' },
+        heading: { value: '"Raleway", "Roboto", "Arial", sans-serif' },
+      },
+      colors: {
+        primary: { value: '#0054c7' },
+        secondary: { value: '#f4d62e' },
+      },
+      sizes: {
+        'site-logo.height': { value: '40px' },
       },
     },
   },
-  components: {
-    Heading: {
-      baseStyle: {
-        marginTop: 0,
-        marginBottom: 8,
-        lineHeight: '1.2',
-        fontWeight: '400',
-        textRendering: 'optimizeLegibility',
-      },
+  globalCss: {
+    html: {
+      fontSize: '1.25rem',
+      letterSpacing: '.03em',
+      overflowY: 'scroll',
     },
   },
 }
 
-export const theme = extendTheme(customTheme)
+export const system = createSystem(defaultConfig, customConfig)

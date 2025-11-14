@@ -42,7 +42,7 @@ export default async function HomePage() {
       <Box minHeight="80vh">
         <Container maxWidth="4xl">
           <Box padding={8}>
-            <Heading textAlign="center" color="primary" size="lg">
+            <Heading textAlign="center" color="primary" size="2xl">
               Bienvenue sur le site de la Bandade!
             </Heading>
             <Text fontSize="1.25em">
@@ -74,7 +74,7 @@ export default async function HomePage() {
       </div>
       <Container maxWidth="4xl">
         <Box padding={8}>
-          <Heading textAlign="center" color="primary" size="lg">
+          <Heading textAlign="center" color="primary" size="2xl">
             Bienvenue sur le site de la Bandade!
           </Heading>
           <Text fontSize="1.25em">

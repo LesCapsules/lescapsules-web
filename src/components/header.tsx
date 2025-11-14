@@ -18,7 +18,7 @@ export const Header = () => {
                 as={LogoCapsules}
                 height="site-logo.height"
                 width="auto"
-                sx={{ path: { fill: 'currentColor' } }}
+                css={{ path: { fill: 'currentColor' } }}
               />
             </Link>
             <Menu />
