@@ -10,7 +10,7 @@
     "@fontsource/raleway": "5.2.8",
     "@fontsource/roboto-slab": "5.2.8",
     "@portabletext/react": "3.1.0",
-    "@sanity/client": "6.27.2",
+    "@sanity/client": "6.29.1",
     "@sanity/image-url": "1.1.0",
     "@sentry/nextjs": "8.47.0",
     "gray-percentage": "2.0.0",
