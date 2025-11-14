@@ -66,7 +66,7 @@ export function GalleryPageClient({
         <Gallery>
           <SimpleGrid
             columns={{ base: 2, sm: 3, md: 4, lg: 5 }}
-            spacing={2}
+            gap={2}
             marginTop={8}
           >
             {photos.map((photo, index) => {
