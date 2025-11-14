@@ -9,7 +9,7 @@
     "@emotion/react": "11.14.0",
     "@fontsource/raleway": "5.2.8",
     "@fontsource/roboto-slab": "5.2.8",
-    "@portabletext/react": "3.2.4",
+    "@portabletext/react": "5.0.0",
     "@sanity/client": "7.12.1",
     "@sanity/image-url": "1.2.0",
     "@sentry/nextjs": "10.25.0",
