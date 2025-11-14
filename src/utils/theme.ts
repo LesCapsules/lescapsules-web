@@ -1,7 +1,20 @@
-import { createSystem, defaultConfig } from '@chakra-ui/react'
+import { createSystem, defaultConfig, defineRecipe } from '@chakra-ui/react'
+
+const headingRecipe = defineRecipe({
+  base: {
+    marginTop: 0,
+    marginBottom: 8,
+    lineHeight: '1.2',
+    fontWeight: '400',
+    textRendering: 'optimizeLegibility',
+  },
+})
 
 const customConfig = {
   theme: {
+    recipes: {
+      heading: headingRecipe,
+    },
     tokens: {
       fonts: {
         body: { value: 'Roboto Slab, Times New Roman, Times, serif' },
