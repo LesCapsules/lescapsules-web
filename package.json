@@ -11,7 +11,7 @@
     "@fontsource/roboto-slab": "5.2.8",
     "@portabletext/react": "5.0.0",
     "@sanity/client": "7.15.0",
-    "@sanity/image-url": "1.2.0",
+    "@sanity/image-url": "2.0.3",
     "next": "16.1.6",
     "next-sanity": "11.6.12",
     "photoswipe": "5.4.4",
