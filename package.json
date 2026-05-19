@@ -28,7 +28,7 @@
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
     "@svgr/webpack": "8.1.0",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "@typescript-eslint/parser": "8.59.2",
     "eslint": "9.39.4",
@@ -60,7 +60,7 @@
     ]
   },
   "overrides": {
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3"
   }
 }
