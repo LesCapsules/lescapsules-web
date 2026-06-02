@@ -15,8 +15,8 @@
     "next": "16.2.6",
     "next-sanity": "12.4.2",
     "photoswipe": "5.4.4",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "react-icons": "5.6.0",
     "react-photoswipe-gallery": "4.0.0",
     "sanitize.css": "13.0.0",
@@ -28,7 +28,7 @@
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
     "@svgr/webpack": "8.1.0",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
     "@typescript-eslint/parser": "8.60.0",
     "eslint": "9.39.4",
@@ -60,7 +60,7 @@
     ]
   },
   "overrides": {
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3"
   }
 }
