@@ -9,11 +9,11 @@
     "@emotion/react": "11.14.0",
     "@fontsource/raleway": "5.3.0",
     "@fontsource/roboto-slab": "5.3.0",
-    "@portabletext/react": "8.0.0",
+    "@portabletext/react": "8.0.1",
     "@sanity/client": "8.2.0",
     "@sanity/image-url": "2.1.1",
-    "next": "16.3.1",
-    "next-sanity": "12.4.5",
+    "next": "16.3.2",
+    "next-sanity": "13.3.3",
     "photoswipe": "5.4.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -28,9 +28,9 @@
     "@eslint/eslintrc": "3.3.6",
     "@eslint/js": "9.39.5",
     "@svgr/webpack": "8.1.0",
-    "@types/node": "26.2.0",
+    "@types/node": "26.3.0",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
+    "@types/react-dom": "19.2.5",
     "@typescript-eslint/parser": "8.67.0",
     "eslint": "9.39.5",
     "eslint-config-prettier": "10.1.8",
@@ -62,6 +62,6 @@
   },
   "overrides": {
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4"
+    "@types/react-dom": "19.2.5"
   }
 }
