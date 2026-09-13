@@ -24,6 +24,15 @@ $ npm run dev
 $ npm run build
 ```
 
+## Content updates
+
+Content is managed in the [Sanity studio](https://github.com/LesCapsules/sanity-studio)
+and baked into the site at build time, so publishing content needs a new deploy.
+A [GROQ-powered webhook](https://www.sanity.io/docs/webhooks) on the Sanity
+project sends a `repository_dispatch` event of type `sanity-publish` to this
+repository, which triggers the [content deploy workflow](.github/workflows/content-deploy.yml)
+and deploys to production. It can also be run manually from the Actions tab.
+
 ## Git flow
 
 1. Create a branch from `main` for the change with a meaningful name
