@@ -1,0 +1,23 @@
+name: Content deploy
+
+# Rebuild and deploy the site when content is published in the Sanity studio,
+# via a webhook sending a repository_dispatch event.
+on:
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+
+# A burst of publishes should only rebuild once, with the latest content
+concurrency:
+  group: content-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@7b06919181c4d87ef735d84bcb87c9cf3de1f4d0 # v1.28.0
+    with:
+      netlify_site_id: '4b203ef5-3ac6-4b51-afcb-564239b2ef86'
+      publish_dir: 'out'
+      production_deploy: true
+    secrets:
+      netlify_auth_token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
