@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   deploy:
-    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@7b06919181c4d87ef735d84bcb87c9cf3de1f4d0 # v1.28.0
+    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@8f15f824db9f3acbcf0edf9c6112a86f5e244665 # v1.28.1
     with:
       netlify_site_id: '4b203ef5-3ac6-4b51-afcb-564239b2ef86'
       publish_dir: 'out'
