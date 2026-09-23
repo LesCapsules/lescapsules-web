@@ -41,9 +41,9 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
-    "lint:tsc": "tsc",
+    "check:lint": "eslint .",
+    "check:format": "prettier --check .",
+    "check:types": "tsc",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
