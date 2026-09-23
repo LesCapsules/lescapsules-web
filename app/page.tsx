@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Box, Container, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import { sanityClient, urlFor } from '@/lib/sanity'
-import { siteMetadata } from '@/lib/metadata'
 
 interface HomePhoto {
   title: string

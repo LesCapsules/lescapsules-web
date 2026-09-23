@@ -34,18 +34,8 @@ export function GalleryPageClient({
   title,
   year,
   overview,
-  mainPhotoUrl,
   photos,
 }: GalleryPageClientProps) {
-  const lightboxOptions = {
-    imageLoadErrorMessage: 'Impossible de charger cette image',
-    nextLabel: 'Image suivante',
-    prevLabel: 'Image précédente',
-    zoomInLabel: 'Zoomer',
-    zoomOutLabel: 'Dézoomer',
-    closeLabel: 'Fermer',
-  }
-
   return (
     <Box paddingY={10} minHeight="80vh">
       <Container
