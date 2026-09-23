@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Box } from '@chakra-ui/react'
 import { Providers } from './providers'
 import { Header } from '@/src/components/header'
 import { Footer } from '@/src/components/footer'
