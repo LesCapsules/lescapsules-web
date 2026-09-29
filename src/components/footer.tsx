@@ -2,6 +2,8 @@ import React from 'react'
 import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa6'
 import { Container, Box, Flex, Stack, Link } from '@chakra-ui/react'
 
+const currentYear = new Date().getFullYear()
+
 export const Footer = () => (
   <Box as="footer" color="primary" backgroundColor="secondary" paddingY={10}>
     <Container maxWidth="5xl">
@@ -37,9 +39,7 @@ export const Footer = () => (
             <FaEnvelope size="3rem" />
           </Link>
         </Stack>
-        <Box paddingTop={{ base: 4, md: 0 }}>
-          © Capsules {new Date().getFullYear()}
-        </Box>
+        <Box paddingTop={{ base: 4, md: 0 }}>© Capsules {currentYear}</Box>
       </Flex>
     </Container>
   </Box>
