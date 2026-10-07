@@ -12,7 +12,7 @@
     "@portabletext/react": "8.0.1",
     "@sanity/client": "8.9.0",
     "@sanity/image-url": "2.1.1",
-    "next": "16.3.8",
+    "next": "16.4.0",
     "photoswipe": "5.4.4",
     "react": "19.3.0",
     "react-dom": "19.3.0",
