@@ -29,7 +29,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "oxfmt": "0.75.0",
-    "oxlint": "1.89.0"
+    "oxlint": "1.90.0"
   },
   "scripts": {
     "format": "oxfmt",
